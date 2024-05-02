@@ -1,0 +1,147 @@
+.logg-inn1 {
+    position: absolute;
+    top: 66px;
+    left: 127px;
+    font-size: 32px;
+    line-height: 36px;
+    color: #1a1c74;
+}
+.logg-inn-child {
+    position: absolute;
+    top: 121px;
+    left: 0px;
+    max-height: 100%;
+    width: 390px;
+}
+.email-address {
+    position: relative;
+    line-height: 20px;
+}
+.inactivedefault-input {
+    position: absolute;
+    top: 381px;
+    left: 52px;
+    border-radius: 20px;
+    border: 1px solid #383b97;
+    box-sizing: border-box;
+    width: 286px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 18px 20px;
+    cursor: pointer;
+}
+.password {
+    position: relative;
+    line-height: 20px;
+    font-weight: 500;
+}
+.eye-closed-icon {
+    width: 20px;
+    position: relative;
+    height: 20px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.inactivedefault-input1 {
+    position: absolute;
+    top: 477px;
+    left: 52px;
+    border-radius: 20px;
+    border: 1px solid #383b97;
+    box-sizing: border-box;
+    width: 286px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 15px 18px 20px;
+}
+.glemt-passord {
+    position: absolute;
+    top: 650px;
+    left: 119px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #000;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 153px;
+    height: 14px;
+}
+.button1 {
+    position: relative;
+    line-height: 32px;
+}
+.text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 8px;
+}
+.button {
+    position: absolute;
+    top: 570px;
+    left: 96px;
+    border-radius: 8px;
+    background-color: #1a1c74;
+    width: 199px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 40px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+}
+.venn {
+    color: #1a1c74;
+}
+.varselvenn {
+    position: absolute;
+    top: 18.31%;
+    left: 24.13%;
+}
+.logo-child {
+    position: absolute;
+    height: 100%;
+    width: 24.83%;
+    top: 0%;
+    right: 75.17%;
+    bottom: 0%;
+    left: 0%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+.logo {
+    position: absolute;
+    top: 238px;
+    left: 53px;
+    width: 286px;
+    height: 71px;
+    font-size: 40px;
+    color: #e43700;
+    font-family: Play;
+}
+.logg-inn {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    height: 844px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 16px;
+    color: #383b97;
+    font-family: Inter;
+}
+

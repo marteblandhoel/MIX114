@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="varslinger.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="varslinger">
+      <b class="varslinger1">Varslinger</b>
+      <img class="varslinger-child" alt="" src="Line 2.svg" />
+
+      <div class="varslinger-liste">
+        <div
+          class="liste-varslingerdefault"
+          id="listeVarslingerDefaultContainer"
+        >
+          <div class="headline">
+            <b class="glatt-vei">Glatt vei!</b>
+            <div class="headline-inner">
+              <div class="group-parent">
+                <div class="parent">
+                  <b class="b">11</b>
+                  <img class="thumb-up-1-icon" alt="" src="thumb-up 1.png" />
+                </div>
+                <b class="b1">2</b>
+                <img
+                  class="tilbakemelding-icon"
+                  alt=""
+                  src="thumb-down 1.png"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="subheading">
+            <i class="time">1 time</i>
+            <div class="obs-til-alle">
+              Obs! Til alle billister: Veiene er ekstremt glatte i dag. Vær
+              forsiktig og tilpass farten etter forholdene. Kjør sikkert!
+            </div>
+          </div>
+          <div class="headline1">
+            <b class="privatsjfr">Privatsjåfør</b>
+            <b class="km">2 km Ø</b>
+          </div>
+        </div>
+        <div class="liste-varslingerdefault1">
+          <div class="headline">
+            <b class="elg-observert">Elg Observert!</b>
+            <div class="headline-child">
+              <div class="group-container">
+                <div class="group">
+                  <b class="b">8</b>
+                  <img class="thumb-up-1-icon1" alt="" src="thumb-up 1.png" />
+                </div>
+                <b class="b3">1</b>
+                <img
+                  class="tilbakemelding-icon1"
+                  alt=""
+                  src="thumb-down 1.png"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="subheading">
+            <i class="time">2 min</i>
+            <div class="obs-til-alle">
+              En elg er observert langs veien i nærheten av E132 vest. Vennligst
+              kjør med forsiktighet og hold øynene åpne. Sikkerhet først!
+            </div>
+          </div>
+          <div class="headline1">
+            <b class="privatsjfr">Privatsjåfør</b>
+            <b class="km">3 km N</b>
+          </div>
+        </div>
+        <div class="liste-varslingerdefault2">
+          <div class="headline">
+            <b class="elg-observert">Veiarbeid</b>
+            <div class="group-div">
+              <div class="group-parent1">
+                <div class="container">
+                  <b class="b">16</b>
+                  <img class="thumb-up-1-icon2" alt="" src="thumb-up 1.png" />
+                </div>
+                <b class="b5">0</b>
+                <img
+                  class="tilbakemelding-icon2"
+                  alt=""
+                  src="thumb-down 1.png"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="subheading">
+            <i class="time">15 min</i>
+            <div class="obs-til-alle">
+              Advarsel til billister: Veiarbeid pågår på E134 mellom Seljord og
+              Åmot. Vær forberedt på nedsatt hastighet og mulige forsinkelser.
+              Følg skilting og vis hensyn til arbeiderne for alles sikkerhet.
+              Takk for tålmodigheten!
+            </div>
+          </div>
+          <div class="headline1">
+            <b class="veiarbeider">Veiarbeider</b>
+            <b class="km">8 km Ø</b>
+          </div>
+        </div>
+        <div class="liste-varslingerdefault3">
+          <div class="skriv-et-varsel">Skriv et varsel...</div>
+          <img class="close-icon" alt="" src="Close.svg" />
+        </div>
+      </div>
+      <div class="sorter" id="sorterContainer">
+        <div class="buttonmediumdefaulticons">
+          <div class="text">
+            <div class="button">Sorter</div>
+          </div>
+          <div class="close-icon"></div>
+        </div>
+        <img
+          class="iconoutlinesort-descending"
+          alt=""
+          src="Icon/Outline/sort-descending.svg"
+        />
+      </div>
+      <div class="filter" id="filterContainer">
+        <div class="buttonmediumdefaulticons1">
+          <div class="text">
+            <div class="button">Filter</div>
+          </div>
+          <div class="close-icon"></div>
+        </div>
+        <img class="iconoutlinefilter" alt="" src="Icon/Outline/filter.svg" />
+      </div>
+      <div class="navbar">
+        <div class="navbar-child"></div>
+        <div class="icon-parent">
+          <img class="icon" alt="" src="Icon.svg" id="icon" />
+
+          <img class="icon1" alt="" src="maps.svg" id="icon1" />
+
+          <img class="car-icon" alt="" src="Car icon.svg" />
+
+          <img class="icon" alt="" src="danger.svg" id="icon2" />
+
+          <img class="icon" alt="" src="profil.svg" id="profil_ikon" />
+        </div>
+        <img class="navbar-item" alt="" src="Vector 563.svg" />
+      </div>
+    </div>
+
+    <script>
+      var listeVarslingerDefaultContainer = document.getElementById(
+        "listeVarslingerDefaultContainer"
+      );
+      if (listeVarslingerDefaultContainer) {
+        listeVarslingerDefaultContainer.addEventListener("click", function (e) {
+          // Add your code here
+        });
+      }
+
+      var sorterContainer = document.getElementById("sorterContainer");
+      if (sorterContainer) {
+        sorterContainer.addEventListener("click", function (e) {
+          // Add your code here
+        });
+      }
+
+      var filterContainer = document.getElementById("filterContainer");
+      if (filterContainer) {
+        filterContainer.addEventListener("click", function (e) {
+          // Add your code here
+        });
+      }
+
+      var icon = document.getElementById("icon");
+      if (icon) {
+        icon.addEventListener("click", function (e) {
+          // Add your code here
+        });
+      }
+
+      var icon1 = document.getElementById("icon1");
+      if (icon1) {
+        icon1.addEventListener("click", function (e) {
+          // Add your code here
+        });
+      }
+
+      var icon2 = document.getElementById("icon2");
+      if (icon2) {
+        icon2.addEventListener("click", function (e) {
+          window.location.href = "Varslinger.html";
+        });
+      }
+
+      var icon3 = document.getElementById("icon3");
+      if (icon3) {
+        icon3.addEventListener("click", function (e) {
+          // Add your code here
+        });
+      }
+    </script>
+  </body>
+</html>
