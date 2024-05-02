@@ -1,3 +1,7 @@
+.belnning {
+  width: 100%;
+}
+
 .belnning1 {
   position: absolute;
   top: 68px;
@@ -6,6 +10,19 @@
   line-height: 36px;
   color: #1a1c74;
 }
+
+.iconsolidx {
+  position: absolute;
+  top: 72px;
+  left: 27px;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 32px;
+  color: #1a1c74;
+}
+
 .belnning-child {
   position: absolute;
   top: 122px;
@@ -13,12 +30,12 @@
   max-height: 100%;
   width: 390px;
 }
-.star-icon {
+.starIcon {
   width: 24px;
   position: relative;
   height: 24px;
-  overflow: hidden;
   flex-shrink: 0;
+  color: #ffffff;
 }
 .title {
   align-self: stretch;
@@ -48,18 +65,15 @@
   justify-content: flex-start;
 }
 .alert {
-  position: absolute;
+  position: relative;
   top: 140px;
-  left: 32px;
+  margin: 0 32px;
   border-radius: 8px;
   background-color: #1a1c74;
-  width: 326px;
   height: 53px;
   overflow: hidden;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
   padding: 16px;
   box-sizing: border-box;
   gap: 16px;
@@ -73,12 +87,11 @@
   line-height: 17px;
   color: #1a1c74;
   display: inline-block;
-  width: 327px;
 }
 .component-child {
   position: absolute;
   height: 67.86%;
-  width: 100%;
+
   top: 11.73%;
   right: 0%;
   bottom: 20.41%;
@@ -88,7 +101,7 @@
   border: 1px solid #1a1c74;
   box-sizing: border-box;
 }
-.screenshot-2024-04-25-at-2051 {
+.premierBilde {
   position: absolute;
   height: 52.55%;
   width: 40.55%;
@@ -129,13 +142,13 @@
 }
 .du-mangler-15-container {
   position: absolute;
-  width: 98.31%;
   top: 84.18%;
   left: 0%;
   font-size: 12px;
   line-height: 14px;
   display: inline-block;
 }
+
 .rectangle-parent {
   position: absolute;
   top: 317px;
@@ -143,24 +156,7 @@
   width: 326px;
   height: 196px;
 }
-.iconsolidx {
-  position: absolute;
-  top: 72px;
-  left: 27px;
-  width: 32px;
-  height: 32px;
-  overflow: hidden;
-  cursor: pointer;
-}
-.for-en-god1 {
-  position: absolute;
-  width: 40.89%;
-  top: 17.86%;
-  left: 49.33%;
-  line-height: 17px;
-  white-space: pre-wrap;
-  display: inline-block;
-}
+
 .rectangle-group {
   position: absolute;
   height: 88.29%;
@@ -202,26 +198,11 @@
   width: 325px;
   height: 222px;
 }
-.for-en-god2 {
-  position: absolute;
-  width: 40.89%;
-  top: 17.86%;
-  left: 49.33%;
-  line-height: 17px;
-  display: inline-block;
-}
+
 .b {
   font-size: 14px;
 }
-.du-mangler-15-container1 {
-  position: absolute;
-  width: 98.32%;
-  top: 84.18%;
-  left: 0%;
-  line-height: 14px;
-  display: inline-block;
-  font-size: 12px;
-}
+
 .component-2 {
   position: absolute;
   top: 788px;
@@ -253,7 +234,7 @@
   justify-content: center;
   padding: 12px 16px;
 }
-.iconoutlinesort-descending {
+.fa-sort-amount-down-alt {
   position: absolute;
   top: 8px;
   left: 83.16px;
@@ -270,6 +251,23 @@
   text-align: center;
   color: #fff;
 }
+
+.innhold {
+  font-size: 12px;
+}
+
+.belnning {
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  height: 1085px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 32px;
+  color: #000;
+  font-family: Inter;
+}
+
 .navbar-child {
   position: absolute;
   height: 100%;
@@ -280,25 +278,7 @@
   left: 0%;
   background-color: #1a1c74;
 }
-.icon {
-  width: 40px;
-  position: relative;
-  height: 40px;
-  overflow: hidden;
-  flex-shrink: 0;
-  cursor: pointer;
-}
-.icon1 {
-  width: 32px;
-  position: relative;
-  height: 32px;
-  cursor: pointer;
-}
-.car-icon {
-  width: 32px;
-  position: relative;
-  height: 25.6px;
-}
+
 .icon-parent {
   position: absolute;
   width: 89.74%;
@@ -310,6 +290,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  color: #ffffff;
 }
 .navbar-item {
   position: absolute;
@@ -324,21 +305,11 @@
   max-height: 100%;
 }
 .navbar {
-  position: absolute;
+  position: fixed;
+  bottom: 0;
   width: 100%;
   right: 0px;
   bottom: 0px;
   left: 0px;
   height: 79px;
-}
-.belnning {
-  width: 100%;
-  position: relative;
-  background-color: #fff;
-  height: 1085px;
-  overflow: hidden;
-  text-align: left;
-  font-size: 14px;
-  color: #000;
-  font-family: Inter;
 }
