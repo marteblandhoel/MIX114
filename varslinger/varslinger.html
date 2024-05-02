@@ -139,21 +139,36 @@
         </div>
         <img class="iconoutlinefilter" alt="" src="Icon/Outline/filter.svg" />
       </div>
-      <div class="navbar">
+      <nav class="navbar">
         <div class="navbar-child"></div>
         <div class="icon-parent">
-          <img class="icon" alt="" src="Icon.svg" id="icon" />
-
-          <img class="icon1" alt="" src="maps.svg" id="icon1" />
-
-          <img class="car-icon" alt="" src="Car icon.svg" />
-
-          <img class="icon" alt="" src="danger.svg" id="icon2" />
-
-          <img class="icon" alt="" src="profil.svg" id="profil_ikon" />
+          <i
+            class="iconFooter fa-solid fa-location-dot"
+            aria-label="location pin"
+          ></i>
+          <i
+            class="iconFooter fa-solid fa-map-location-dot"
+            aria-label="maps icon"
+          ></i>
+          <i class="iconFooter fa fa-car" aria-label="car icon"></i>
+          <i
+            class="iconFooter fa fa-exclamation-triangle"
+            aria-label="varsel icon"
+          ></i>
+          <i
+            class="iconFooter fa fa-user-circle-o"
+            aria-label="profile icon"
+          ></i>
+          <!--script for creating the undeline which is added when the icon is clicked-->
+          <script>
+            document
+              .querySelector(".iconFooter")
+              .addEventListener("click", function () {
+                this.classList.toggle("active");
+              });
+          </script>
         </div>
-        <img class="navbar-item" alt="" src="Vector 563.svg" />
-      </div>
+      </nav>
     </div>
 
     <script>

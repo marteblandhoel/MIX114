@@ -10,6 +10,10 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
     />
+    <script
+      src="https://kit.fontawesome.com/c941d0ea4c.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="hjemside">
@@ -110,20 +114,36 @@
           </div>
         </div>
       </div>
-      <div class="navbar">
+      <nav class="navbar">
         <div class="navbar-child"></div>
         <div class="icon-parent">
-          <img class="icon3" alt="" src="Icon.svg" id="icon" />
-
-          <img class="icon4" alt="" src="Icon.svg" id="icon1" />
-
-          <img class="frame-child" alt="" src="Group 11.svg" id="group" />
-
-          <img class="icon3" alt="" src="Icon.svg" id="icon2" />
-
-          <img class="icon3" alt="" src="Icon.svg" id="icon3" />
+          <i
+            class="iconFooter fa-solid fa-location-dot"
+            aria-label="location pin"
+          ></i>
+          <i
+            class="iconFooter fa-solid fa-map-location-dot"
+            aria-label="maps icon"
+          ></i>
+          <i class="iconFooter fa fa-car" aria-label="car icon"></i>
+          <i
+            class="iconFooter fa fa-exclamation-triangle"
+            aria-label="varsel icon"
+          ></i>
+          <i
+            class="iconFooter fa fa-user-circle-o"
+            aria-label="profile icon"
+          ></i>
+          <!--script for creating the undeline which is added when the icon is clicked-->
+          <script>
+            document
+              .querySelector(".iconFooter")
+              .addEventListener("click", function () {
+                this.classList.toggle("active");
+              });
+          </script>
         </div>
-      </div>
+      </nav>
     </div>
 
     <script>
