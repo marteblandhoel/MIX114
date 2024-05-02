@@ -13,6 +13,7 @@
   line-height: 36px;
   color: #1a1c74;
 }
+
 .icon {
   width: 32px;
   position: relative;
@@ -127,6 +128,7 @@
   padding: 16px;
   gap: 16px;
 }
+/* #poeng-og-belnninger-icon */
 .poeng-og-belnninger {
   position: absolute;
   top: 306px;
