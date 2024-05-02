@@ -4,3 +4,52 @@ body {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 12px;
 }
+
+/*felles styling for alle sider med navigasjonsbaren
+må fjerne disse styling-ene i alle de individuelle CSS filene slik at alle navigasjonsbarene styles av dette dokumentet */
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  height: 79px;
+}
+
+.navbar-child {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 0%;
+  background-color: #1a1c74;
+}
+
+.icon-parent {
+  position: absolute;
+  width: 89.74%;
+  top: calc(50% - 19.5px);
+  right: 5.13%;
+  left: 5.13%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-item {
+  position: absolute;
+  height: 2.53%;
+  width: 5.64%;
+  top: 83.54%;
+  right: 7.44%;
+  bottom: 13.92%;
+  left: 86.92%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
