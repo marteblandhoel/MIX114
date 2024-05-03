@@ -78,18 +78,7 @@
   width: 52px;
   height: 15px;
 }
-.vector-icon {
-  position: absolute;
-  height: 100%;
-  width: 25.48%;
-  top: 0%;
-  right: 74.52%;
-  bottom: 0%;
-  left: 0%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
+
 .min-parent {
   position: absolute;
   top: 0px;
@@ -106,18 +95,7 @@
   width: 24px;
   height: 16px;
 }
-.vector-icon1 {
-  position: absolute;
-  height: 99.09%;
-  width: 30.23%;
-  top: 0%;
-  right: 69.77%;
-  bottom: 0.91%;
-  left: 0%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
+
 .t-parent {
   position: absolute;
   top: -2px;
@@ -149,12 +127,12 @@
   width: 52px;
   height: 16px;
 }
-.vector-icon2 {
+.fa-car,
+.fa-bus,
+.fa-person-walking {
   position: absolute;
   height: 100%;
-  width: 23.68%;
-  top: 0%;
-  right: 76.32%;
+  width: 16px;
   bottom: 0%;
   left: 0%;
   max-width: 100%;
@@ -166,7 +144,7 @@
   position: relative;
   height: 16px;
 }
-.buttonmediumhovericons-te {
+.buttonClicked {
   position: absolute;
   top: 251px;
   left: 52px;
@@ -174,14 +152,14 @@
   background-color: #cfd0ff;
   border: 1.5px solid #1a1c74;
   box-sizing: border-box;
-  width: 91px;
+  width: fit-content;
   height: 32px;
   overflow: hidden;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 12px 16px;
+  padding: 8px 8px;
 }
 .skefelt-child {
   position: absolute;
@@ -260,7 +238,7 @@
   text-align: center;
   font-size: 16px;
 }
-.iconsolidarrow-circle-right {
+.fa-circle-arrow-down {
   width: 30px;
   position: absolute;
   margin: 0 !important;
@@ -298,6 +276,18 @@
   gap: 8px;
   font-size: 18px;
 }
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  height: 79px;
+  font-size: 32px;
+}
+
 .navbar-child {
   position: absolute;
   height: 100%;
@@ -308,25 +298,7 @@
   left: 0%;
   background-color: #1a1c74;
 }
-.icon {
-  width: 40px;
-  position: relative;
-  height: 40px;
-  overflow: hidden;
-  flex-shrink: 0;
-  cursor: pointer;
-}
-.icon1 {
-  width: 32px;
-  position: relative;
-  height: 32px;
-  cursor: pointer;
-}
-.car-icon {
-  width: 32px;
-  position: relative;
-  height: 25.6px;
-}
+
 .icon-parent {
   position: absolute;
   width: 89.74%;
@@ -338,26 +310,19 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  color: #ffffff;
 }
 .navbar-item {
   position: absolute;
   height: 2.53%;
   width: 5.64%;
   top: 83.54%;
-  right: 86.92%;
+  right: 7.44%;
   bottom: 13.92%;
-  left: 7.44%;
+  left: 86.92%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
-}
-.navbar {
-  position: absolute;
-  width: 100%;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  height: 79px;
 }
 .din-rute {
   width: 100%;
