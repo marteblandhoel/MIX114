@@ -140,6 +140,10 @@
   overflow: hidden;
   max-height: 100%;
 }
+.fa-car-alt {
+  font-size: 24px; /* Adjust the size as needed */
+  color: #000; /* Adjust the color as needed */
+}
 .logo {
   position: absolute;
   top: 238px;
