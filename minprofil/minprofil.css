@@ -6,8 +6,9 @@
 }
 .fa-user {
   position: absolute;
-  top: 137px;
+  top: 122px;
   left: 279px;
+  font-size: 64px;
 }
 .min-profil-child {
   position: absolute;
@@ -124,7 +125,7 @@
   height: 24px;
   z-index: 1;
 }
-.dine-reiser {
+.seMer {
   width: 296px;
   border-radius: 8px;
   background-color: #1a1c74;
