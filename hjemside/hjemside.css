@@ -213,4 +213,20 @@
   height: 79px;
   font-size: 32px;
 }
+.active {
+  position: relative;
+}
 
+.active::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+.iconFooter.fa-car {
+  cursor: pointer;
+}
