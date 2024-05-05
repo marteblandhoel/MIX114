@@ -8,7 +8,7 @@
 .fa-user {
   position: absolute;
   top: 122px;
-  left: 32px; /* Adjusted to match hjemside.html */
+  right: 32px; /* Adjusted to match hjemside.html */
   font-size: 64px;
 }
 
