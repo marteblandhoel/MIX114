@@ -76,13 +76,25 @@
   justify-content: center;
   padding: 16px 40px;
 }
-.venn {
+/* .venn {
   color: #1a1c74;
 }
 .varselvenn {
   position: absolute;
   top: 18.31%;
   left: 24.13%;
+} */
+.varselvenn {
+  position: absolute;
+  top: 18.31%;
+  left: 24.13%;
+  font-size: 38px;
+  color: #e43700;
+  font-family: Play;
+}
+
+.varselvenn .venn {
+  color: #1a1c74;
 }
 .logo-child {
   position: absolute;

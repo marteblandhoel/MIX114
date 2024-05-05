@@ -5,7 +5,8 @@
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
     <link rel="stylesheet" href="åpningsside.css" />
-    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="global.css" />
+    <script src="åpningsside.js"></script>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap"
@@ -27,7 +28,7 @@
       <img class="åpningsside-child" alt="" src="Line 2.svg" />
 
       <div class="button" id="buttonContainer">
-        <div class="text">
+        <div class="text" onclick="redirectToLoginPage()">
           <b class="button1">Logg inn</b>
         </div>
       </div>
@@ -41,7 +42,10 @@
           <span>Varsel</span>
           <span class="venn">Venn</span>
         </b>
-        <img class="logo-child" alt="" src="Group 11.svg" />
+        <!-- <img class="logo-child" alt="" src="Group 11.svg" /> -->
+        <div class="logo-child">
+          <img class="logo-bil" src="../globals/logo-bil.png" />
+        </div>
       </div>
     </div>
 
