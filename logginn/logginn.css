@@ -82,39 +82,29 @@
   position: relative;
   line-height: 32px;
 }
-.text {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 0px 8px;
-}
+
 .button {
   position: absolute;
   top: 570px;
   left: 96px;
-  border-radius: 8px;
-  background-color: #1a1c74;
-  width: 199px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+}
+
+.text {
+  display: inline-block; /* Ensure button takes up space */
   padding: 16px 40px;
-  box-sizing: border-box;
-  text-align: center;
+  /* border: none;  */
+  border-radius: 8px;
+  background-color: #1a1c74; /* Background color */
+  color: #fff; /* Text color */
   font-size: 24px;
-  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition on hover */
 }
-/* .venn {
-  color: #1a1c74;
+
+.text:hover {
+  background-color: #131451; /* Darker background color on hover */
 }
-.varselvenn {
-  position: absolute;
-  top: 18.31%;
-  left: 24.13%;
-} */
+
 .varselvenn {
   position: absolute;
   top: 18.31%;
@@ -164,4 +154,42 @@
   font-size: 16px;
   color: #383b97;
   font-family: Inter;
+}
+
+#loginForm {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.inactivedefault-input,
+.inactivedefault-input1 {
+  margin-bottom: 20px; /* Add some spacing between inputs */
+}
+
+.inactivedefault-input input,
+.inactivedefault-input1 input {
+  border: none; /* Remove border */
+  border-bottom: 1px solid #ccc; /* Add bottom border for separation */
+  background-color: transparent; /* Make background transparent */
+  padding: 10px; /* Add padding */
+  width: 100%; /* Make inputs take full width */
+  box-sizing: border-box; /* Include padding and border in the width */
+  font-size: 16px; /* Adjust font size as needed */
+  color: #333; /* Set text color */
+}
+
+.inactivedefault-input input::placeholder,
+.inactivedefault-input1 input::placeholder {
+  color: #aaa; /* Adjust placeholder text color */
+}
+
+/* Style placeholder text on focus */
+.inactivedefault-input input:focus::placeholder,
+.inactivedefault-input1 input:focus::placeholder {
+  color: transparent; /* Hide placeholder text on focus */
+}
+
+.eye-closed-icon {
+  font-size: 24px; /* Adjust icon size */
+  color: #999; /* Adjust icon color */
 }
