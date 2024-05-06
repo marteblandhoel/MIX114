@@ -52,4 +52,24 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = "../belønning/poengside.html";
     });
   }
+
+  var seVarslingerButton = document.querySelector(".text-button .button");
+
+  if (seVarslingerButton) {
+    seVarslingerButton.addEventListener("click", function () {
+      // Redirect to varslinger.html
+      window.location.href = "../varslinger/varslinger.html";
+    });
+  }
+  var varselIcon = document.querySelector(
+    ".iconFooter.fa.fa-exclamation-triangle"
+  );
+
+  if (varselIcon) {
+    varselIcon.addEventListener("click", function () {
+      console.log("Icon clicked!"); // Add this line for debugging
+      // Redirect to varslinger.html
+      window.location.href = "../varslinger/varslinger.html";
+    });
+  }
 });
