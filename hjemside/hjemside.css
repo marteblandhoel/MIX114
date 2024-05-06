@@ -233,3 +233,7 @@
 .iconFooter.fa-user-circle-o {
   cursor: pointer;
 }
+
+.button:hover {
+  cursor: pointer;
+}
