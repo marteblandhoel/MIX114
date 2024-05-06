@@ -61,14 +61,9 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = "../varslinger/varslinger.html";
     });
   }
-  var varselIcon = document.querySelector(
-    ".iconFooter.fa.fa-exclamation-triangle"
-  );
-
+  var varselIcon = document.querySelector("fa-exclamation-triangle");
   if (varselIcon) {
     varselIcon.addEventListener("click", function () {
-      console.log("Icon clicked!"); // Add this line for debugging
-      // Redirect to varslinger.html
       window.location.href = "../varslinger/varslinger.html";
     });
   }
