@@ -130,3 +130,12 @@
   color: #1a1c74;
   font-family: Inter;
 }
+
+.button2 .text {
+  cursor: pointer;
+}
+
+.button2 .text:hover {
+  cursor: pointer;
+  /* Add your desired cursor style here */
+}
