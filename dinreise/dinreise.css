@@ -245,3 +245,40 @@
     background-size: 100% 100%;
     z-index: 24;
   }
+
+  .navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: 79px;
+    color: #ffffff;
+    background-color: #1a1c74;
+  }
+  
+  .icon-parent {
+    display: flex;
+    padding: 24px 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+  }
+  
+  .iconFooter {
+    font-size: 32px;
+    z-index: 2;
+    overflow: hidden;
+  }
+  
+  .active {
+    text-decoration-line: underline;
+  }
+  
+  .iconFooter {
+    cursor: pointer;
+  }
+  
