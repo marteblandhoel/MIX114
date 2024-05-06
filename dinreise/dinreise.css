@@ -81,17 +81,17 @@ input {
 
 .navbar {
   position: fixed;
-  bottom: 0;
+  top: auto; /* Ensures it sticks to the bottom */
+  left: 0; /* Aligns it to the left edge */
+  right: 0; /* Aligns it to the right edge */
+  bottom: 0; /* Sticks to the bottom of the viewport */
   width: 100%;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
   height: 79px;
   color: #ffffff;
   background-color: #1a1c74;
   z-index: 100;
+  box-sizing: border-box;
 }
-
 .icon-parent {
   display: flex;
   padding: 24px 20px;
