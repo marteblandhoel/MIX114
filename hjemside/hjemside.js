@@ -44,4 +44,12 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = "../minprofil/minprofil.html";
     });
   }
+
+  var seBelonningerButton = document.getElementById("se-belonninger");
+  if (seBelonningerButton) {
+    seBelonningerButton.addEventListener("click", function (e) {
+      // Redirect to poengside.html
+      window.location.href = "../belønning/poengside.html";
+    });
+  }
 });
