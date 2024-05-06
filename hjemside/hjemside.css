@@ -1,40 +1,77 @@
-.hjemside-child {
-  position: absolute;
-  top: 121px;
-  left: 0px;
-  max-height: 100%;
-  width: 390px;
+/*global*/
+h4 {
+  margin: 0;
 }
-.min-side {
-  position: absolute;
-  top: 68px;
-  left: 129px;
+p {
+  margin-top: 0;
+}
+h2 {
+  margin-top: 0;
   font-size: 32px;
+}
+
+.hjemside {
+  margin: 0 32px;
+  margin-top: 68px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: #fff;
+  overflow: hidden;
+  text-align: left;
+  font-size: 32px;
+  line-height: 20px;
+  color: #1a1c74;
+  font-family: Inter;
+  text-align: center;
+}
+
+.min-side {
+  display: inline;
   line-height: 36px;
+  margin-bottom: 24px;
+}
+
+.innhold {
+  display: inline;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  gap: 24px;
+  font-size: 16px;
   color: #1a1c74;
 }
 
-.icon {
-  width: 32px;
-  position: relative;
-  height: 32px;
-  overflow: hidden;
-  flex-shrink: 0;
+.boks {
+  width: 100%;
+  border-radius: 8px;
+  background-color: #cfd0ff;
+  border: 1.5px solid #1a1c74;
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  box-sizing: border-box;
+  gap: 16px;
+  cursor: pointer;
 }
 
-.varslinger1 {
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+}
+
+.tittel {
   align-self: stretch;
-  position: relative;
-  line-height: 20px;
   font-weight: 500;
 }
-.her-kan-du {
-  align-self: stretch;
-  position: relative;
-  font-size: 14px;
-  line-height: 16px;
-  color: #919191;
-}
+
 .text {
   align-self: stretch;
   display: flex;
@@ -43,133 +80,47 @@
   justify-content: flex-start;
   gap: 4px;
 }
+
+.her-kan-du {
+  align-self: stretch;
+  font-size: smaller;
+  line-height: 16px;
+  color: #595959;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  text-align: center;
+  color: #1a1c74;
+}
+
 .button {
   position: relative;
   line-height: 20px;
-  font-weight: 500;
+  font-size: 14px;
 }
 .text-button {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  font-weight: 600;
 }
-.text-button1 {
+.text-button_grey {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  color: #919191;
-}
-.buttons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 16px;
-  text-align: center;
-  color: #1a1c74;
-}
-.content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 16px;
-}
-.varslinger {
-  position: absolute;
-  top: 138px;
-  left: 32px;
-  border-radius: 8px;
-  background-color: #cfd0ff;
-  border: 1.5px solid #1a1c74;
-  box-sizing: border-box;
-  width: 326px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 16px;
-  gap: 16px;
-}
-.planlegg-reise {
-  position: absolute;
-  top: 502px;
-  left: 32px;
-  border-radius: 8px;
-  background-color: #cfd0ff;
-  border: 1.5px solid #1a1c74;
-  box-sizing: border-box;
-  width: 326px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 16px;
-  gap: 16px;
-}
-.kart {
-  position: absolute;
-  top: 670px;
-  left: 32px;
-  border-radius: 8px;
-  background-color: #cfd0ff;
-  border: 1.5px solid #1a1c74;
-  box-sizing: border-box;
-  width: 326px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 16px;
-  gap: 16px;
-}
-/* #poeng-og-belnninger-icon */
-.poeng-og-belnninger {
-  position: absolute;
-  top: 306px;
-  left: 32px;
-  border-radius: 8px;
-  background-color: #cfd0ff;
-  border: 1.5px solid #1a1c74;
-  box-sizing: border-box;
-  width: 326px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 16px;
-  gap: 16px;
-}
-
-.frame-child {
-  width: 64px;
-  position: relative;
-  height: 64px;
-  cursor: pointer;
-}
-
-.hjemside {
-  width: 100%;
-  position: relative;
-  background-color: #fff;
-  height: 927px;
-  overflow: hidden;
-  text-align: left;
-  font-size: 16px;
-  color: #000;
-  font-family: Inter;
+  color: #595959;
 }
 
 .navbar {
   position: fixed;
-  bottom: 0;
+  bottom: 0px;
   width: 100%;
   right: 0px;
   bottom: 0px;
