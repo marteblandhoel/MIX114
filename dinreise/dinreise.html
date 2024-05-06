@@ -1,4 +1,3 @@
-din reise
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,7 +8,7 @@ din reise
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
     />
-    <link rel="stylesheet" href="dinreise.css" />
+    <link rel="stylesheet" href="dinreise.css" type="text/css" />
     <link rel="stylesheet" href="./global.css" />
     <script
       src="https://kit.fontawesome.com/c941d0ea4c.js"
@@ -18,16 +17,20 @@ din reise
   </head>
   <body>
     <div class="main-container">
-      <span class="din-reise-1">Din Reise</span>
-      <div class="rectangle">
-        <span class="from">Fra: </span><span class="to">Til:</span>
-        <div class="icon-outline-switch"><div class="icon"></div></div>
-        <div class="line"></div>
+      <h2 class="overskrift">Din Reise</h2>
+      <div class="velgReise">
+        <div class="from">
+          <input type="text" placeholder="Fra:" />
+        </div>
+        <div class="line-with-icon">
+          <div class="line"></div>
+          <i class="fa-solid icon fa-arrows-up-down"></i>
+        </div>
+        <div class="to">
+          <input type="text" placeholder="Til:" />
+        </div>
       </div>
-      <div class="line-2"></div>
-      <div class="frame">
-        <div class="kart-bergen"><div class="image"></div></div>
-      </div>
+      <div class="kart"></div>
     </div>
     <nav class="navbar">
       <div class="navbar-child"></div>
