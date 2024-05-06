@@ -1,51 +1,72 @@
-.min-profil1 {
-  position: absolute;
-  top: 68px;
-  left: 122px;
+/*global*/
+h4 {
+  margin: 0;
+}
+p {
+  margin-top: 0;
+}
+h2 {
+  margin-top: 0;
+  font-size: 32px;
+}
+
+.min-profil {
+  margin: 0 32px;
+  margin-top: 68px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: #fff;
+  overflow: hidden;
+  text-align: left;
+  font-size: 32px;
+  line-height: 20px;
+  color: #1a1c74;
+  font-family: Inter;
+  text-align: center;
+}
+
+.overskrift {
+  display: inline;
   line-height: 36px;
+  margin-bottom: 24px;
+}
+
+.bruker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .fa-user {
-  position: absolute;
-  top: 122px;
-  right: 32px; /* Adjusted to match hjemside.html */
-  font-size: 64px;
+  font-size: 48px;
 }
 
-.min-profil-child {
-  position: absolute;
-  top: 122px;
-  left: 0px;
-  max-height: 100%;
-  width: 390px;
-}
-
-.navn-anders-andresen {
-  position: absolute;
-  top: 169px;
-  left: 47px;
+.navn {
   font-size: 18px;
-  line-height: 18px;
-  display: inline-block;
-  width: 209px;
-  height: 24px;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
 }
 
-.iconoutlinearrow-circle-right {
-  width: 32px;
-  position: absolute;
-  margin: 0 !important;
-  top: 78px;
-  left: 213px;
-  height: 32px;
-  overflow: hidden;
-  flex-shrink: 0;
-  z-index: 0;
+.innhold {
+  display: inline;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  gap: 24px;
+  font-size: 16px;
+  color: #fff;
 }
 
 .fa-star {
   width: 24px;
-  position: relative;
   height: 24px;
   overflow: hidden;
   flex-shrink: 0;
@@ -53,15 +74,12 @@
 }
 
 .title {
-  align-self: stretch;
-  position: relative;
   line-height: 20px;
   font-weight: 500;
 }
 
-.poengene-dine-gir {
+.info {
   align-self: stretch;
-  position: relative;
   font-size: 14px;
   line-height: 16px;
 }
@@ -76,164 +94,51 @@
 }
 
 .button {
-  position: relative;
   line-height: 20px;
   font-weight: 500;
 }
 
 .text-button {
+  flex-grow: 1; /* Allow to take up any available space */
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+}
+
+.arrowRight {
+  display: flex;
+  margin-left: auto; /* This pushes the icon to the far right */
+  font-size: larger;
+  align-items: center; /* This ensures the icon is vertically centered */
 }
 
 .buttons {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  text-align: center;
+  justify-content: space-between; /* Aligns children to each end */
+  width: 100%; /* Use the full width to space out items */
 }
 
-.content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 16px;
-  z-index: 2;
-}
-
-.settings-poeng {
-  width: 296px;
+.seMer {
+  width: 100%;
   border-radius: 8px;
   background-color: #1a1c74;
   overflow: hidden;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
   padding: 16px;
   box-sizing: border-box;
-  position: relative;
   gap: 16px;
   cursor: pointer;
 }
 
-.arrowRight {
-  width: 32px;
-  position: absolute;
-  margin: 0;
-  bottom: 2px;
-  left: 213px;
-  height: 32px;
-  overflow: hidden;
-  flex-shrink: 0;
-  z-index: 0;
-}
-
-.fa-map-location-dot {
-  position: relative;
-  z-index: 1;
-}
-
-.seMer {
-  width: 296px;
-  border-radius: 8px;
-  background-color: #1a1c74;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 16px;
-  box-sizing: border-box;
-  position: relative;
-  gap: 16px;
-}
-
-.iconoutlinesettings {
-  width: 24px;
-  position: relative;
-  height: 24px;
-}
-
-.content3 {
-  flex: 1;
+.content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 16px;
+  z-index: 2;
 }
 
-.alert {
-  position: absolute;
-  height: 101.89%;
-  width: 100%;
-  top: -0.94%;
-  right: 0%;
-  bottom: -0.94%;
-  left: 0%;
-  border-radius: 8px;
-  background-color: #1a1c74;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 16px;
-  box-sizing: border-box;
-  gap: 16px;
-}
-
-.iconoutlinearrow-circle-righ3 {
-  position: absolute;
-  height: 30.19%;
-  width: 10.1%;
-  top: 60.38%;
-  right: 17.94%;
-  bottom: 9.43%;
-  left: 71.96%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
-
-.settings-instillinger {
-  width: 296px;
-  position: relative;
-  height: 106px;
-}
-
-.innhold {
-  position: absolute;
-  top: 221px;
-  left: 47px;
-  width: 325px;
-  height: 623px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 24px;
-  font-size: 16px;
-  color: #fff;
-}
-
-.min-profil {
-  width: 100%;
-  position: relative;
-  background-color: #fff;
-  height: 844px;
-  overflow: hidden;
-  text-align: left;
-  font-size: 32px;
-  color: #1a1c74;
-  font-family: Inter;
-}
+/*navbar styling, should be moved to global when we get that page linked right*/
 
 .navbar {
   position: fixed;
@@ -245,6 +150,7 @@
   height: 79px;
   color: #ffffff;
   background-color: #1a1c74;
+  z-index: 100;
 }
 
 .icon-parent {

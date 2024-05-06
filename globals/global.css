@@ -1,8 +1,11 @@
 body {
   margin: 0 32px;
+  margin-top: 68px;
   line-height: normal;
   font-size: 12px;
 }
+
+h4 {margin: 0;}
 
 /*felles styling for alle sider med navigasjonsbaren
 må fjerne disse styling-ene i alle de individuelle CSS filene slik at alle navigasjonsbarene styles av dette dokumentet */
@@ -17,6 +20,7 @@ må fjerne disse styling-ene i alle de individuelle CSS filene slik at alle navi
   height: 79px;
   color: #ffffff;
   background-color: #1a1c74;
+  z-index: 100;
 }
 
 .icon-parent {
