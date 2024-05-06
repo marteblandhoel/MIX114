@@ -1,20 +1,21 @@
 .belnning {
   width: 100%;
+  display: flex;
 }
 
 .belnning1 {
-  position: absolute;
-  top: 68px;
-  left: 116px;
+  display: flex;
+  display: inline-block;
+  margin: 20px;
   font-size: 32px;
   line-height: 36px;
   color: #1a1c74;
 }
 
 .iconsolidx {
-  position: absolute;
-  top: 72px;
-  left: 27px;
+  display: flex;
+  margin: 0px 32px;
+  display: inline-block;
   width: 32px;
   height: 32px;
   overflow: hidden;
@@ -30,6 +31,7 @@
   max-height: 100%;
   width: 390px;
 }
+
 .starIcon {
   width: 24px;
   position: relative;
@@ -37,6 +39,7 @@
   flex-shrink: 0;
   color: #ffffff;
 }
+
 .title {
   align-self: stretch;
   position: relative;

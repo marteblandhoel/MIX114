@@ -1,0 +1,212 @@
+.maps-icon {
+  position: absolute;
+  top: 215px;
+  left: 0px;
+  width: 390px;
+  height: 561px;
+  object-fit: cover;
+}
+.kart {
+  position: absolute;
+  top: 67px;
+  left: 161px;
+  font-size: 32px;
+  line-height: 36px;
+  color: #1a1c74;
+}
+.karttype-child {
+  position: absolute;
+  top: 122px;
+  left: 0px;
+  max-height: 100%;
+  width: 390px;
+}
+.email-address {
+  position: relative;
+  line-height: 20px;
+}
+.inactivedefault-input {
+  position: absolute;
+  top: 129px;
+  left: 30px;
+  border-radius: 20px;
+  border: 1px solid #383b97;
+  box-sizing: border-box;
+  width: 326px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 18px 20px;
+  font-size: 16px;
+  color: #383b97;
+}
+.karttype-item {
+  position: absolute;
+  top: 332px;
+  left: 47px;
+  width: 61px;
+  height: 55px;
+  object-fit: contain;
+}
+.karttype-inner {
+  position: absolute;
+  top: 518.83px;
+  left: 215.12px;
+  width: 38.7px;
+  height: 100.2px;
+  object-fit: contain;
+}
+.vector-icon {
+  position: absolute;
+  top: 301px;
+  left: 24px;
+  width: 6px;
+  height: 11px;
+  object-fit: contain;
+}
+.iconsolidexclamation {
+  position: absolute;
+  height: 7.11%;
+  width: 15.38%;
+  top: 63.86%;
+  right: 20.51%;
+  bottom: 29.03%;
+  left: 64.1%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.snowflake-icon {
+  position: absolute;
+  top: 291px;
+  left: 64px;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+}
+.group-child {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 18px;
+  background-color: #fff;
+  border: 1px solid #383b97;
+  box-sizing: border-box;
+  width: 184px;
+  height: 36px;
+}
+.moderat-k-langs {
+  position: absolute;
+  top: 13px;
+  left: 35px;
+  line-height: 12px;
+  font-weight: 500;
+  display: inline-block;
+  width: 144px;
+  height: 11px;
+}
+.kart-varsling-icon {
+  position: absolute;
+  top: 6px;
+  left: 11px;
+  width: 24px;
+  height: 24px;
+}
+.rectangle-parent {
+  position: absolute;
+  top: 720px;
+  left: 34px;
+  width: 184px;
+  height: 36px;
+}
+.group-item {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 18px;
+  background-color: #fff;
+  border: 1px solid #383b97;
+  box-sizing: border-box;
+  width: 263px;
+  height: 36px;
+}
+.glatt-og-lite {
+  position: absolute;
+  top: 13px;
+  left: 35px;
+  line-height: 12px;
+  font-weight: 500;
+}
+.snowflake-icon1 {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.rectangle-group {
+  position: absolute;
+  top: 675px;
+  left: 34px;
+  width: 263px;
+  height: 36px;
+}
+.iconsolidinformation-circle {
+  position: absolute;
+  top: 240px;
+  left: 317px;
+  width: 43px;
+  height: 43px;
+  overflow: hidden;
+}
+
+.karttype {
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  height: 844px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 12px;
+  color: #000;
+  font-family: Inter;
+}
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  height: 79px;
+  color: #ffffff;
+  background-color: #1a1c74;
+}
+
+.icon-parent {
+  display: flex;
+  padding: 24px 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+}
+
+.iconFooter {
+  font-size: 32px;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.active {
+  text-decoration-line: underline;
+}
+
+.iconFooter {
+  cursor: pointer;
+}
