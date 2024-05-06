@@ -451,3 +451,15 @@
   color: #fff;
   font-family: Inter;
 }
+
+.iconsolidx {
+  position: absolute;
+  top: 72px;
+  left: 27px;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 32px;
+  color: #1a1c74;
+}

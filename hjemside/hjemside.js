@@ -52,4 +52,13 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = "../belønning/poengside.html";
     });
   }
+
+  var seVarslingerButton = document.querySelector(".text-button .button");
+
+  if (seVarslingerButton) {
+    seVarslingerButton.addEventListener("click", function () {
+      // Redirect to varslinger.html
+      window.location.href = "../varslinger/varslinger.html";
+    });
+  }
 });
