@@ -6,6 +6,7 @@
 .belnning1 {
   display: flex;
   display: inline-block;
+  margin: 20px;
   font-size: 32px;
   line-height: 36px;
   color: #1a1c74;
