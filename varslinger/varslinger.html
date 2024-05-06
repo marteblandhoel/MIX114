@@ -18,54 +18,45 @@
   </head>
   <body>
     <div class="varslinger">
-      <b class="varslinger1">Varslinger</b>
-      <img class="varslinger-child" alt="" src="Line 2.svg" />
-      <i id="goBackButton" class="iconsolidx fa-solid fa-xmark"></i>
-
+      <header class="header">
+        <h2 class="varslinger1">Varslinger</h2>
+        <i id="goBackButton" class="iconsolidx fa-solid fa-xmark"></i>
+      </header>
       <div class="varslinger-liste">
-        <div
-          class="liste-varslingerdefault"
-          id="listeVarslingerDefaultContainer"
-        >
+        <div class="liste-varslingerdefault">
           <div class="headline">
-            <b class="glatt-vei">Glatt vei!</b>
-            <div class="headline-inner">
-              <div class="group-parent">
-                <div class="parent">
-                  <b class="b">11</b>
-                  <img class="thumb-up-1-icon" alt="" src="thumb-up 1.png" />
-                </div>
-                <b class="b1">2</b>
-                <img
-                  class="tilbakemelding-icon"
-                  alt=""
-                  src="thumb-down 1.png"
-                />
+            <h4 class="notification-title">Glatt vei!</h4>
+            <div class="thumbs">
+              <div class="thumbs-up">
+                <p class="b">11</p>
+                <img class="thumb-icon" alt="" src="thumb-up 1.png" />
               </div>
+              <p class="b1">2</p>
+              <img class="thumb-icon" alt="" src="thumb-down 1.png" />
             </div>
           </div>
           <div class="subheading">
             <i class="time">1 time</i>
-            <div class="obs-til-alle">
+            <div class="message">
               Obs! Til alle billister: Veiene er ekstremt glatte i dag. Vær
               forsiktig og tilpass farten etter forholdene. Kjør sikkert!
             </div>
           </div>
-          <div class="headline1">
-            <b class="privatsjfr">Privatsjåfør</b>
-            <b class="km">2 km Ø</b>
+          <div class="footer">
+            <p class="privatsjfr">Privatsjåfør</p>
+            <p class="km">2 km Ø</p>
           </div>
         </div>
         <div class="liste-varslingerdefault1">
           <div class="headline">
-            <b class="elg-observert">Elg Observert!</b>
+            <h4 class="elg-observert">Elg Observert!</h4>
             <div class="headline-child">
               <div class="group-container">
                 <div class="group">
-                  <b class="b">8</b>
+                  <p class="b">8</p>
                   <img class="thumb-up-1-icon1" alt="" src="thumb-up 1.png" />
                 </div>
-                <b class="b3">1</b>
+                <p class="b3">1</p>
                 <img
                   class="tilbakemelding-icon1"
                   alt=""
@@ -82,20 +73,20 @@
             </div>
           </div>
           <div class="headline1">
-            <b class="privatsjfr">Privatsjåfør</b>
-            <b class="km">3 km N</b>
+            <p class="privatsjfr">Privatsjåfør</p>
+            <p class="km">3 km N</p>
           </div>
         </div>
         <div class="liste-varslingerdefault2">
           <div class="headline">
-            <b class="elg-observert">Veiarbeid</b>
+            <h4 class="elg-observert">Veiarbeid</h4>
             <div class="group-div">
               <div class="group-parent1">
                 <div class="container">
-                  <b class="b">16</b>
+                  <p class="b">16</p>
                   <img class="thumb-up-1-icon2" alt="" src="thumb-up 1.png" />
                 </div>
-                <b class="b5">0</b>
+                <p class="b5">0</p>
                 <img
                   class="tilbakemelding-icon2"
                   alt=""
@@ -114,8 +105,8 @@
             </div>
           </div>
           <div class="headline1">
-            <b class="veiarbeider">Veiarbeider</b>
-            <b class="km">8 km Ø</b>
+            <p class="veiarbeider">Veiarbeider</p>
+            <p class="km">8 km Ø</p>
           </div>
         </div>
         <div class="liste-varslingerdefault3">
@@ -123,111 +114,49 @@
           <img class="close-icon" alt="" src="Close.svg" />
         </div>
       </div>
-      <div class="sorter" id="sorterContainer">
-        <div class="buttonmediumdefaulticons">
-          <div class="text">
-            <div class="button">Sorter</div>
+      <div class="controls">
+        <div class="sorter" id="sorterContainer">
+          <div class="buttonmediumdefaulticons">
+            <div class="text">
+              <div class="button">Sorter</div>
+            </div>
+            <div class="close-icon"></div>
           </div>
-          <div class="close-icon"></div>
+          <img
+            class="iconoutlinesort-descending"
+            alt=""
+            src="Icon/Outline/sort-descending.svg"
+          />
         </div>
-        <img
-          class="iconoutlinesort-descending"
-          alt=""
-          src="Icon/Outline/sort-descending.svg"
-        />
-      </div>
-      <div class="filter" id="filterContainer">
-        <div class="buttonmediumdefaulticons1">
-          <div class="text">
-            <div class="button">Filter</div>
+        <div class="filter" id="filterContainer">
+          <div class="buttonmediumdefaulticons1">
+            <div class="text">
+              <div class="button">Filter</div>
+            </div>
+            <div class="close-icon"></div>
           </div>
-          <div class="close-icon"></div>
+          <img class="iconoutlinefilter" alt="" src="Icon/Outline/filter.svg" />
         </div>
-        <img class="iconoutlinefilter" alt="" src="Icon/Outline/filter.svg" />
       </div>
-      <nav class="navbar">
-        <div class="navbar-child"></div>
-        <div class="icon-parent">
-          <i
-            class="iconFooter fa-solid fa-location-dot"
-            aria-label="location pin"
-          ></i>
-          <i
-            class="iconFooter fa-solid fa-map-location-dot"
-            aria-label="maps icon"
-          ></i>
-          <i class="iconFooter fa fa-car" aria-label="car icon"></i>
-          <i
-            class="iconFooter fa fa-exclamation-triangle"
-            aria-label="varsel icon"
-          ></i>
-          <i
-            class="iconFooter fa fa-user-circle-o"
-            aria-label="profile icon"
-          ></i>
-          <!--script for creating the undeline which is added when the icon is clicked-->
-          <script>
-            document
-              .querySelector(".iconFooter")
-              .addEventListener("click", function () {
-                this.classList.toggle("active");
-              });
-          </script>
-        </div>
-      </nav>
     </div>
-
-    <script>
-      var listeVarslingerDefaultContainer = document.getElementById(
-        "listeVarslingerDefaultContainer"
-      );
-      if (listeVarslingerDefaultContainer) {
-        listeVarslingerDefaultContainer.addEventListener("click", function (e) {
-          // Add your code here
-        });
-      }
-
-      var sorterContainer = document.getElementById("sorterContainer");
-      if (sorterContainer) {
-        sorterContainer.addEventListener("click", function (e) {
-          // Add your code here
-        });
-      }
-
-      var filterContainer = document.getElementById("filterContainer");
-      if (filterContainer) {
-        filterContainer.addEventListener("click", function (e) {
-          // Add your code here
-        });
-      }
-
-      var icon = document.getElementById("icon");
-      if (icon) {
-        icon.addEventListener("click", function (e) {
-          // Add your code here
-        });
-      }
-
-      var icon1 = document.getElementById("icon1");
-      if (icon1) {
-        icon1.addEventListener("click", function (e) {
-          // Add your code here
-        });
-      }
-
-      var icon2 = document.getElementById("icon2");
-      if (icon2) {
-        icon2.addEventListener("click", function (e) {
-          window.location.href = "Varslinger.html";
-        });
-      }
-
-      var icon3 = document.getElementById("icon3");
-      if (icon3) {
-        icon3.addEventListener("click", function (e) {
-          // Add your code here
-        });
-      }
-    </script>
+    <nav class="navbar">
+      <div class="navbar-child"></div>
+      <div class="icon-parent">
+        <i
+          class="iconFooter fa-solid fa-location-dot"
+          aria-label="location pin"
+        ></i>
+        <i
+          class="iconFooter fa-solid fa-map-location-dot"
+          aria-label="maps icon"
+        ></i>
+        <i class="iconFooter fa fa-car" aria-label="car icon"></i>
+        <i
+          class="iconFooter fa fa-exclamation-triangle"
+          aria-label="varsel icon"
+        ></i>
+        <i class="iconFooter fa fa-user-circle-o" aria-label="profile icon"></i>
+      </div>
+    </nav>
   </body>
 </html>
