@@ -5,10 +5,16 @@ body {
   font-size: 12px;
 }
 
-h4 {margin: 0;}
-
-/*felles styling for alle sider med navigasjonsbaren
-må fjerne disse styling-ene i alle de individuelle CSS filene slik at alle navigasjonsbarene styles av dette dokumentet */
+h4 {
+  margin: 0;
+}
+p {
+  margin-top: 0;
+}
+h2 {
+  margin-top: 0;
+  font-size: 32px;
+}
 
 .navbar {
   position: fixed;
@@ -53,10 +59,13 @@ må fjerne disse styling-ene i alle de individuelle CSS filene slik at alle navi
   background-color: white;
 }
 
-.iconFooter.fa-user-circle-o {
-  cursor: pointer;
-}
 .iconFooter.fa-car {
   cursor: pointer;
 }
+.iconFooter.fa-user-circle-o {
+  cursor: pointer;
+}
 
+.button:hover {
+  cursor: pointer;
+}
