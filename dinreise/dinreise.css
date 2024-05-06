@@ -1,0 +1,247 @@
+.main-container {
+    overflow: hidden;
+    color: #1a1c74;
+  font-family: Inter;
+  }
+  
+  .main-container,
+  .main-container * {
+    box-sizing: border-box;
+  }
+  
+  input,
+  select,
+  textarea,
+  button {
+    outline: 0;
+  }
+  
+  .main-container {
+    position: relative;
+    width: 390px;
+    height: 844px;
+    margin: 0 auto;
+    font-size: 0px;
+    background: #ffffff;
+    overflow: hidden;
+  }
+  .din-reise-1 {
+    display: block;
+    position: relative;
+    height: 36px;
+    margin: 68px 0 0 122px;
+    color: #1a1c74;
+ 
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: left;
+    white-space: nowrap;
+  }
+  .rectangle {
+    position: relative;
+    width: 326px;
+    height: 102px;
+    margin: 22px 0 0 32px;
+    font-size: 0px;
+    border: 1px solid #383a97;
+    z-index: 7;
+    overflow: visible auto;
+    border-radius: 20px;
+  }
+  .from {
+    display: block;
+    position: relative;
+    height: 22.754px;
+    margin: 23.538px 0 0 31px;
+    color: #8f91e8;
+ 
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 11;
+  }
+  .to {
+    display: block;
+    position: relative;
+    height: 22.754px;
+    margin: 27.677px 0 0 31px;
+    color: #8f91e8;
+ 
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 12;
+  }
+  .icon-outline-switch {
+    position: absolute;
+    width: 10.81%;
+    height: 24.62%;
+    top: 36.71%;
+    left: 83.14%;
+    z-index: 9;
+    overflow: hidden;
+  }
+  .icon {
+    position: relative;
+    width: 28.433px;
+    height: 18.738px;
+    margin: 3.185px 0 0 3.405px;
+    background: url(./assets/images/a717f6cc-7919-4b45-9052-24410bbf2cb5.png)
+      no-repeat center;
+    background-size: 100% 100%;
+    z-index: 10;
+  }
+  .line {
+    position: absolute;
+    width: 100%;
+    height: 0.98%;
+    top: 48.04%;
+    left: -0.31%;
+    background: url(./assets/images/62e25058-b41c-4dc5-a5aa-38a659c2efc3.png)
+      no-repeat center;
+    background-size: 100% 100%;
+    z-index: 8;
+  }
+  .line-2 {
+    position: absolute;
+    width: 390px;
+    height: 2px;
+    top: 120px;
+    left: 0;
+    background: url(./assets/images/c93d1040-12f4-4e12-afa6-cb7bee59e2f2.png)
+      no-repeat center;
+    background-size: cover;
+    z-index: 1;
+  }
+  .frame {
+    position: absolute;
+    width: 390px;
+    height: 525px;
+    top: 251px;
+    left: 0;
+    background: #ffffff;
+    z-index: 2;
+    overflow: hidden;
+  }
+  .kart-bergen {
+    position: absolute;
+    width: 564px;
+    height: 645px;
+    top: 0;
+    left: -37px;
+    z-index: 3;
+  }
+  .image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url(./assets/images/53540b7c9bbf430d07db4511a8615ce5ca4928df.png)
+      no-repeat center;
+    background-size: cover;
+    z-index: 4;
+  }
+  .rectangle-3 {
+    position: absolute;
+    width: 100%;
+    height: 9.36%;
+    top: 90.64%;
+    left: 0;
+    background: #1a1c74;
+    z-index: 14;
+  }
+  .frame-4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    width: 350px;
+    margin: 20px 0 0 20px;
+    z-index: 15;
+  }
+  .icon-5 {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    z-index: 16;
+    overflow: hidden;
+  }
+  .icon-6 {
+    position: relative;
+    width: 29.667px;
+    height: 34.362px;
+    margin: 3.5px 0 0 5.167px;
+    background: url(./assets/images/6f1c2716-1359-41c9-a16e-bef785267706.png)
+      no-repeat center;
+    background-size: 100% 100%;
+    z-index: 17;
+  }
+  .icon-7 {
+    position: relative;
+    width: 32px;
+    height: 31.986px;
+    background: url(./assets/images/2d98b23b-a3ce-4dfa-a914-bdb2e7a9e8b5.png)
+      no-repeat center;
+    background-size: cover;
+    z-index: 18;
+  }
+  .car-icon {
+    position: relative;
+    width: 32px;
+    height: 25.6px;
+    background: url(./assets/images/e67b685b-87d3-4abb-b447-afa8b1b9df1f.png)
+      no-repeat center;
+    background-size: 100% 100%;
+    z-index: 19;
+  }
+  .icon-8 {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    z-index: 20;
+    overflow: hidden;
+  }
+  .icon-9 {
+    position: relative;
+    width: 32.775px;
+    height: 29.667px;
+    margin: 3.5px 0 0 3.613px;
+    background: url(./assets/images/632c8c8a-f90e-43a3-8f0d-f5d3a81c17f8.png)
+      no-repeat center;
+    background-size: 100% 100%;
+    z-index: 21;
+  }
+  .icon-a {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    z-index: 22;
+    overflow: hidden;
+  }
+  .icon-b {
+    position: relative;
+    width: 33px;
+    height: 33px;
+    margin: 3.5px 0 0 3.5px;
+    background: url(./assets/images/95f63222-bf38-4a0b-8d8f-440f5e0867e0.png)
+      no-repeat center;
+    background-size: 100% 100%;
+    z-index: 23;
+  }
+  .vector {
+    position: relative;
+    width: 22px;
+    height: 2px;
+    margin: 5px 0 0 29px;
+    background: url(./assets/images/742bde63-702c-4bd1-88d9-49b680243113.png)
+      no-repeat center;
+    background-size: 100% 100%;
+    z-index: 24;
+  }

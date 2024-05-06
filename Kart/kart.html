@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="karttype.css" type="text/css" />
+    <link rel="stylesheet" href="./global.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="karttype">
+      <img class="maps-icon" alt="" src="Maps.png" />
+
+      <b class="kart">Kart</b>
+      <img class="karttype-child" alt="" src="Line 2.svg" />
+
+      <div class="inactivedefault-input">
+        <div class="email-address">Din posisjon</div>
+      </div>
+      <img class="karttype-item" alt="" src="Vector 1.svg" />
+
+      <img class="karttype-inner" alt="" src="Vector 3.svg" />
+
+      <img class="vector-icon" alt="" src="Vector 2.svg" />
+
+      <img
+        class="iconsolidexclamation"
+        alt=""
+        src="Icon/Solid/exclamation.svg"
+      />
+
+      <img class="snowflake-icon" alt="" src="snowflake.svg" />
+
+      <div class="rectangle-parent">
+        <div class="group-child"></div>
+        <div class="moderat-k-langs">Moderat kø langs Fv561</div>
+        <img class="kart-varsling-icon" alt="" src="KART VARSLING.svg" />
+      </div>
+      <div class="rectangle-group">
+        <div class="group-item"></div>
+        <div class="glatt-og-lite">
+          Glatt og lite saltet langs Svartevikveien
+        </div>
+        <img class="snowflake-icon1" alt="" src="snowflake.svg" />
+      </div>
+      <img
+        class="iconsolidinformation-circle"
+        alt=""
+        src="Icon/Solid/information-circle.svg"
+      />
+
+      <nav class="navbar">
+        <div class="navbar-child"></div>
+        <div class="icon-parent">
+          <i
+            class="iconFooter fa-solid fa-location-dot"
+            aria-label="location pin"
+          ></i>
+          <i
+            class="iconFooter fa-solid fa-map-location-dot"
+            aria-label="maps icon"
+          ></i>
+          <i class="iconFooter fa fa-car" aria-label="car icon"></i>
+          <i
+            class="iconFooter fa fa-exclamation-triangle"
+            aria-label="varsel icon"
+          ></i>
+          <i
+            class="iconFooter fa fa-user-circle-o"
+            aria-label="profile icon"
+          ></i>
+          <!--script for creating the undeline which is added when the icon is clicked-->
+          <!-- <script>
+            document
+              .querySelector(".iconFooter")
+              .addEventListener("click", function () {
+                this.classList.toggle("active");
+              });
+          </script> -->
+        </div>
+      </nav>
+    </div>
+
+    <script>
+      var icon = document.getElementById("icon");
+      if (icon) {
+        icon.addEventListener("click", function (e) {
+          // Add your code here
+        });
+      }
+
+      var icon1 = document.getElementById("icon1");
+      if (icon1) {
+        icon1.addEventListener("click", function (e) {
+          window.location.href = "Karttype.html";
+        });
+      }
+
+      var icon2 = document.getElementById("icon2");
+      if (icon2) {
+        icon2.addEventListener("click", function (e) {
+          // Add your code here
+        });
+      }
+
+      var icon3 = document.getElementById("icon3");
+      if (icon3) {
+        icon3.addEventListener("click", function (e) {
+          // Add your code here
+        });
+      }
+    </script>
+  </body>
+</html>
