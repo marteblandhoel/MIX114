@@ -21,4 +21,14 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = "../hjemside/hjemside.html";
     });
   }
+  var varselIcon = document.querySelector(
+    ".iconFooter.fa.fa-exclamation-triangle"
+  );
+
+  if (varselIcon) {
+    varselIcon.addEventListener("click", function () {
+      console.log("Icon clicked!"); // Debugging line
+      window.location.href = "../varslinger/varslinger.html";
+    });
+  }
 });
