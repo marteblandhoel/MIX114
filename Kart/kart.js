@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     profileIcon.addEventListener("click", function () {
-      window.location.href = "minprofil.html";
+      window.location.href = "../minprofil/minprofil.html";
     });
   }
 });
@@ -29,16 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
     varselIcon.addEventListener("click", function () {
       console.log("Icon clicked!"); // Debugging line
       window.location.href = "../varslinger/varslinger.html";
-    });
-  }
-  var mapsIcon = document.querySelector(
-    ".iconFooter.fa-solid.fa-map-location-dot"
-  );
-
-  if (mapsIcon) {
-    mapsIcon.addEventListener("click", function () {
-      // Redirect to kart.html
-      window.location.href = "../kart/kart.html";
     });
   }
   var locationIcon = document.querySelector(
