@@ -18,131 +18,193 @@
   </head>
   <body>
     <div class="varslinger">
-      <header>
-        <i id="goBackButton" class="iconsolidx fa-solid fa-xmark"></i>
-        <h2 class="overskrift">Varslinger</h2>
-      </header>
+      <h2 class="overskrift">Varslinger</h2>
       <div class="controls">
         <div class="sorter" id="sorterContainer">
-          <label for="sorterContainer">Sorter</label>
-          <input type="radio" id="nærmest" name="nærmest" value="Nærmest" />
-          <input type="radio" id="mestLikt" name="mestLikt" value="Mest Likt">
-          <div class="buttonmediumdefaulticons">
-            <div class="text">
-              <div class="button">Sorter</div>
-            </div>
-            <div class="close-icon"></div>
+          <div class="default">
+              <p>Sorter</p>
+              <i class="fa-solid fa-sort" ></i>
           </div>
-          <img
-            class="iconoutlinesort-descending"
-            alt=""
-            src="Icon/Outline/sort-descending.svg"
-          />
+          <div><hr /></div>
+          <div id="sortMenu" class="sort-menu" style="display: none">
+              <div>
+                <label for="naermest">Nærmest</label>
+                <input type="radio" name="sort" id="naermest" onchange="sortVarslinger('naermest')">
+              </div>
+              <div>
+                <label for="flestLikes">Flest Likes</label>
+                <input type="radio" name="sort" id="flestLikes" onchange="sortVarslinger('flestLikes')">
+              </div>
+              <div>
+                <label for="nyeste">Nyeste</label>
+                <input type="radio" name="sort" id="nyeste" onchange="sortVarslinger('nyeste')">
+              </div>
+          </div>
         </div>
         <div class="filter" id="filterContainer">
-          <select type="checkbox" id="filters">
-            <option value="Psychology"></option>
-            <option value="Computer Science"></option>
-            <option value="Science"></option>
-            <option value="Politics"></option>
-          </select>
-
-          <i class="fa-solid fa-filter"></i>
+          <div class="default">
+            <p>Filter</p>
+            <i class="fa-solid fa-filter" ></i>
+          </div>
+          <div><hr /></div>
+          <div id="filterMenu" class="filter-menu" style="display: none">
+            <div>
+              <label for="veiarbeider">Veiarbeider</label>
+              <input
+                type="checkbox"
+                id="veiarbeider"
+                onchange="filterVarslinger()"
+              />
+            </div>
+            <div>
+              <label for="privatsjåfør">Privatsjåfør</label>
+              <input
+                type="checkbox"
+                id="privatsjåfør"
+                onchange="filterVarslinger()"
+              />
+            </div>
+            <div>
+              <label for="veiansvarlig">Veiansvarlig</label>
+              <input
+                type="checkbox"
+                id="veiansvarlig"
+                onchange="filterVarslinger()"
+              />
+            </div>
+          </div>
         </div>
       </div>
+
       <div class="varslinger-liste">
         <div class="varsling">
-          <div class="headline">
-            <h4 class="notification-title">Glatt vei!</h4>
-            <div class="thumbs">
-              <div class="thumbs-up">
-                <p class="b">11</p>
-                <img class="thumb-icon" alt="" src="thumb-up 1.png" />
+          <div class="topplinje">
+            <p class="underoverskrift">Glatt vei!</p>
+            <div class="tilbakemeling">
+              <div class="up">
+                <p>11</p>
+                <i class="fa-solid fa-thumbs-up"></i>
               </div>
-              <p class="b1">2</p>
-              <img class="thumb-icon" alt="" src="thumb-down 1.png" />
+              <div class="down">
+                <p>2</p>
+                <i class="fa-solid fa-thumbs-down"></i>
+              </div>
             </div>
           </div>
-          <div class="subheading">
-            <i class="time">1 time</i>
-            <div class="message">
-              Obs! Til alle billister: Veiene er ekstremt glatte i dag. Vær
-              forsiktig og tilpass farten etter forholdene. Kjør sikkert!
-            </div>
-          </div>
-          <div class="footer">
-            <p class="privatsjfr">Privatsjåfør</p>
-            <p class="km">2 km Ø</p>
+          <p class="italic">1 time</p>
+          <p class="tekst">
+            Obs! Til alle billister: Veiene er ekstremt glatte i dag. Vær
+            forsiktig og tilpass farten etter forholdene. Kjør sikkert!
+          </p>
+          <div class="hvem_hvor">
+            <p class="hvem">Privatsjåfør</p>
+            <p>2 km Ø</p>
           </div>
         </div>
         <div class="varsling">
-          <div class="headline">
-            <h4 class="elg-observert">Elg Observert!</h4>
-            <div class="headline-child">
-              <div class="group-container">
-                <div class="group">
-                  <p class="b">8</p>
-                  <img class="thumb-up-1-icon1" alt="" src="thumb-up 1.png" />
-                </div>
-                <p class="b3">1</p>
-                <img
-                  class="tilbakemelding-icon1"
-                  alt=""
-                  src="thumb-down 1.png"
-                />
+          <div class="topplinje">
+            <p class="underoverskrift">Veiarbeid i tunnel</p>
+            <div class="tilbakemeling">
+              <div class="up">
+                <p>8</p>
+                <i class="fa-solid fa-thumbs-up"></i>
+              </div>
+              <div class="down">
+                <p>1</p>
+                <i class="fa-solid fa-thumbs-down"></i>
               </div>
             </div>
           </div>
-          <div class="subheading">
-            <i class="time">2 min</i>
-            <div class="obs-til-alle">
-              En elg er observert langs veien i nærheten av E132 vest. Vennligst
-              kjør med forsiktighet og hold øynene åpne. Sikkerhet først!
-            </div>
-          </div>
-          <div class="headline1">
-            <p class="privatsjfr">Privatsjåfør</p>
-            <p class="km">3 km N</p>
+          <p class="italic">5 min</p>
+          <p class="tekst">
+            E16 Trengereidtunnelen i Bergen/Vaksdal, Vestland er det Vegarbeid.
+            Manuell dirigering.Vent på ledebil. Utrykningskjøretøy kan passere.
+          </p>
+          <div class="hvem_hvor">
+            <p class="hvem">Veiarbeider</p>
+            <p>5 km V</p>
           </div>
         </div>
         <div class="varsling">
-          <div class="headline">
-            <h4 class="elg-observert">Veiarbeid</h4>
-            <div class="group-div">
-              <div class="group-parent1">
-                <div class="container">
-                  <p class="b">16</p>
-                  <img class="thumb-up-1-icon2" alt="" src="thumb-up 1.png" />
-                </div>
-                <p class="b5">0</p>
-                <img
-                  class="tilbakemelding-icon2"
-                  alt=""
-                  src="thumb-down 1.png"
-                />
+          <div class="topplinje">
+            <p class="underoverskrift">Elg observert</p>
+            <div class="tilbakemeling">
+              <div class="up">
+                <p>8</p>
+                <i class="fa-solid fa-thumbs-up"></i>
+              </div>
+              <div class="down">
+                <p>1</p>
+                <i class="fa-solid fa-thumbs-down"></i>
               </div>
             </div>
           </div>
-          <div class="subheading">
-            <i class="time">15 min</i>
-            <div class="obs-til-alle">
-              Advarsel til billister: Veiarbeid pågår på E134 mellom Seljord og
-              Åmot. Vær forberedt på nedsatt hastighet og mulige forsinkelser.
-              Følg skilting og vis hensyn til arbeiderne for alles sikkerhet.
-              Takk for tålmodigheten!
+          <p class="italic">2 min</p>
+          <p class="tekst">
+            En elg er observert langs veien i nærheten av E132 vest. Vennligst
+            kjør med forsiktighet og hold øynene åpne. Sikkerhet først!
+          </p>
+          <div class="hvem_hvor">
+            <p class="hvem">Privatsjåfør</p>
+            <p>3 km N</p>
+          </div>
+        </div>
+        <div class="varsling">
+          <div class="topplinje">
+            <p class="underoverskrift">Veiarbeid</p>
+            <div class="tilbakemeling">
+              <div class="up">
+                <p>16</p>
+                <i class="fa-solid fa-thumbs-up"></i>
+              </div>
+              <div class="down">
+                <p>0</p>
+                <i class="fa-solid fa-thumbs-down"></i>
+              </div>
             </div>
           </div>
-          <div class="headline1">
-            <p class="veiarbeider">Veiarbeider</p>
-            <p class="km">8 km Ø</p>
+          <p class="italic">15 min</p>
+          <p class="tekst">
+            Advarsel til billister: Veiarbeid pågår på E134 mellom Seljord og
+            Åmot. Vær forberedt på nedsatt hastighet og mulige forsinkelser.
+            Følg skilting og vis hensyn til arbeiderne for alles sikkerhet. Takk
+            for tålmodigheten!
+          </p>
+          <div class="hvem_hvor">
+            <p class="hvem">Veiarbeider</p>
+            <p>8 km Ø</p>
+          </div>
+        </div>
+        <div class="varsling">
+          <div class="topplinje">
+            <p class="underoverskrift">Ny asvalt</p>
+            <div class="tilbakemeling">
+              <div class="up">
+                <p>11</p>
+                <i class="fa-solid fa-thumbs-up"></i>
+              </div>
+              <div class="down">
+                <p>2</p>
+                <i class="fa-solid fa-thumbs-down"></i>
+              </div>
+            </div>
+          </div>
+          <p class="italic">12 timer</p>
+          <p class="tekst">
+            E39 Selviktunnelen i Bergen, Vestland - E39 Glaskartunnelen i
+            Bergen, Vestland, i retning mot Førde. Vegarbeid, vegen er stengt,
+            gyldig mellom 21:00 og 05:30 mandag, tirsdag, onsdag, torsdag og
+            søndag fra 10.03.2024 til 26.04.2024. Omkjøring er skiltet.
+          </p>
+          <div class="hvem_hvor">
+            <p class="hvem">Veiarbeider</p>
+            <p>3 km S</p>
           </div>
         </div>
       </div>
       <div class="ny_varsling">
         <input type="text" placeholder="Skriv et varsel..." />
         <i class="fa-solid fa-plus"></i>
-      </div>
-    </div>
     <nav class="navbar">
       <div class="icon-parent">
         <i

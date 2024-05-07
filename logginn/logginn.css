@@ -1,165 +1,79 @@
-.logg-inn1 {
-  position: absolute;
-  top: 66px;
-  left: 127px;
-  font-size: 32px;
-  line-height: 36px;
-  color: #1a1c74;
-}
-.logg-inn-child {
-  position: absolute;
-  top: 121px;
-  left: 0px;
-  max-height: 100%;
-  width: 390px;
-}
-.email-address {
-  position: relative;
-  line-height: 20px;
-}
-.inactivedefault-input {
-  position: absolute;
-  top: 381px;
-  left: 52px;
-  border-radius: 20px;
-  border: 1px solid #383b97;
-  box-sizing: border-box;
-  width: 286px;
-  height: 60px;
+.logg-inn {
+  margin: 0 32px;
+  margin-top: 68px;
+  margin-bottom: 20%;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 18px 20px;
-  cursor: pointer;
-}
-.password {
-  position: relative;
-  line-height: 20px;
-  font-weight: 500;
-}
-.eye-closed-icon {
-  font-size: 24px;
-  width: 20px;
-  position: relative;
-  height: 20px;
+  flex-direction: column;
+  gap: 24px;
+  background-color: #fff;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-}
-.inactivedefault-input1 {
-  position: absolute;
-  top: 477px;
-  left: 52px;
-  border-radius: 20px;
-  border: 1px solid #383b97;
+  text-align: left;
+  color: #1a1c74;
   box-sizing: border-box;
-  width: 286px;
-  height: 60px;
+}
+
+.logo {
+  margin-top: 20%;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 18px 15px 18px 20px;
-}
-.glemt-passord {
-  position: absolute;
-  top: 660px;
-  left: 119px;
-  font-size: 12px;
-  line-height: 12px;
-  color: #000;
-  text-align: center;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  width: 153px;
-  height: 14px;
-}
-.button1 {
-  position: relative;
-  line-height: 32px;
-}
-
-.button {
-  position: absolute;
-  top: 570px;
-  left: 96px;
-}
-
-.text {
-  display: inline-block; /* Ensure button takes up space */
-  padding: 16px 40px;
-  /* border: none;  */
-  border-radius: 8px;
-  background-color: #1a1c74; /* Background color */
-  color: #fff; /* Text color */
-  font-size: 24px;
-  cursor: pointer;
-  transition: background-color 0.3s; /* Smooth transition on hover */
-}
-
-.text:hover {
-  background-color: #131451; /* Darker background color on hover */
 }
 
 .varselvenn {
-  position: absolute;
-  top: 18.31%;
-  left: 24.13%;
-  font-size: 38px;
+  font-size: 320%;
   color: #e43700;
   font-family: Play;
+  line-height: 200%;
 }
 
 .varselvenn .venn {
   color: #1a1c74;
 }
 
-.logo-child {
-  position: absolute;
-  height: 100%;
-  width: 24.83%;
-  top: 0%;
-  right: 75.17%;
-  bottom: 0%;
-  left: 0%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
-.fa-car-alt {
-  font-size: 24px; /* Adjust the size as needed */
-  color: #000; /* Adjust the color as needed */
-}
-.logo {
-  position: absolute;
-  top: 238px;
-  left: 53px;
-  width: 286px;
-  height: 71px;
-  /* font-size: 38px; */
-  color: #e43700;
-  font-family: Play;
-}
-.logg-inn {
+.inactivedefault-input {
+  border-radius: 20px;
+  border: 1px solid #383b97;
   width: 100%;
-  position: relative;
-  background-color: #fff;
-  height: 844px;
-  overflow: hidden;
-  text-align: left;
-  font-size: 16px;
-  color: #383b97;
-  font-family: Inter;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2% 5%;
+  cursor: pointer;
   box-sizing: border-box;
 }
 
-#loginForm {
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+.inactivedefault-input1 {
+  border-radius: 20px;
+  border: 1px solid #383b97;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2% 5%;
+}
+.glemt-passord {
+  color: #000;
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.text {
+  align-self: center;
+  width: fit-content;
+  padding: 5% 10% 0;
+  border-radius: 8px;
+  background-color: #1a1c74;
+  color: #fff;
+  font-size: 200%;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+.text:hover {
+  background-color: #131451; /* Darker background color on hover */
 }
 
 .inactivedefault-input,
