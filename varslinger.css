@@ -1,0 +1,152 @@
+.varslinger {
+    margin: 0 32px;
+    margin-top: 68px;
+    margin-bottom: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background-color: #fff;
+    overflow: hidden;
+    text-align: left;
+    line-height: 20px;
+    color: #1a1c74;
+    font-family: Inter;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  header {
+    display: flex;
+    align-items: center; /* Aligns children vertically in the center */
+    justify-content: space-between; /* Distributes space between and around content items */
+    width: 100%; /* Ensures the header takes full width */
+  }
+  
+  .overskrift {
+    flex-grow: 1; /* Allows the h2 to grow and fill the space */
+    text-align: center; /* Ensures text is centered within the growing space */
+    line-height: 1.2;
+    margin-left: -6%;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .filter {
+    width: 32%;
+    padding: 4%;
+    color: #ffffff;
+    background-color: #1a1c74;
+    border-radius: 8px;
+  }
+  
+  .default {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 150%;
+  }
+  
+  hr {margin-top: -10%;
+  border: solid 1px #8F91E8;}
+  
+  .filter-menu {
+    display: flex;
+    background-color: #1a1c74;
+    color: #ffffff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 2%;
+    z-index: 1;
+    
+  }
+  
+  .fa-filter {
+    color: #ffffff;
+  }
+  
+  .varslinger-liste {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25%;
+  }
+  
+  .varsling {
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid black;
+    padding: 5.6%;
+    gap: 2%;
+    color: black;
+    text-align: left;
+  }
+  
+  .topplinje {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: -5%;
+  }
+  
+  .underoverskrift {
+    font-size: 150%;
+    font-weight: bold;
+  }
+  
+  .tilbakemeling {
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+  }
+  
+  .up {
+    color: #11b95c;
+  }
+  
+  .down {
+    color: #e43700;
+  }
+  
+  .up,
+  .down {
+    font-weight: bold;
+    font-size: 133%;
+    display: flex;
+    flex-direction: row;
+    padding: 5%;
+  }
+  
+  .italic {
+    font-style: italic;
+  }
+  
+  .hvem_hvor {
+    color: darkgrey;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .ny_varsling {
+    position: fixed;
+    display: flex;
+    bottom: 10%;
+    border-radius: 15px;
+    border-color: solid #1a1c74;
+    border: solid;
+    color: #1a1c74;
+    background-color: #ffffff;
+    width: 80%;
+    padding: 15px;
+    box-sizing: border-box;
+    justify-content: space-between;
+  }
+  
+  .ny_varsling input {
+    border: none;
+    justify-content: left;
+    box-sizing: border-box;
+  }

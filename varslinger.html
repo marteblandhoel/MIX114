@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="varslinger.css" type="text/css" />
+    <link rel="stylesheet" href="../globals//global.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+    />
+    <script
+      src="https://kit.fontawesome.com/c941d0ea4c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="varslinger.js"></script>
+  </head>
+  <body>
+    <div class="varslinger">
+      <h2 class="overskrift">Varslinger</h2>
+      <div class="controls">
+        <div class="sorter" id="sorterContainer"></div>
+        <div class="filter" id="filterContainer">
+          <div class="default">
+            <p>Filter</p>
+            <i class="fa-solid fa-filter" onclick="toggleFilterMenu()"></i>
+          </div>
+          <div><hr></hr></div>
+          <div id="filterMenu" class="filter-menu" style="display: none">
+            <div>
+              <label for="veiarbeider">Veiarbeider</label>
+              <input
+                type="checkbox"
+                id="veiarbeider"
+                onchange="filterVarslinger()"
+              />
+            </div>
+            <div>
+              <label for="privatsjåfør">Privatsjåfør</label>
+              <input
+                type="checkbox"
+                id="privatsjåfør"
+                onchange="filterVarslinger()"
+              />
+            </div>
+            <div>
+              <label for="veiansvarlig">Veiansvarlig</label>
+              <input
+                type="checkbox"
+                id="veiansvarlig"
+                onchange="filterVarslinger()"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="varslinger-liste">
+        <div class="varsling">
+          <div class="topplinje">
+            <p class="underoverskrift">Glatt vei!</p>
+            <div class="tilbakemeling">
+              <div class="up">
+                <p>11</p>
+                <i class="fa-solid fa-thumbs-up"></i>
+              </div>
+              <div class="down">
+                <p>2</p>
+                <i class="fa-solid fa-thumbs-down"></i>
+              </div>
+            </div>
+          </div>
+          <p class="italic">1 time</p>
+          <p class="tekst">
+            Obs! Til alle billister: Veiene er ekstremt glatte i dag. Vær
+            forsiktig og tilpass farten etter forholdene. Kjør sikkert!
+          </p>
+          <div class="hvem_hvor">
+            <p class="hvem">Privatsjåfør</p>
+            <p>2 km Ø</p>
+          </div>
+        </div>
+        <div class="varsling">
+          <div class="topplinje">
+            <p class="underoverskrift">Veiarbeid i tunnel</p>
+            <div class="tilbakemeling">
+              <div class="up">
+                <p>8</p>
+                <i class="fa-solid fa-thumbs-up"></i>
+              </div>
+              <div class="down">
+                <p>1</p>
+                <i class="fa-solid fa-thumbs-down"></i>
+              </div>
+            </div>
+          </div>
+          <p class="italic">5 min</p>
+          <p class="tekst">
+            E16 Trengereidtunnelen i Bergen/Vaksdal, Vestland er det Vegarbeid.
+            Manuell dirigering.Vent på ledebil. Utrykningskjøretøy kan passere.
+          </p>
+          <div class="hvem_hvor">
+            <p class="hvem">Veiarbeider</p>
+            <p>5 km V</p>
+          </div>
+        </div>
+        <div class="varsling">
+          <div class="topplinje">
+            <p class="underoverskrift">Elg observert</p>
+            <div class="tilbakemeling">
+              <div class="up">
+                <p>8</p>
+                <i class="fa-solid fa-thumbs-up"></i>
+              </div>
+              <div class="down">
+                <p>1</p>
+                <i class="fa-solid fa-thumbs-down"></i>
+              </div>
+            </div>
+          </div>
+          <p class="italic">2 min</p>
+          <p class="tekst">
+            En elg er observert langs veien i nærheten av E132 vest. Vennligst
+            kjør med forsiktighet og hold øynene åpne. Sikkerhet først!
+          </p>
+          <div class="hvem_hvor">
+            <p class="hvem">Privatsjåfør</p>
+            <p>3 km N</p>
+          </div>
+        </div>
+        <div class="varsling">
+          <div class="topplinje">
+            <p class="underoverskrift">Veiarbeid</p>
+            <div class="tilbakemeling">
+              <div class="up">
+                <p>16</p>
+                <i class="fa-solid fa-thumbs-up"></i>
+              </div>
+              <div class="down">
+                <p>0</p>
+                <i class="fa-solid fa-thumbs-down"></i>
+              </div>
+            </div>
+          </div>
+          <p class="italic">15 min</p>
+          <p class="tekst">
+            Advarsel til billister: Veiarbeid pågår på E134 mellom Seljord og
+            Åmot. Vær forberedt på nedsatt hastighet og mulige forsinkelser.
+            Følg skilting og vis hensyn til arbeiderne for alles sikkerhet. Takk
+            for tålmodigheten!
+          </p>
+          <div class="hvem_hvor">
+            <p class="hvem">Veiarbeider</p>
+            <p>8 km Ø</p>
+          </div>
+        </div>
+        <div class="varsling">
+          <div class="topplinje">
+            <p class="underoverskrift">Ny asvalt</p>
+            <div class="tilbakemeling">
+              <div class="up">
+                <p>11</p>
+                <i class="fa-solid fa-thumbs-up"></i>
+              </div>
+              <div class="down">
+                <p>2</p>
+                <i class="fa-solid fa-thumbs-down"></i>
+              </div>
+            </div>
+          </div>
+          <p class="italic">12 timer</p>
+          <p class="tekst">
+            E39 Selviktunnelen i Bergen, Vestland - E39 Glaskartunnelen i
+            Bergen, Vestland, i retning mot Førde. Vegarbeid, vegen er stengt,
+            gyldig mellom 21:00 og 05:30 mandag, tirsdag, onsdag, torsdag og
+            søndag fra 10.03.2024 til 26.04.2024. Omkjøring er skiltet.
+          </p>
+          <div class="hvem_hvor">
+            <p class="hvem">Veiarbeider</p>
+            <p>3 km S</p>
+          </div>
+        </div>
+      </div>
+      <div class="ny_varsling">
+        <input type="text" placeholder="Skriv et varsel..." />
+        <i class="fa-solid fa-plus"></i>
+      </div>
+    </div>
+    <nav class="navbar">
+      <div class="icon-parent">
+        <i
+          class="iconFooter fa-solid fa-location-dot"
+          aria-label="location pin"
+        ></i>
+        <i
+          class="iconFooter fa-solid fa-map-location-dot"
+          aria-label="maps icon"
+        ></i>
+        <i class="iconFooter fa fa-car" aria-label="car icon"></i>
+        <i
+          class="iconFooter fa fa-exclamation-triangle"
+          aria-label="varsel icon"
+        ></i>
+        <i class="iconFooter fa fa-user-circle-o" aria-label="profile icon"></i>
+      </div>
+    </nav>
+  </body>
+  <script>
+    function toggleFilterMenu() {
+  var menu = document.getElementById("filterMenu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+
+function filterVarslinger() {
+  let veiarbeider = document.getElementById("veiarbeider").checked;
+  let privatsjåfør = document.getElementById("privatsjåfør").checked;
+  let veiansvarlig = document.getElementById("veiansvarlig").checked;
+  let varslinger = document.querySelectorAll(".varsling");
+
+  if (!veiarbeider && !privatsjåfør && !veiansvarlig) {
+    // If no filter is selected, show all notifications
+    varslinger.forEach((varsling) => (varsling.style.display = ""));
+    return;
+  }
+
+  varslinger.forEach(function (varsling) {
+    let hvem = varsling.querySelector(".hvem_hvor p").textContent.trim();
+    // Display notifications that match any of the checked categories
+    if (
+      (hvem === "Veiarbeider" && veiarbeider) ||
+      (hvem === "Privatsjåfør" && privatsjåfør) ||
+      (hvem === "Veiansvarlig" && veiansvarlig)
+    ) {
+      varsling.style.display = "";
+    } else {
+      varsling.style.display = "none";
+    }
+  });
+}
+  </script>
+</html>
