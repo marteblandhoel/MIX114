@@ -79,7 +79,8 @@ header {
 .alert {
   margin: 32px 0px;
   gap: 10%;
-  margin-top: -9%;
+  margin-top: 1%;
+  margin-bottom: 99%;
   flex-shrink: 0;
   border-radius: 8px;
   background-color: #1a1c74;
@@ -104,6 +105,9 @@ header {
   font-family: Inter;
   float: left;
   margin: 32px 0px;
+  margin-top: -98%;
+  margin-bottom:102% ;
+
 }
 .component-child {
   position: absolute;
@@ -184,11 +188,11 @@ header {
   bottom: 11.71%;
   left: 3.12%;
 }
-.hent {
+/* .hent {
   position: relative;
   line-height: 14px;
   font-weight: 500;
-}
+} */
 .hent-wrapper {
   position: absolute;
   height: 18.47%;
@@ -235,18 +239,13 @@ header {
   justify-content: center;
   padding: 0px 8px;
 }
-.buttonmediumdefaulticons {
-  position: absolute;
-  top: 0px;
-  left: 0px;
+.sort_button {
+  margin: 32px 0px;
+  display: flex;
   border-radius: 8px;
   background-color: #1a1c74;
   border: 1.5px solid #1a1c74;
   box-sizing: border-box;
-  width: 120px;
-  height: 40px;
-  overflow: hidden;
-  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
