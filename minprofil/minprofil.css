@@ -13,6 +13,7 @@ h2 {
 .min-profil {
   margin: 0 32px;
   margin-top: 68px;
+  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
   gap: 24px;
