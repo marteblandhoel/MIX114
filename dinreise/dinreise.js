@@ -52,3 +52,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  var expandIcon = document.getElementById("expand-icon");
+  var collapseIcon = document.getElementById("collapse-icon");
+
+  expandIcon.addEventListener("click", function () {
+    document.getElementById("shortContainer").style.display = "none";
+    document.getElementById("expandedContainer").style.display = "flex"; // Changed from 'block' to 'flex' if you want to maintain flex properties
+  });
+
+  collapseIcon.addEventListener("click", function () {
+    document.getElementById("expandedContainer").style.display = "none";
+    document.getElementById("shortContainer").style.display = "flex"; // Same here for consistency
+  });
+});

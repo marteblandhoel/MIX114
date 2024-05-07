@@ -9,7 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
     />
     <link rel="stylesheet" href="dinreise.css" type="text/css" />
-    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="../globals//global.css" />
     <script src="dinreise.js"></script>
     <script
       src="https://kit.fontawesome.com/c941d0ea4c.js"
@@ -31,6 +31,116 @@
           <input type="text" placeholder="Til:" />
         </div>
       </div>
+      <div class="framkomstmiddel">
+        <div class="chosen">
+          <i class="fa-solid fa-car"></i>
+          <p>20 min</p>
+        </div>
+        <div class="unactive">
+          <i class="fa-solid fa-bus-simple"></i>
+          <p>35 min</p>
+        </div>
+        <div class="unactive">
+          <i class="fa-solid fa-person-walking"></i>
+          <p>1 time</p>
+        </div>
+      </div>
+      <div id="shortContainer" class="container short">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <div>
+          <p class="tittel">Aktuelle varslinger: 3</p>
+          <p>Se nylige varsler på din rute:</p>
+        </div>
+        <i id="expand-icon" class="fa-solid fa-circle-arrow-down"></i>
+      </div>
+      <div
+        id="expandedContainer"
+        class="container expanded"
+        style="display: none"
+      >
+        <div class="linje1">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <p class="tittel">Aktuelle varslinger: 3</p>
+        </div>
+        <div class="varsling">
+          <div class="topplinje">
+            <p class="underoverskrift">Ny asvalt</p>
+            <div class="tilbakemeling">
+              <div class="up">
+                <p>11</p>
+                <i class="fa-solid fa-thumbs-up"></i>
+              </div>
+              <div class="down">
+                <p>2</p>
+                <i class="fa-solid fa-thumbs-down"></i>
+              </div>
+            </div>
+          </div>
+          <p class="italic">12 timer</p>
+          <p class="tekst">
+            E39 Selviktunnelen i Bergen, Vestland - E39 Glaskartunnelen i
+            Bergen, Vestland, i retning mot Førde. Vegarbeid, vegen er stengt,
+            gyldig mellom 21:00 og 05:30 mandag, tirsdag, onsdag, torsdag og
+            søndag fra 10.03.2024 til 26.04.2024. Omkjøring er skiltet.
+          </p>
+          <div class="hvem_hvor">
+            <p>Veiarbeider</p>
+            <p>555 Møhlenpris</p>
+          </div>
+        </div>
+        <div class="varsling">
+          <div class="topplinje">
+            <p class="underoverskrift">Veiarbeid</p>
+            <div class="tilbakemeling">
+              <div class="up">
+                <p>16</p>
+                <i class="fa-solid fa-thumbs-up"></i>
+              </div>
+              <div class="down">
+                <p>0</p>
+                <i class="fa-solid fa-thumbs-down"></i>
+              </div>
+            </div>
+          </div>
+          <p class="italic">15 min</p>
+          <p class="tekst">
+            Advarsel til billister: Veiarbeid pågår på E134 mellom Seljord og
+            Åmot. Vær forberedt på nedsatt hastighet og mulige forsinkelser.
+            Følg skilting og vis hensyn til arbeiderne for alles sikkerhet. Takk
+            for tålmodigheten!
+          </p>
+          <div class="hvem_hvor">
+            <p>Veiarbeider</p>
+            <p>E39 Danmarksplass</p>
+          </div>
+        </div>
+        <div class="varsling">
+          <div class="topplinje">
+            <p class="underoverskrift">Glatt vei!</p>
+            <div class="tilbakemeling">
+              <div class="up">
+                <p>11</p>
+                <i class="fa-solid fa-thumbs-up"></i>
+              </div>
+              <div class="down">
+                <p>2</p>
+                <i class="fa-solid fa-thumbs-down"></i>
+              </div>
+            </div>
+          </div>
+          <p class="italic">1 time</p>
+          <p class="tekst">
+            Obs! Til alle billister: Veiene er ekstremt glatte i dag. Vær
+            forsiktig og tilpass farten etter forholdene. Kjør sikkert!
+          </p>
+          <div class="hvem_hvor">
+            <p>Privatsjåfør</p>
+            <p>Ved Melkeplassen</p>
+          </div>
+        </div>
+        <i id="collapse-icon" class="fa-solid fa-circle-arrow-up"></i>
+      </div>
+
       <div class="kart"></div>
     </div>
     <nav class="navbar">
@@ -53,4 +163,5 @@
       </div>
     </nav>
   </body>
+  <script src="dinreise.js"></script>
 </html>

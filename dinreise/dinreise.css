@@ -7,15 +7,12 @@
   background-color: #fff;
   overflow: hidden;
   text-align: left;
-  line-height: 20px;
   color: #1a1c74;
-  font-family: Inter;
-  text-align: center;
 }
 .overskrift {
   text-align: center;
-  font-size: 32px;
 }
+
 .velgReise {
   display: flex;
   flex-direction: column;
@@ -23,7 +20,7 @@
   border: 1px solid #1a1c74;
   border-radius: 20px;
   position: relative;
-  padding: 20px;
+  padding: 5%;
   width: 100%;
   box-sizing: border-box;
 }
@@ -31,12 +28,10 @@
 input {
   display: flex;
   width: 100%;
-  margin-bottom: 1%;
   border: none;
   outline: none;
   text-align: left;
   font-size: 16px;
-  padding: 8px;
   width: 100%;
 }
 
@@ -45,6 +40,7 @@ input {
   color: #8f91e8;
   font-size: 16px;
   font-weight: 400;
+  line-height: 20px;
   text-align: left;
   width: 100%;
 }
@@ -65,10 +61,161 @@ input {
 }
 
 .icon {
-  font-size: 24px; /* Adjust icon size as needed */
+  font-size: 24px;
   color: #1a1c74;
   position: absolute;
-  right: 5%; /* Positioned 5% from the right */
+  right: 5%;
+}
+
+.framkomstmiddel {
+  display: flex;
+  flex-direction: row;
+  gap: 4%;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 125%;
+}
+
+.framkomstmiddel i {
+  padding: 0 5px;
+  font-size: 150%;
+}
+
+.framkomstmiddel p {
+  margin-bottom: 0;
+}
+
+.chosen {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding: 1.5% 2%;
+  border: 1.5px solid #1a1c74;
+  border-radius: 8px;
+  background-color: #cfd0ff;
+}
+
+.chosen p {
+  margin-right: 5px;
+}
+
+.unactive {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+#shortContainer {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  background-color: #f49e00;
+  border: 2px solid #1a1c74;
+  border-radius: 8px;
+  padding: 5%;
+  box-sizing: border-box;
+  transition: max-height 0.3s ease;
+}
+
+.tittel {
+  font-size: 150%;
+  font-weight: 500;
+}
+
+.tekst {
+  font-size: 133%;
+  margin-bottom: 0;
+}
+
+#expandedContainer {
+  display: flex;
+  flex-direction: column;
+  max-height: fit-content;
+  margin-bottom: 20%;
+  gap: 16px;
+}
+
+.linje1 {
+  display: flex;
+  flex-direction: row;
+  gap: 9%;
+}
+
+.fa-triangle-exclamation,
+#expand-icon,
+#collapse-icon {
+  font-size: 200%;
+}
+
+.varsling {
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid black;
+  padding: 5.6%;
+  gap: 5.6%;
+  color: black;
+}
+
+.topplinje {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.underoverskrift {
+  font-size: 150%;
+  font-weight: bold;
+}
+
+.tilbakemeling {
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+}
+
+.up {
+  color: #11b95c;
+}
+
+.down {
+  color: #e43700;
+}
+
+.up,
+.down {
+  font-weight: bold;
+  font-size: 133%;
+  display: flex;
+  flex-direction: row;
+  padding: 5%;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.hvem_hvor {
+  color: darkgrey;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 8%;
+}
+
+#expand-icon,
+#collapse-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: right;
+  cursor: pointer;
 }
 
 .kart {
@@ -77,41 +224,4 @@ input {
   height: auto;
   background-color: lightgreen;
   z-index: inherit;
-}
-
-.navbar {
-  position: fixed;
-  top: auto; /* Ensures it sticks to the bottom */
-  left: 0; /* Aligns it to the left edge */
-  right: 0; /* Aligns it to the right edge */
-  bottom: 0; /* Sticks to the bottom of the viewport */
-  width: 100%;
-  height: 79px;
-  color: #ffffff;
-  background-color: #1a1c74;
-  z-index: 100;
-  box-sizing: border-box;
-}
-.icon-parent {
-  display: flex;
-  padding: 24px 20px;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  position: relative;
-  z-index: 1;
-  color: #ffffff;
-}
-
-.iconFooter {
-  font-size: 32px;
-  z-index: 2;
-  overflow: hidden;
-}
-
-.active {
-  text-decoration-line: underline;
-}
-
-.iconFooter {
-  cursor: pointer;
 }
