@@ -1,7 +1,7 @@
 .varslinger {
   margin: 0 32px;
   margin-top: 68px;
-  margin-bottom: 100px;
+  margin-bottom: 20%;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -16,34 +16,35 @@
 
 header {
   display: flex;
-  align-items: center;  /* Aligns children vertically in the center */
+  align-items: center; /* Aligns children vertically in the center */
   justify-content: space-between; /* Distributes space between and around content items */
   width: 100%; /* Ensures the header takes full width */
 }
 
 #goBackButton {
-  margin-left: 10px; /* Adjust as needed to align the icon within the header */
-  font-size: 24px; /* Icon size */
-  justify-content: flex-start;
+  font-size: 3em; /* Icon size */
+  align-self: flex-start; /* Aligns the icon to the top */
 }
 
 .overskrift {
   flex-grow: 1; /* Allows the h2 to grow and fill the space */
   text-align: center; /* Ensures text is centered within the growing space */
   line-height: 1.2;
+  margin-left: -6%;
 }
 
-.line {
-  flex-grow: 1;
+.controls {
+  display: flex;
+  justify-content: space-between;
 }
 
 .varslinger-liste {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
-.liste-varslingerdefault {
+.varsling {
   background-color: #f4f4f4;
   border-radius: 15px;
   padding: 10px;
@@ -71,7 +72,20 @@ header {
   gap: 5px;
 }
 
-.controls {
+.ny_varsling {
+  position: fixed;
   display: flex;
+  bottom: 85px;
+  border-radius: 15px;
+  border-color: solid #1a1c74;
+  border: solid ;
+  color: #1a1c74;
+  background-color: #ffffff;
+  width: 100%;
+  padding: 15px;
   justify-content: space-between;
+  box-sizing: border-box;
 }
+
+.ny_varsling input {border: none;
+justify-content: left;}

@@ -1,9 +1,10 @@
 body {
   line-height: normal;
-  font-size: 14px;
+  font-size: 12px;
   font-family: Inter;
   background-color: #fff;
   color: #1a1c74;
+  box-sizing: border-box;
 }
 
 h4 {
@@ -16,6 +17,8 @@ h2 {
   margin-top: 0;
   font-size: 32px;
 }
+
+
 
 .navbar {
   position: fixed;
