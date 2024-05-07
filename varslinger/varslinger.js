@@ -89,21 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// sorting varsler
-function toggleSortMenu() {
-  var sortMenu = document.getElementById("sortMenu");
-  var filterMenu = document.getElementById("filterMenu");
-
-  // Toggle the sort menu
-  sortMenu.style.display =
-    sortMenu.style.display === "block" ? "none" : "block";
-
-  // Ensure the filter menu is closed when the sort menu is toggled
-  if (sortMenu.style.display === "block") {
-    filterMenu.style.display = "none";
-  }
-}
-
 function sortVarslinger(criteria) {
   var list = document.querySelector(".varslinger-liste");
   var notifications = Array.from(list.children);
@@ -148,6 +133,20 @@ function convertTimeToMinutes(timeStr) {
   return value * 1440; // Convert days to minutes (assuming 'dager')
 }
 
+// sorting varsler
+function toggleSortMenu() {
+  var sortMenu = document.getElementById("sortMenu");
+  var filterMenu = document.getElementById("filterMenu");
+
+  // Toggle the sort menu
+  sortMenu.style.display =
+    sortMenu.style.display === "block" ? "none" : "block";
+
+  // Ensure the filter menu is closed when the sort menu is toggled
+  if (sortMenu.style.display === "block") {
+    filterMenu.style.display = "none";
+  }
+}
 //filtrering for varslene!!
 
 function toggleFilterMenu() {
