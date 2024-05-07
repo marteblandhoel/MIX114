@@ -36,11 +36,6 @@ h2 {
   flex-grow: 1;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-around;
-}
-
 .varslinger-liste {
   display: flex;
   flex-direction: column;
