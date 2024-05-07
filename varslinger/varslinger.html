@@ -22,8 +22,32 @@
         <i id="goBackButton" class="iconsolidx fa-solid fa-xmark"></i>
         <h2 class="overskrift">Varslinger</h2>
       </header>
+      <div class="controls">
+        <div class="sorter" id="sorterContainer">
+          <div class="buttonmediumdefaulticons">
+            <div class="text">
+              <div class="button">Sorter</div>
+            </div>
+            <div class="close-icon"></div>
+          </div>
+          <img
+            class="iconoutlinesort-descending"
+            alt=""
+            src="Icon/Outline/sort-descending.svg"
+          />
+        </div>
+        <div class="filter" id="filterContainer">
+          <div class="buttonmediumdefaulticons1">
+            <div class="text">
+              <div class="button">Filter</div>
+            </div>
+            <div class="close-icon"></div>
+          </div>
+          <img class="iconoutlinefilter" alt="" src="Icon/Outline/filter.svg" />
+        </div>
+      </div>
       <div class="varslinger-liste">
-        <div class="liste-varslingerdefault">
+        <div class="varsling">
           <div class="headline">
             <h4 class="notification-title">Glatt vei!</h4>
             <div class="thumbs">
@@ -47,7 +71,7 @@
             <p class="km">2 km Ø</p>
           </div>
         </div>
-        <div class="liste-varslingerdefault1">
+        <div class="varsling">
           <div class="headline">
             <h4 class="elg-observert">Elg Observert!</h4>
             <div class="headline-child">
@@ -77,7 +101,7 @@
             <p class="km">3 km N</p>
           </div>
         </div>
-        <div class="liste-varslingerdefault2">
+        <div class="varsling">
           <div class="headline">
             <h4 class="elg-observert">Veiarbeid</h4>
             <div class="group-div">
@@ -109,34 +133,10 @@
             <p class="km">8 km Ø</p>
           </div>
         </div>
-        <div class="liste-varslingerdefault3">
-          <div class="skriv-et-varsel">Skriv et varsel...</div>
-          <img class="close-icon" alt="" src="Close.svg" />
-        </div>
       </div>
-      <div class="controls">
-        <div class="sorter" id="sorterContainer">
-          <div class="buttonmediumdefaulticons">
-            <div class="text">
-              <div class="button">Sorter</div>
-            </div>
-            <div class="close-icon"></div>
-          </div>
-          <img
-            class="iconoutlinesort-descending"
-            alt=""
-            src="Icon/Outline/sort-descending.svg"
-          />
-        </div>
-        <div class="filter" id="filterContainer">
-          <div class="buttonmediumdefaulticons1">
-            <div class="text">
-              <div class="button">Filter</div>
-            </div>
-            <div class="close-icon"></div>
-          </div>
-          <img class="iconoutlinefilter" alt="" src="Icon/Outline/filter.svg" />
-        </div>
+      <div class="ny_varsling">
+        <input type="text" placeholder="Skriv et varsel..." />
+        <i class="fa-solid fa-plus"></i>
       </div>
     </div>
     <nav class="navbar">
