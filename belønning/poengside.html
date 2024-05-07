@@ -12,14 +12,11 @@
   </head>
   <body>
     <div class="belnning">
-      <div class="innhold">
+      <div class="header">
         <i id="goBackButton" class="iconsolidx fa-solid fa-xmark"></i>
-        <div class="belnning1">
-          <b>Belønning</b>
-        </div>
-        <img class="belnning-child" alt="" src="Line 2.svg" />
-        <!-- <i class="iconsolidx fa-solid fa-xmark"></i> -->
-
+        <h2 class="overskrift">Belønning</h2>
+      </div>
+      <div class="innhold">
         <div class="alert">
           <i class="fa-regular fa-star" aria-label="poeng icon"></i>
 
@@ -30,7 +27,7 @@
             </div>
           </div>
         </div>
-        <div class="f-minst-5">Få minst 5 UpVotes på en av dine varslinger for å oppnå poeng.</div>
+        <p class="f-minst-5">Få minst 5 UpVotes på en av dine varslinger for å oppnå poeng.</p>
         <div class="sorter" id="sorterContainer">
           <div class="buttonmediumdefaulticons">
             <div class="text1">
@@ -93,50 +90,8 @@
           <i class="iconFooter fa fa-car" aria-label="car icon"></i>
           <i class="iconFooter fa fa-exclamation-triangle" aria-label="varsel icon"></i>
           <i class="iconFooter fa fa-user-circle-o" aria-label="profile icon"></i>
-          <!--script for creating the undeline which is added when the icon is clicked-->
-          <script>
-            document.querySelector(".iconFooter").addEventListener("click", function () {
-              this.classList.toggle("active");
-            });
-          </script>
         </div>
       </nav>
     </div>
-    <script>
-      var settingsPoengContainer = document.getElementById("settingsPoengContainer");
-      if (settingsPoengContainer) {
-        settingsPoengContainer.addEventListener("click", function (e) {
-          // Add your code here
-        });
-      }
-
-      var icon = document.getElementById("icon");
-      if (icon) {
-        icon.addEventListener("click", function (e) {
-          // Add your code here
-        });
-      }
-
-      var icon1 = document.getElementById("icon1");
-      if (icon1) {
-        icon1.addEventListener("click", function (e) {
-          // Add your code here
-        });
-      }
-
-      var icon2 = document.getElementById("icon2");
-      if (icon2) {
-        icon2.addEventListener("click", function (e) {
-          // Add your code here
-        });
-      }
-
-      var icon3 = document.getElementById("icon3");
-      if (icon3) {
-        icon3.addEventListener("click", function (e) {
-          window.location.href = "MinProfil.html";
-        });
-      }
-    </script>
   </body>
 </html>
