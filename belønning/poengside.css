@@ -11,7 +11,7 @@
   line-height: 20px;
   color: #1a1c74;
   font-family: Inter;
-  text-align: center;
+
 }
 
 header {
@@ -79,9 +79,9 @@ header {
 }
 .alert {
   margin: 0px 32px;
-  align-items: flex-start;
+  
   gap: 10%;
-  margin-top: 60%;
+  margin-top: -9%;
   flex-shrink: 0;
   border-radius: 8px;
   background-color: #1a1c74;
@@ -93,13 +93,21 @@ header {
   font-size: 1rem;
   color: #fff;
 }
-.f-minst-5 {
-  position: absolute;
-  top: 202px;
-  left: 31px;
+/* .f-minst-5 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 31px;
   line-height: 17px;
   color: #1a1c74;
-  display: inline-block;
+  width: 100%;
+  border: 1px solid red; /* Temporarily added for debugging */
+  background-color: yellow; /* Temporarily added for debugging 
+} */
+*/
+.txt_undrpoints {
+  font-family: Inter;
+
 }
 .component-child {
   position: absolute;
@@ -108,6 +116,7 @@ header {
   top: 11.73%;
   right: 0%;
   bottom: 20.41%;
+  
   left: 0%;
   border-radius: 8px;
   background-color: #f4f4f4;
