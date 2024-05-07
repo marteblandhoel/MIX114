@@ -20,11 +20,31 @@
     <div class="varslinger">
       <h2 class="overskrift">Varslinger</h2>
       <div class="controls">
-        <div class="sorter" id="sorterContainer"></div>
+        <div class="sorter" id="sorterContainer">
+          <div class="default">
+              <p>Sorter</p>
+              <i class="fa-solid fa-sort" ></i>
+          </div>
+          <div><hr /></div>
+          <div id="sortMenu" class="sort-menu" style="display: none">
+              <div>
+                <label for="naermest">Nærmest</label>
+                <input type="radio" name="sort" id="naermest" onchange="sortVarslinger('naermest')">
+              </div>
+              <div>
+                <label for="flestLikes">Flest Likes</label>
+                <input type="radio" name="sort" id="flestLikes" onchange="sortVarslinger('flestLikes')">
+              </div>
+              <div>
+                <label for="nyeste">Nyeste</label>
+                <input type="radio" name="sort" id="nyeste" onchange="sortVarslinger('nyeste')">
+              </div>
+          </div>
+        </div>
         <div class="filter" id="filterContainer">
           <div class="default">
             <p>Filter</p>
-            <i class="fa-solid fa-filter" onclick="toggleFilterMenu()"></i>
+            <i class="fa-solid fa-filter" ></i>
           </div>
           <div><hr /></div>
           <div id="filterMenu" class="filter-menu" style="display: none">

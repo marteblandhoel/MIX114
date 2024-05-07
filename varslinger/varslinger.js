@@ -43,11 +43,125 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// Wait for the DOM to be fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+  const sortIcon = document.querySelector(".fa-sort");
+  const filterIcon = document.querySelector(".fa-filter");
+  const sortMenu = document.getElementById("sortMenu");
+  const filterMenu = document.getElementById("filterMenu");
+
+  // Toggle sort menu
+  sortIcon.addEventListener("click", function (event) {
+    event.stopPropagation(); // Prevent bubbling to outer elements
+    sortMenu.style.display =
+      sortMenu.style.display === "none" || !sortMenu.style.display
+        ? "block"
+        : "none";
+    filterMenu.style.display = "none"; // Ensure filter menu is closed
+  });
+
+  // Toggle filter menu
+  filterIcon.addEventListener("click", function (event) {
+    event.stopPropagation(); // Prevent bubbling to outer elements
+    filterMenu.style.display =
+      filterMenu.style.display === "none" || !filterMenu.style.display
+        ? "block"
+        : "none";
+    sortMenu.style.display = "none"; // Ensure sort menu is closed
+  });
+
+  // Click anywhere on the window to close both menus if open
+  window.addEventListener("click", function () {
+    if (sortMenu.style.display === "block") {
+      sortMenu.style.display = "none";
+    }
+    if (filterMenu.style.display === "block") {
+      filterMenu.style.display = "none";
+    }
+  });
+
+  // Prevent clicks within the menus from closing them
+  sortMenu.addEventListener("click", function (event) {
+    event.stopPropagation();
+  });
+  filterMenu.addEventListener("click", function (event) {
+    event.stopPropagation();
+  });
+});
+
+// sorting varsler
+function toggleSortMenu() {
+  var sortMenu = document.getElementById("sortMenu");
+  var filterMenu = document.getElementById("filterMenu");
+
+  // Toggle the sort menu
+  sortMenu.style.display =
+    sortMenu.style.display === "block" ? "none" : "block";
+
+  // Ensure the filter menu is closed when the sort menu is toggled
+  if (sortMenu.style.display === "block") {
+    filterMenu.style.display = "none";
+  }
+}
+
+function sortVarslinger(criteria) {
+  var list = document.querySelector(".varslinger-liste");
+  var notifications = Array.from(list.children);
+
+  notifications.sort(function (a, b) {
+    switch (criteria) {
+      case "naermest":
+        return parseDistance(a) - parseDistance(b);
+
+      case "flestLikes":
+        var likesA = parseInt(a.querySelector(".up p").textContent);
+        var likesB = parseInt(b.querySelector(".up p").textContent);
+        return likesB - likesA;
+
+      case "nyeste":
+        var timeA = convertTimeToMinutes(
+          a.querySelector(".italic").textContent
+        );
+        var timeB = convertTimeToMinutes(
+          b.querySelector(".italic").textContent
+        );
+        return timeA - timeB;
+    }
+  });
+
+  notifications.forEach(function (node) {
+    list.appendChild(node);
+  });
+}
+
+function parseDistance(varsling) {
+  var distanceText = varsling.querySelector(".hvem_hvor").textContent;
+  var matches = distanceText.match(/(\d+)\s*km/);
+  return matches ? parseInt(matches[1]) : 99999; // Return a large number if no match is found
+}
+
+function convertTimeToMinutes(timeStr) {
+  var [value, unit] = timeStr.split(" ");
+  value = parseInt(value);
+  if (unit.startsWith("min")) return value;
+  if (unit.startsWith("time")) return value * 60; // Convert hours to minutes
+  return value * 1440; // Convert days to minutes (assuming 'dager')
+}
+
 //filtrering for varslene!!
 
 function toggleFilterMenu() {
-  var menu = document.getElementById("filterMenu");
-  menu.style.display = menu.style.display === "block" ? "none" : "block";
+  var sortMenu = document.getElementById("sortMenu");
+  var filterMenu = document.getElementById("filterMenu");
+
+  // Toggle the filter menu
+  filterMenu.style.display =
+    filterMenu.style.display === "block" ? "none" : "block";
+
+  // Ensure the sort menu is closed when the filter menu is toggled
+  if (filterMenu.style.display === "block") {
+    sortMenu.style.display = "none";
+  }
 }
 
 function filterVarslinger() {
@@ -75,4 +189,6 @@ function filterVarslinger() {
       varsling.style.display = "none";
     }
   });
+
+  sortMenu.style.display = "none";
 }
