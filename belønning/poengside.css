@@ -11,7 +11,7 @@
   line-height: 20px;
   color: #1a1c74;
   font-family: Inter;
-  text-align: center;
+
 }
 
 header {
@@ -79,9 +79,9 @@ header {
 }
 .alert {
   margin: 0px 32px;
-  align-items: flex-start;
+  
   gap: 10%;
-  margin-top: 60%;
+  margin-top: -9%;
   flex-shrink: 0;
   border-radius: 8px;
   background-color: #1a1c74;
