@@ -154,6 +154,7 @@
   font-size: 16px;
   color: #383b97;
   font-family: Inter;
+  box-sizing: border-box;
 }
 
 #loginForm {
@@ -187,9 +188,4 @@
 .inactivedefault-input input:focus::placeholder,
 .inactivedefault-input1 input:focus::placeholder {
   color: transparent; /* Hide placeholder text on focus */
-}
-
-.eye-closed-icon {
-  font-size: 24px; /* Adjust icon size */
-  color: #999; /* Adjust icon color */
 }
