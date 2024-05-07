@@ -38,6 +38,15 @@ header {
   justify-content: space-between;
 }
 
+.filter {
+  width: fit-content;
+  color: #ffffff;
+  background-color: #1a1c74;
+}
+.fa-filter {
+  color: #ffffff;
+}
+
 .varslinger-liste {
   display: flex;
   flex-direction: column;
@@ -78,7 +87,7 @@ header {
   bottom: 85px;
   border-radius: 15px;
   border-color: solid #1a1c74;
-  border: solid ;
+  border: solid;
   color: #1a1c74;
   background-color: #ffffff;
   width: 100%;
@@ -87,5 +96,7 @@ header {
   box-sizing: border-box;
 }
 
-.ny_varsling input {border: none;
-justify-content: left;}
+.ny_varsling input {
+  border: none;
+  justify-content: left;
+}

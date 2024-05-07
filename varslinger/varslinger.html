@@ -24,6 +24,9 @@
       </header>
       <div class="controls">
         <div class="sorter" id="sorterContainer">
+          <label for="sorterContainer">Sorter</label>
+          <input type="radio" id="nærmest" name="nærmest" value="Nærmest" />
+          <input type="radio" id="mestLikt" name="mestLikt" value="Mest Likt">
           <div class="buttonmediumdefaulticons">
             <div class="text">
               <div class="button">Sorter</div>
@@ -37,13 +40,14 @@
           />
         </div>
         <div class="filter" id="filterContainer">
-          <div class="buttonmediumdefaulticons1">
-            <div class="text">
-              <div class="button">Filter</div>
-            </div>
-            <div class="close-icon"></div>
-          </div>
-          <img class="iconoutlinefilter" alt="" src="Icon/Outline/filter.svg" />
+          <select type="checkbox" id="filters">
+            <option value="Psychology"></option>
+            <option value="Computer Science"></option>
+            <option value="Science"></option>
+            <option value="Politics"></option>
+          </select>
+
+          <i class="fa-solid fa-filter"></i>
         </div>
       </div>
       <div class="varslinger-liste">
