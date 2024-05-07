@@ -24,7 +24,7 @@
         <div class="dropdown">
           <label for="dropdownMenu">Tidligere ulykker på din reiserute:</label>
           <select id="dropdownMenu">
-            <option value="1">1 År</option>
+            <option value="">1 År</option>
             <option value="5" selected>5 År</option>
             <option value="10">10 År</option>
             <option value="20">20 År</option>
@@ -47,190 +47,150 @@
       </div>
     </div>
     <script>
-      // Define the URL of the API
-      const apiUrl = "https://api.npoint.io/c4261b1dc876f9137329";
-
-      // Use the fetch function to request data from the API
-      fetch(apiUrl)
-        .then((response) => {
-          // Check if the request was successful
-          if (!response.ok) {
-            // If the response is not successful, throw an error with the status
-            throw new Error(
-              "Network response was not ok, status: " + response.status
-            );
-          }
-          // If successful, parse the JSON data from the response
-          return response.json();
-        })
-        .then((data) => {
-          // Log the parsed data to the console
-          console.log(data);
-        })
-        .catch((error) => {
-          // Log any errors that occur during the fetch or parsing process
-          console.log("Error fetching data: ", error);
-        });
-
-      Dashboards.board(
-        "container",
-        {
-          components: [
-            {
-              renderTo: "dashboard-kpi-1",
-              type: "KPI",
-              title: "Alvolige ulykker",
-              subtitle: "antall alvolige ulikker siste x år",
-              linkedValueTo: {
-                enabled: false,
-              },
-            },
-            {
-              renderTo: "dashboard-kpi-2",
-              type: "KPI",
-              title: "Dødsfall",
-              subtitle: "antall dødsfall siste x år",
-              linkedValueTo: {
-                enabled: false,
-              },
-            },
-          ],
-        },
-        true
-      ).then((dashboard) => {
-        const alvorligUlykkerKPI = dashboard.mountedComponents[0].component,
-          dodeligeYlykkerKPI = dashboard.mountedComponents[1].component;
-
-        alvorligUlykkerKPI.setValue(24); // Setting the value for alvorligUlykkerKPI
-        dodeligeYlykkerKPI.setValue(12); // Setting the value for dodeligeYlykkerKPI
-      });
-
-      Highcharts.chart("dashboard-kpi-4", {
-        chart: {
-          type: "pie",
-        },
-        title: {
-          text: "Ulykkestype",
-        },
-        tooltip: {
-          // Changed to show absolute values
-          pointFormat: "{series.name}: <b>{point.y}</b>",
-        },
-        subtitle: {
-          text: "Source: x",
-        },
-        plotOptions: {
-          pie: {
-            allowPointSelect: true,
-            cursor: "pointer",
-            dataLabels: {
-              enabled: true,
-              format: "<b>{point.name}</b>: {point.y}", // Display absolute values
-            },
-          },
-        },
-        series: [
-          {
-            name: "Antall",
-            colorByPoint: true,
-            data: [
-              {
-                name: "Frontkollisjon",
-                y: 55, // Assuming whole numbers are already provided
-              },
-              {
-                name: "Utforkjøring",
-                sliced: true,
-                selected: true,
-                y: 27, // Rounded up for whole number
-              },
-              {
-                name: "Påkjørsel av fotgjenger",
-                y: 1,
-              },
-              {
-                name: "Påkjøring bakfra",
-                y: 16, // Rounded up for whole number
-              },
-              {
-                name: "Andre ulykker",
-                y: 2, // Rounded up for whole number
-              },
-            ],
-          },
-        ],
-      });
-
-      // Data retrieved from:
-      // - https://en.as.com/soccer/which-teams-have-won-the-premier-league-the-most-times-n/
-      // - https://www.statista.com/statistics/383679/fa-cup-wins-by-team/
-      // - https://www.uefa.com/uefachampionsleague/history/winners/
-      Highcharts.chart("dashboard-chart-1", {
-        chart: {
-          type: "column",
-        },
-        title: {
-          text: "Alder og kjønn på ulykkesutsatte",
-          align: "left",
-        },
-        xAxis: {
-          categories: ["0-20 År", "21-40 År", "41-60 År", "61+ År"],
-        },
-        yAxis: {
-          min: 0,
-          title: {
-            text: "Count trophies",
-          },
-          stackLabels: {
-            enabled: true,
-          },
-        },
-        legend: {
-          align: "left",
-          x: 70,
-          verticalAlign: "top",
-          y: 70,
-          floating: true,
-          backgroundColor:
-            Highcharts.defaultOptions.legend.backgroundColor || "white",
-          borderColor: "#CCC",
-          borderWidth: 1,
-          shadow: false,
-        },
-        tooltip: {
-          headerFormat: "<b>{point.x}</b><br/>",
-          pointFormat: "{series.name}: {point.y}<br/>Total: {point.stackTotal}",
-        },
-        plotOptions: {
-          column: {
-            stacking: "normal",
-            dataLabels: {
-              enabled: true,
-            },
-          },
-        },
-        series: [
-          {
-            name: "Kvinne",
-            data: [200, 300, 400, 500],
-            color: "red",
-          },
-          {
-            name: "Mann",
-            data: [100, 2, 4, 6],
-            color: "green",
-          },
-        ],
-      });
-      // JavaScript to handle dropdown changes and store the chosen option
       document.addEventListener("DOMContentLoaded", function () {
-        var selectedOption = "5"; // Variable to store the selected option value
+        var selectedOption = "5"; // Default value to initialize the dashboard
         var dropdownMenu = document.getElementById("dropdownMenu");
 
+        // Event listener for dropdown changes
         dropdownMenu.addEventListener("change", function () {
           selectedOption = this.value; // Update the variable with the new selected option
-          console.log("Selected option:", selectedOption); // Optional: log it to the console
+          fetchDataAndUpdateDashboard(); // Fetch and update the dashboard with the new selection
         });
+
+        // API URL
+        const apiUrl = "https://api.npoint.io/c4261b1dc876f9137329";
+
+        // Function to fetch data and update the dashboard
+        function fetchDataAndUpdateDashboard() {
+          fetch(apiUrl)
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error(
+                  "Network response was not ok, status: " + response.status
+                );
+              }
+              return response.json(); // Parse JSON data
+            })
+            .then((data) => {
+              updateDashboardComponents(data); // Update dashboard components with the fetched data
+            })
+            .catch((error) => {
+              console.error("Error fetching data: ", error);
+            });
+        }
+
+        // Function to update dashboard components based on fetched data
+        function updateDashboardComponents(data) {
+          const ulykkeData = data.data[0]["Siste" + selectedOption + "År"];
+          const ulykke = ulykkeData["AntallAlvorligeUlykker"];
+          const dodelig = ulykkeData["AntallDøde"];
+          const kpi1 = document.getElementById("dashboard-kpi-1");
+          const kpi2 = document.getElementById("dashboard-kpi-2");
+          if (kpi1) {
+            kpi1.innerHTML = "";
+          }
+          if (kpi2) {
+            kpi2.innerHTML = "";
+          }
+
+          // Assuming the dashboard system allows updates like this
+          Dashboards.board(
+            "container",
+            {
+              components: [
+                {
+                  renderTo: "dashboard-kpi-1",
+                  type: "KPI",
+                  title: "Alvorlige ulykker",
+                  subtitle:
+                    "antall alvorlige ulykker siste " + selectedOption + " år",
+                  value: ulykke, // Set the dynamic value here
+                },
+                {
+                  renderTo: "dashboard-kpi-2",
+                  type: "KPI",
+                  title: "Dødsfall",
+                  subtitle: "antall dødsfall siste " + selectedOption + " år",
+                  value: dodelig, // Set the dynamic value here
+                },
+              ],
+            },
+            true
+          ).then((dashboard) => {
+            // Here you might access and use dashboard object methods if additional interactions are needed
+          });
+
+          // Update Highcharts for the Pie chart
+          Highcharts.chart("dashboard-kpi-4", {
+            chart: {
+              type: "pie",
+            },
+            title: {
+              text: "Ulykkestype",
+            },
+            series: [
+              {
+                name: "Antall",
+                data: [
+                  {
+                    name: "Frontkollisjon",
+                    y: ulykkeData.UlykkeType.Frontkollisjon,
+                  },
+                  {
+                    name: "Påkjørsel av fotgjenger",
+                    y: ulykkeData.UlykkeType.PåkjørtFotgjenger,
+                  },
+                  {
+                    name: "Påkjøring bakfra",
+                    y: ulykkeData.UlykkeType.PåkjøringBakfra,
+                  },
+                  {
+                    name: "Andre ulykker",
+                    y: ulykkeData.UlykkeType.AndreUlykker,
+                  },
+                ],
+              },
+            ],
+          });
+
+          // Update Highcharts for the Column chart
+          Highcharts.chart("dashboard-chart-1", {
+            chart: {
+              type: "column",
+            },
+            title: {
+              text: "Alder og kjønn på ulykkesutsatte",
+            },
+            xAxis: {
+              categories: ["0-20 År", "21-40 År", "41-60 År", "61+ År"],
+            },
+            series: [
+              {
+                name: "Kvinne",
+                data: [
+                  ulykkeData.AlderUtsatte["0-20"].Kvinne,
+                  ulykkeData.AlderUtsatte["21-40"].Kvinne,
+                  ulykkeData.AlderUtsatte["41-60"].Kvinne,
+                  ulykkeData.AlderUtsatte["61+"].Kvinne,
+                ],
+                color: "pink",
+              },
+              {
+                name: "Mann",
+                data: [
+                  ulykkeData.AlderUtsatte["0-20"].Mann,
+                  ulykkeData.AlderUtsatte["21-40"].Mann,
+                  ulykkeData.AlderUtsatte["41-60"].Mann,
+                  ulykkeData.AlderUtsatte["61+"].Mann,
+                ],
+                color: "blue",
+              },
+            ],
+          });
+        }
+
+        // Initial call to populate the dashboard
+        fetchDataAndUpdateDashboard();
       });
     </script>
     <nav class="navbar">
