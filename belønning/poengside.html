@@ -7,23 +7,18 @@
     <link rel="stylesheet" href="poengside.css" type="text/css" />
     <script src="poengside.js"></script>
 
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
-    />
-    <script
-      src="https://kit.fontawesome.com/c941d0ea4c.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" />
+    <script src="https://kit.fontawesome.com/c941d0ea4c.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="belnning">
-      <div class="innhold"> 
+      <div class="innhold">
         <i id="goBackButton" class="iconsolidx fa-solid fa-xmark"></i>
-        <b class="belnning1">Belønning</b>
+        <div class="belnning1">
+          <b>Belønning</b>
+        </div>
         <img class="belnning-child" alt="" src="Line 2.svg" />
         <!-- <i class="iconsolidx fa-solid fa-xmark"></i> -->
-      
 
         <div class="alert">
           <i class="fa-regular fa-star" aria-label="poeng icon"></i>
@@ -35,18 +30,13 @@
             </div>
           </div>
         </div>
-        <div class="f-minst-5">
-          Få minst 5 UpVotes på en av dine varslinger for å oppnå poeng.
-        </div>
+        <div class="f-minst-5">Få minst 5 UpVotes på en av dine varslinger for å oppnå poeng.</div>
         <div class="sorter" id="sorterContainer">
           <div class="buttonmediumdefaulticons">
             <div class="text1">
               <div class="hent">Sorter</div>
             </div>
-            <i
-              class="fas fa-sort-amount-down-alt"
-              aria-label="sort descending icon"
-            ></i>
+            <i class="fas fa-sort-amount-down-alt" aria-label="sort descending icon"></i>
           </div>
         </div>
 
@@ -54,9 +44,7 @@
           <div class="component-child"></div>
           <img class="premierBilde" alt="" src="spyleveske.png" />
 
-          <div class="for-en-god">
-            For en god deal! Her får du 20% på spylervæske hos Biltema!
-          </div>
+          <div class="for-en-god">For en god deal! Her får du 20% på spylervæske hos Biltema!</div>
           <b class="poeng">40 POENG</b>
           <b class="p-spylervske">20% på spylervæske!</b>
           <div class="du-mangler-15-container">
@@ -71,14 +59,10 @@
             <div class="component-child"></div>
             <img class="premierBilde" alt="" src="softis.png" />
 
-            <div class="for-en-god">
-              Esso gir deg 2 STORE softis for kun 55 kr! Stopp innom og kjøp!
-            </div>
+            <div class="for-en-god">Esso gir deg 2 STORE softis for kun 55 kr! Stopp innom og kjøp!</div>
             <b class="poeng">20 POENG</b>
             <b class="p-spylervske">2 softis for 55 kr!</b>
-            <div class="du-mangler-15-container">
-              Du har nok poeng til denne belønningen!
-            </div>
+            <div class="du-mangler-15-container">Du har nok poeng til denne belønningen!</div>
           </div>
           <div class="hent-wrapper">
             <div class="hent">Hent</div>
@@ -89,9 +73,7 @@
             <div class="component-child"></div>
             <img class="premierBilde" alt="" src="kaffekopp.png" />
 
-            <div class="for-en-god">
-              Skaff deg en GRATIS kaffekopp hos Circkle K!
-            </div>
+            <div class="for-en-god">Skaff deg en GRATIS kaffekopp hos Circkle K!</div>
             <b class="poeng">30 POENG</b>
             <b class="p-spylervske">Gratis kaffekopp!</b>
             <div class="du-mangler-15-container">
@@ -106,38 +88,22 @@
       <nav class="navbar">
         <div class="navbar-child"></div>
         <div class="icon-parent">
-          <i
-            class="iconFooter fa-solid fa-location-dot"
-            aria-label="location pin"
-          ></i>
-          <i
-            class="iconFooter fa-solid fa-map-location-dot"
-            aria-label="maps icon"
-          ></i>
+          <i class="iconFooter fa-solid fa-location-dot" aria-label="location pin"></i>
+          <i class="iconFooter fa-solid fa-map-location-dot" aria-label="maps icon"></i>
           <i class="iconFooter fa fa-car" aria-label="car icon"></i>
-          <i
-            class="iconFooter fa fa-exclamation-triangle"
-            aria-label="varsel icon"
-          ></i>
-          <i
-            class="iconFooter fa fa-user-circle-o"
-            aria-label="profile icon"
-          ></i>
+          <i class="iconFooter fa fa-exclamation-triangle" aria-label="varsel icon"></i>
+          <i class="iconFooter fa fa-user-circle-o" aria-label="profile icon"></i>
           <!--script for creating the undeline which is added when the icon is clicked-->
           <script>
-            document
-              .querySelector(".iconFooter")
-              .addEventListener("click", function () {
-                this.classList.toggle("active");
-              });
+            document.querySelector(".iconFooter").addEventListener("click", function () {
+              this.classList.toggle("active");
+            });
           </script>
         </div>
       </nav>
     </div>
     <script>
-      var settingsPoengContainer = document.getElementById(
-        "settingsPoengContainer"
-      );
+      var settingsPoengContainer = document.getElementById("settingsPoengContainer");
       if (settingsPoengContainer) {
         settingsPoengContainer.addEventListener("click", function (e) {
           // Add your code here
