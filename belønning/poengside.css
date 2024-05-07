@@ -6,7 +6,9 @@
 .belnning1 {
   display: flex;
   display: inline-block;
-  margin: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   font-size: 32px;
   line-height: 36px;
   color: #1a1c74;
@@ -68,18 +70,17 @@
   justify-content: flex-start;
 }
 .alert {
-  position: relative;
-  top: 140px;
+  display: flex;
   margin: 0 32px;
+  margin-top: 70px;
   border-radius: 8px;
   background-color: #1a1c74;
   height: 53px;
   overflow: hidden;
-  display: flex;
-  flex-direction: row;
+  flex-direction:row;
   padding: 16px;
   box-sizing: border-box;
-  gap: 16px;
+  gap: 6px;
   font-size: 16px;
   color: #fff;
 }
