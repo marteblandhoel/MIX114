@@ -1,28 +1,3 @@
-.main-container {
-  overflow: hidden;
-}
-
-.main-container,
-.main-container * {
-  box-sizing: border-box;
-}
-
-input,
-select,
-textarea,
-button {
-  outline: 0;
-}
-
-.main-container {
-  position: relative;
-  width: 390px;
-  height: 844px;
-  margin: 0 auto;
-  font-size: 0px;
-  background: #ffffff;
-  overflow: hidden;
-}
 .accident-statistics {
   display: block;
   position: relative;
@@ -36,34 +11,8 @@ button {
   text-align: left;
   white-space: nowrap;
 }
-.image {
-  position: relative;
-  width: 345px;
-  height: 561.959px;
-  margin: 77px 0 0 22px;
-  background: url(./assets/images/363765af-4653-45ca-bd5e-079883e9f583.png)
-    no-repeat center;
-  background-size: cover;
-  z-index: 2;
-}
-.rectangle {
-  position: relative;
-  width: 390px;
-  height: 79px;
-  margin: 23.041px 0 0 0;
-  background: #1a1c74;
-  z-index: 9;
-  overflow: visible auto;
-}
-.frame {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  position: relative;
-  width: 350px;
-  margin: 8px 0 0 20px;
-  z-index: 10;
+#statesikk_top {
+  margin-bottom: 30px;
 }
 .icon {
   position: relative;
@@ -92,8 +41,7 @@ button {
   z-index: 13;
 }
 
-
-.rectangle-7 {
+.antall_år {
   position: absolute;
   width: 55px;
   height: 28px;
@@ -102,6 +50,10 @@ button {
   background: #1a1c74;
   z-index: 5;
   border-radius: 10px;
+  color: white;
+}
+.antall_år:hover {
+  background: gray;
 }
 .span {
   display: flex;
@@ -147,4 +99,238 @@ button {
   text-align: left;
   white-space: nowrap;
   z-index: 3;
+}
+@import url("https://code.highcharts.com/css/highcharts.css");
+
+body {
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+}
+
+:root,
+.highcharts-light {
+  /* Colors for data series and points */
+  --highcharts-color-0: #69a285;
+  --highcharts-color-1: #ffbb07;
+  --highcharts-color-2: #727e8d;
+  --highcharts-color-3: #fc6556;
+  --highcharts-color-5: #404040;
+  --highcharts-neutral-color-100: #000;
+  --highcharts-neutral-color-5: #f2f2f2;
+  --highcharts-neutral-color-3: #f7f7f7;
+  --highcharts-neutral-color-0: #fff;
+
+  /* General */
+  --highcharts-background-color: #fff;
+
+  /* Extra colors */
+  --gray: #ccc;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Colors for data series and points */
+    --highcharts-color-0: #93cbae;
+    --highcharts-color-5: #c4c4c4;
+
+    /* Extra colors */
+    --gray: #333;
+
+    /* UI colors */
+    --highcharts-background-color: #333;
+    --highcharts-neutral-color-100: rgb(255, 255, 255);
+    --highcharts-neutral-color-5: rgb(61, 61, 61);
+    --highcharts-neutral-color-3: rgb(57, 57, 57);
+    --highcharts-neutral-color-0: rgb(0, 0, 0);
+  }
+}
+
+#container {
+  background-color: var(--highcharts-neutral-color-5);
+  padding: 20px 10px;
+  position: relative;
+}
+
+.row {
+  display: flex;
+  position: relative;
+}
+
+.cell {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  position: relative;
+  min-width: 20px;
+  height: 300px;
+}
+
+.highcharts-dashboards-component {
+  color: var(--highcharts-neutral-color-100);
+}
+
+.highcharts-dashboards-component-title {
+  font-size: 1.2em;
+  text-align: left;
+  margin: 1em;
+}
+
+.cell > .highcharts-dashboards-component {
+  position: relative;
+  background-color: var(--highcharts-background-color);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  margin: 5px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.dashboard-header .dashboard-title {
+  padding-top: 20px;
+}
+
+.dashboard-header .dashboard-title,
+.dashboard-header .dashboard-description {
+  background-color: var(--highcharts-neutral-color-5);
+  color: var(--highcharts-neutral-color-100);
+  margin: 0;
+  padding-left: 20px;
+}
+
+.highcharts-dashboards-component-kpi-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.highcharts-dashboards-component.highcharts-dashboards-component-kpi-value {
+  font-size: 4em;
+  margin-top: 40px;
+}
+
+.highcharts-dashboards-component-kpi {
+  text-align: center;
+}
+
+.highcharts-dashboards-component-kpi-content
+  .highcharts-dashboards-component-subtitle {
+  font-size: 1.4em;
+}
+
+#dashboard-kpi-3
+  .highcharts-dashboards-component
+  .highcharts-point.highcharts-color-0 {
+  fill: var(--highcharts-neutral-color-100);
+}
+
+.highcharts-dashboards-component.highcharts-dashboards-component-kpi,
+.highcharts-dashboards-component.highcharts-dashboards-component-highcharts {
+  border-radius: 10px;
+}
+
+.highcharts-dashboards-component.highcharts-dashboards-component-kpi-chart-container
+  .highcharts-background {
+  fill: transparent;
+}
+
+#dashboard-chart-1 .highcharts-point.highcharts-color-0,
+#dashboard-chart-2 .highcharts-color-0 {
+  fill: var(--highcharts-color-5);
+  stroke: var(--highcharts-color-5);
+}
+
+#dashboard-chart-2 .highcharts-grid-axis .highcharts-tick,
+#dashboard-chart-2 .highcharts-axis-line {
+  stroke-width: 0;
+}
+
+#dashboard-chart-2 .highcharts-data-label text {
+  fill: var(--highcharts-neutral-color-0);
+}
+
+.highcharts-plot-line {
+  stroke-width: 3px;
+  stroke: #f00;
+}
+
+.highcharts-plot-line-label {
+  fill: var(--highcharts-neutral-color-100);
+  font-size: 1em;
+  font-weight: bold;
+}
+
+#dashboard-kpi-1,
+#dashboard-kpi-2,
+#dashboard-kpi-4,
+#current-sprint-kpi {
+  flex: 1 1 50%;
+  height: 300px;
+}
+
+#dashboard-chart-1,
+#dashboard-chart-2,
+#dashboard-chart-cumulative {
+  height: 350px;
+}
+
+#dashboard-chart-1 {
+  flex: 1 1 20%;
+}
+
+#dashboard-chart-2 {
+  flex: 1 1 60%;
+}
+
+#dashboard-chart-cumulative {
+  flex: 1 1 100%;
+}
+
+/* LARGE */
+@media (max-width: 1200px) {
+  #dashboard-kpi-1,
+  #dashboard-kpi-2,
+  #current-sprint-kpi,
+  #dashboard-kpi-4 {
+    flex: 1 1 50%;
+  }
+
+  #dashboard-chart-1 {
+    flex: 1 1 20%;
+  }
+
+  #dashboard-chart-2 {
+    flex: 1 1 60%;
+  }
+}
+
+/* MEDIUM */
+@media (max-width: 992px) {
+  .row {
+    flex-direction: column;
+  }
+
+  #current-sprint-kpi {
+    height: auto;
+  }
+
+  #current-sprint.row {
+    flex-direction: row;
+  }
+
+  #dashboard-kpi-1,
+  #dashboard-kpi-2 {
+    flex: 1 1 50%;
+  }
+
+  #dashboard-kpi-4,
+  #dashboard-chart-1,
+  #dashboard-chart-2,
+  #current-sprint-kpi {
+    flex: 1 1 100%;
+  }
+}
+
+/* MEDIUM */
+@media (max-width: 576px) {
+  #current-sprint,
+  #current-sprint.row {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }

@@ -10,18 +10,229 @@
     />
     <link rel="stylesheet" href="statestikk.css" />
     <link rel="stylesheet" href="../globals//global.css" type="text/css" />
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/gantt/modules/gantt.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/dashboards/dashboards.js"></script>
+    <script src="https://code.highcharts.com/dashboards/modules/layout.js"></script>
   </head>
   <body>
     <div class="main-container">
-      <span class="accident-statistics">Ulykke-statestikk</span>
-      <span class="previous-accidents">Tidligere ulykker på din reiserute</span>
-      <div class="rectangle-7">
-        <span class="span">5 år</span>
-        <div class="polygon"></div>
+      <div id="statesikk_top">
+        <span class="accident-statistics">Ulykke-statestikk</span>
+        <div class="dropdown">
+          <label for="dropdownMenu">Tidligere ulykker på din reiserute:</label>
+          <select id="dropdownMenu">
+            <option value="1">1 År</option>
+            <option value="5" selected>5 År</option>
+            <option value="10">10 År</option>
+            <option value="20">20 År</option>
+          </select>
+        </div>
       </div>
-
-      <div class="highcharts"></div>
+      <div id="container">
+        <div class="row">
+          <div class="cell" id="current-sprint-kpi">
+            <div class="row" id="current-sprint">
+              <div class="cell" id="dashboard-kpi-1"></div>
+              <div class="cell" id="dashboard-kpi-2"></div>
+            </div>
+          </div>
+          <div class="cell" id="dashboard-kpi-4"></div>
+        </div>
+        <div class="row" id="charts-1">
+          <div class="cell" id="dashboard-chart-1"></div>
+        </div>
+      </div>
     </div>
+    <script>
+      // Define the URL of the API
+      const apiUrl = "https://api.npoint.io/c4261b1dc876f9137329";
+
+      // Use the fetch function to request data from the API
+      fetch(apiUrl)
+        .then((response) => {
+          // Check if the request was successful
+          if (!response.ok) {
+            // If the response is not successful, throw an error with the status
+            throw new Error(
+              "Network response was not ok, status: " + response.status
+            );
+          }
+          // If successful, parse the JSON data from the response
+          return response.json();
+        })
+        .then((data) => {
+          // Log the parsed data to the console
+          console.log(data);
+        })
+        .catch((error) => {
+          // Log any errors that occur during the fetch or parsing process
+          console.log("Error fetching data: ", error);
+        });
+
+      Dashboards.board(
+        "container",
+        {
+          components: [
+            {
+              renderTo: "dashboard-kpi-1",
+              type: "KPI",
+              title: "Alvolige ulykker",
+              subtitle: "antall alvolige ulikker siste x år",
+              linkedValueTo: {
+                enabled: false,
+              },
+            },
+            {
+              renderTo: "dashboard-kpi-2",
+              type: "KPI",
+              title: "Dødsfall",
+              subtitle: "antall dødsfall siste x år",
+              linkedValueTo: {
+                enabled: false,
+              },
+            },
+          ],
+        },
+        true
+      ).then((dashboard) => {
+        const alvorligUlykkerKPI = dashboard.mountedComponents[0].component,
+          dodeligeYlykkerKPI = dashboard.mountedComponents[1].component;
+
+        alvorligUlykkerKPI.setValue(24); // Setting the value for alvorligUlykkerKPI
+        dodeligeYlykkerKPI.setValue(12); // Setting the value for dodeligeYlykkerKPI
+      });
+
+      Highcharts.chart("dashboard-kpi-4", {
+        chart: {
+          type: "pie",
+        },
+        title: {
+          text: "Ulykkestype",
+        },
+        tooltip: {
+          // Changed to show absolute values
+          pointFormat: "{series.name}: <b>{point.y}</b>",
+        },
+        subtitle: {
+          text: "Source: x",
+        },
+        plotOptions: {
+          pie: {
+            allowPointSelect: true,
+            cursor: "pointer",
+            dataLabels: {
+              enabled: true,
+              format: "<b>{point.name}</b>: {point.y}", // Display absolute values
+            },
+          },
+        },
+        series: [
+          {
+            name: "Antall",
+            colorByPoint: true,
+            data: [
+              {
+                name: "Frontkollisjon",
+                y: 55, // Assuming whole numbers are already provided
+              },
+              {
+                name: "Utforkjøring",
+                sliced: true,
+                selected: true,
+                y: 27, // Rounded up for whole number
+              },
+              {
+                name: "Påkjørsel av fotgjenger",
+                y: 1,
+              },
+              {
+                name: "Påkjøring bakfra",
+                y: 16, // Rounded up for whole number
+              },
+              {
+                name: "Andre ulykker",
+                y: 2, // Rounded up for whole number
+              },
+            ],
+          },
+        ],
+      });
+
+      // Data retrieved from:
+      // - https://en.as.com/soccer/which-teams-have-won-the-premier-league-the-most-times-n/
+      // - https://www.statista.com/statistics/383679/fa-cup-wins-by-team/
+      // - https://www.uefa.com/uefachampionsleague/history/winners/
+      Highcharts.chart("dashboard-chart-1", {
+        chart: {
+          type: "column",
+        },
+        title: {
+          text: "Alder og kjønn på ulykkesutsatte",
+          align: "left",
+        },
+        xAxis: {
+          categories: ["0-20 År", "21-40 År", "41-60 År", "61+ År"],
+        },
+        yAxis: {
+          min: 0,
+          title: {
+            text: "Count trophies",
+          },
+          stackLabels: {
+            enabled: true,
+          },
+        },
+        legend: {
+          align: "left",
+          x: 70,
+          verticalAlign: "top",
+          y: 70,
+          floating: true,
+          backgroundColor:
+            Highcharts.defaultOptions.legend.backgroundColor || "white",
+          borderColor: "#CCC",
+          borderWidth: 1,
+          shadow: false,
+        },
+        tooltip: {
+          headerFormat: "<b>{point.x}</b><br/>",
+          pointFormat: "{series.name}: {point.y}<br/>Total: {point.stackTotal}",
+        },
+        plotOptions: {
+          column: {
+            stacking: "normal",
+            dataLabels: {
+              enabled: true,
+            },
+          },
+        },
+        series: [
+          {
+            name: "Kvinne",
+            data: [200, 300, 400, 500],
+            color: "red",
+          },
+          {
+            name: "Mann",
+            data: [100, 2, 4, 6],
+            color: "green",
+          },
+        ],
+      });
+      // JavaScript to handle dropdown changes and store the chosen option
+      document.addEventListener("DOMContentLoaded", function () {
+        var selectedOption = "5"; // Variable to store the selected option value
+        var dropdownMenu = document.getElementById("dropdownMenu");
+
+        dropdownMenu.addEventListener("change", function () {
+          selectedOption = this.value; // Update the variable with the new selected option
+          console.log("Selected option:", selectedOption); // Optional: log it to the console
+        });
+      });
+    </script>
     <nav class="navbar">
       <div class="icon-parent">
         <i
