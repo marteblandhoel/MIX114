@@ -1,28 +1,3 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//   var carIcon = document.querySelector(".fa-car");
-
-//   if (carIcon) {
-
-//     if (window.location.href.includes("hjemside.html")) {
-//       carIcon.classList.add("active");
-//     }
-
-//     carIcon.addEventListener("click", function () {
-//       window.location.href = "hjemside.html";
-//     });
-//   }
-// });
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   var profileIcon = document.querySelector(".fa-user-circle-o");
-
-//   if (profileIcon) {
-//     profileIcon.addEventListener("click", function () {
-//       window.location.href = "../minprofil/minprofil.html";
-//     });
-//   }
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
   var carIcon = document.querySelector(".fa-car");
 
@@ -61,7 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = "../varslinger/varslinger.html";
     });
   }
-  var varselIcon = document.querySelector(".fa-exclamation-triangle");
+  var varselIcon = document.querySelector(
+    ".iconFooter.fa.fa-exclamation-triangle"
+  );
 
   if (varselIcon) {
     varselIcon.addEventListener("click", function () {
