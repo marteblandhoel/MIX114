@@ -43,6 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+//filtrering for varslene!!
+
 function toggleFilterMenu() {
   var menu = document.getElementById("filterMenu");
   menu.style.display = menu.style.display === "block" ? "none" : "block";
