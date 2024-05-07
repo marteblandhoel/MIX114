@@ -1,8 +1,9 @@
 body {
-  margin: 0 32px;
-  margin-top: 68px;
   line-height: normal;
   font-size: 12px;
+  font-family: Inter;
+  background-color: #fff;
+  color: #1a1c74;
 }
 
 h4 {
