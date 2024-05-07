@@ -42,3 +42,35 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+function toggleFilterMenu() {
+  var menu = document.getElementById("filterMenu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+
+function filterVarslinger() {
+  let veiarbeider = document.getElementById("veiarbeider").checked;
+  let privatsjåfør = document.getElementById("privatsjåfør").checked;
+  let veiansvarlig = document.getElementById("veiansvarlig").checked;
+  let varslinger = document.querySelectorAll(".varsling");
+
+  if (!veiarbeider && !privatsjåfør && !veiansvarlig) {
+    // If no filter is selected, show all notifications
+    varslinger.forEach((varsling) => (varsling.style.display = ""));
+    return;
+  }
+
+  varslinger.forEach(function (varsling) {
+    let hvem = varsling.querySelector(".hvem_hvor p").textContent.trim();
+    // Display notifications that match any of the checked categories
+    if (
+      (hvem === "Veiarbeider" && veiarbeider) ||
+      (hvem === "Privatsjåfør" && privatsjåfør) ||
+      (hvem === "Veiansvarlig" && veiansvarlig)
+    ) {
+      varsling.style.display = "";
+    } else {
+      varsling.style.display = "none";
+    }
+  });
+}

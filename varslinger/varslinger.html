@@ -18,11 +18,9 @@
   </head>
   <body>
     <div class="varslinger">
-      <header>
-        <i id="goBackButton" class="iconsolidx fa-solid fa-xmark"></i>
-        <h2 class="overskrift">Varslinger</h2>
-      </header>
+      <h2 class="overskrift">Varslinger</h2>
       <div class="controls">
+<<<<<<< HEAD
         <!-- <div class="sorter" id="sorterContainer">
           <label for="sorterContainer">Sorter</label>
           <input type="radio" id="nærmest" name="nærmest" value="Nærmest" />
@@ -42,8 +40,44 @@
         />
 =======
           <i class="fa-solid fa-filter"></i>
+=======
+        <div class="sorter" id="sorterContainer"></div>
+        <div class="filter" id="filterContainer">
+          <div class="default">
+            <p>Filter</p>
+            <i class="fa-solid fa-filter" onclick="toggleFilterMenu()"></i>
+          </div>
+          <div><hr></hr></div>
+          <div id="filterMenu" class="filter-menu" style="display: none">
+            <div>
+              <label for="veiarbeider">Veiarbeider</label>
+              <input
+                type="checkbox"
+                id="veiarbeider"
+                onchange="filterVarslinger()"
+              />
+            </div>
+            <div>
+              <label for="privatsjåfør">Privatsjåfør</label>
+              <input
+                type="checkbox"
+                id="privatsjåfør"
+                onchange="filterVarslinger()"
+              />
+            </div>
+            <div>
+              <label for="veiansvarlig">Veiansvarlig</label>
+              <input
+                type="checkbox"
+                id="veiansvarlig"
+                onchange="filterVarslinger()"
+              />
+            </div>
+          </div>
+>>>>>>> 3585347 (laget filtrering)
         </div>
       </div>
+
       <div class="varslinger-liste">
         <div class="varsling">
           <div class="topplinje">
@@ -65,8 +99,32 @@
             forsiktig og tilpass farten etter forholdene. Kjør sikkert!
           </p>
           <div class="hvem_hvor">
-            <p>Privatsjåfør</p>
+            <p class="hvem">Privatsjåfør</p>
             <p>2 km Ø</p>
+          </div>
+        </div>
+        <div class="varsling">
+          <div class="topplinje">
+            <p class="underoverskrift">Veiarbeid i tunnel</p>
+            <div class="tilbakemeling">
+              <div class="up">
+                <p>8</p>
+                <i class="fa-solid fa-thumbs-up"></i>
+              </div>
+              <div class="down">
+                <p>1</p>
+                <i class="fa-solid fa-thumbs-down"></i>
+              </div>
+            </div>
+          </div>
+          <p class="italic">5 min</p>
+          <p class="tekst">
+            E16 Trengereidtunnelen i Bergen/Vaksdal, Vestland er det Vegarbeid.
+            Manuell dirigering.Vent på ledebil. Utrykningskjøretøy kan passere.
+          </p>
+          <div class="hvem_hvor">
+            <p class="hvem">Veiarbeider</p>
+            <p>5 km V</p>
           </div>
         </div>
         <div class="varsling">
@@ -89,7 +147,7 @@
             kjør med forsiktighet og hold øynene åpne. Sikkerhet først!
           </p>
           <div class="hvem_hvor">
-            <p>Privatsjåfør</p>
+            <p class="hvem">Privatsjåfør</p>
             <p>3 km N</p>
           </div>
         </div>
@@ -115,7 +173,7 @@
             for tålmodigheten!
           </p>
           <div class="hvem_hvor">
-            <p>Veiarbeider</p>
+            <p class="hvem">Veiarbeider</p>
             <p>8 km Ø</p>
           </div>
         </div>
@@ -141,8 +199,8 @@
             søndag fra 10.03.2024 til 26.04.2024. Omkjøring er skiltet.
           </p>
           <div class="hvem_hvor">
-            <p>Veiarbeider</p>
-            <p>3 km</p>
+            <p class="hvem">Veiarbeider</p>
+            <p>3 km S</p>
           </div>
         </div>
       </div>
