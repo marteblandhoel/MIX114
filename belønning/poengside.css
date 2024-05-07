@@ -69,12 +69,15 @@
   justify-content: flex-start;
 }
 .alert {
-  position: relative;
-  top: 140px;
+  width: 326px;
+  height: 53px;
+  padding: 16px;
+  align-items: flex-start;
+  gap: 16px;
+  flex-shrink: 0;
   margin: 0 32px;
   border-radius: 8px;
   background-color: #1a1c74;
-  height: 53px;
   overflow: hidden;
   display: flex;
   flex-direction: row;
