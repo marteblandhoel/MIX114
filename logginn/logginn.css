@@ -8,10 +8,7 @@
   background-color: #fff;
   overflow: hidden;
   text-align: left;
-  line-height: 20px;
   color: #1a1c74;
-  font-family: Inter;
-  text-align: center;
   box-sizing: border-box;
 }
 
@@ -22,16 +19,15 @@
 }
 
 .varselvenn {
-  font-size: 38px;
+  font-size: 320%;
   color: #e43700;
   font-family: Play;
-line-height: 200%;
+  line-height: 200%;
 }
 
 .varselvenn .venn {
   color: #1a1c74;
 }
-
 
 .inactivedefault-input {
   border-radius: 20px;
@@ -63,34 +59,21 @@ line-height: 200%;
   align-items: flex-end;
   justify-content: center;
 }
-.button1 {
-  position: relative;
-  line-height: 32px;
-}
-
-.button {
-  justify-content: center;
-}
 
 .text {
-  display: inline-block; /* Ensure button takes up space */
-  padding: 16px 40px;
-  /* border: none;  */
+  align-self: center;
+  width: fit-content;
+  padding: 5% 10% 0;
   border-radius: 8px;
-  background-color: #1a1c74; /* Background color */
-  color: #fff; /* Text color */
-  font-size: 24px;
+  background-color: #1a1c74;
+  color: #fff;
+  font-size: 200%;
   cursor: pointer;
   transition: background-color 0.3s; /* Smooth transition on hover */
 }
 
 .text:hover {
   background-color: #131451; /* Darker background color on hover */
-}
-
-#loginForm {
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
 }
 
 .inactivedefault-input,
