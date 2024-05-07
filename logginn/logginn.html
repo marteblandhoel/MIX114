@@ -19,61 +19,43 @@
   </head>
   <body>
     <div class="logg-inn">
-      <b class="logg-inn1">Logg inn</b>
-      <img class="logg-inn-child" alt="" src="Line 2.svg" />
-
-      <!-- <div class="inactivedefault-input" id="inactiveDefaultInputContainer">
-        <div class="email-address">Email-addresse</div>
+      <h2 class="overskrift">Logg inn</h2>
+      <div class="logo">
+        <div class="logo-child">
+          <img class="logo-bil" src="../globals/logo-bil.png" />
+        </div>
+        <p class="varselvenn">
+          <span>Varsel</span>
+          <span class="venn">Venn</span>
+        </p>
       </div>
-      <div class="inactivedefault-input1">
-        <div class="password">Passord</div> -->
       <form id="loginForm">
         <div class="inactivedefault-input" id="inactiveDefaultInputContainer">
-          <div class="email-address">Email-addresse:</div>
-          <!-- Add id to email input -->
+          <div class="email-address"></div>
           <input
             type="text"
             id="emailInput"
             name="email"
-            placeholder="emailen er: @email"
+            placeholder="email: @email"
           />
         </div>
         <div class="inactivedefault-input1">
-          <div class="password">Passord:</div>
-          <!-- Add id to password input -->
+          <div class="password"></div>
           <input
             type="password"
             id="passwordInput"
             name="password"
-            placeholder="passordet er: 123"
+            placeholder="passord: 123"
           />
+          
         </div>
       </form>
-      <!-- <div class="button" onclick="login()">
-        <div class="text">
-          <b class="button1">Logg inn</b>
-        </div>
-      </div> -->
-
       <div class="button">
         <button class="text" onclick="login()">
-          <b class="button1">Logg inn</b>
+          <p class="button1">Logg inn</p>
         </button>
       </div>
-    </div>
-    <img class="logg-inn-child" alt="" src="Line 3.svg" />
-
-    <div class="glemt-passord">Glemt passord?</div>
-
-    <div class="logo">
-      <b class="varselvenn">
-        <span>Varsel</span>
-        <span class="venn">Venn</span>
-      </b>
-      <!-- <img class="logo-child" alt="" src="Group 11.svg" /> -->
-      <div class="logo-child">
-        <img class="logo-bil" src="../globals/logo-bil.png" />
-      </div>
+      <div class="glemt-passord">Glemt passord?</div>
     </div>
   </body>
 </html>
