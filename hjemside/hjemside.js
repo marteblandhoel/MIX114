@@ -46,4 +46,25 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = "../varslinger/varslinger.html";
     });
   }
+  var locationIcon = document.querySelector(
+    ".iconFooter.fa-solid.fa-location-dot"
+  );
+
+  if (locationIcon) {
+    locationIcon.addEventListener("click", function () {
+      // Redirect to dinrute.html
+      window.location.href = "../dinrute/dinrute.html";
+    });
+  }
+
+  var mapsIcon = document.querySelector(
+    ".iconFooter.fa-solid.fa-map-location-dot"
+  );
+
+  if (mapsIcon) {
+    mapsIcon.addEventListener("click", function () {
+      // Redirect to kart.html
+      window.location.href = "../kart/kart.html";
+    });
+  }
 });
