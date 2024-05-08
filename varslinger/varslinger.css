@@ -25,14 +25,17 @@ header {
 .controls {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
-.sorter {width: 32%;
+.sorter {
+  width: 32%;
   padding: 4%;
   color: #ffffff;
   background-color: #1a1c74;
-  border-radius: 8px;}
-  
+  border-radius: 8px;
+}
+
 .filter {
   width: 32%;
   padding: 4%;
