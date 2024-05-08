@@ -1,267 +1,605 @@
-.belnning {
-  margin: 0px 32px;
-  margin-top: 68px;
-  margin-bottom: 100px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  background-color: #fff;
-  overflow: hidden;
-  text-align: left;
-  line-height: 20px;
-  color: #1a1c74;
-  font-family: Inter;
-}
-
-header {
+.filter {
+  color: #ffffff;
+  background-color: #1a1c74;
+  border-radius: 8px;
+  padding: 12px 16px 12px 16px;
   display: flex;
   flex-direction: row;
-  align-items: center; /* Aligns children vertically in the center */
-  justify-content: space-between; /* Distributes space between and around content items */
-  width: 100%; /* Ensures the header takes full width */
-}
-
-#goBackButton {
-  margin-left: 10px; /* Adjust as needed to align the icon within the header */
-  font-size: 24px; /* Icon size */
-  justify-content: flex-start;
-}
-
-.overskrift {
-  flex-grow: 1; /* Allows the h2 to grow and fill the space */
-  text-align: center; /* Ensures text is centered within the growing space */
-  line-height: 1.2;
-}
-
-.belnning-child {
-  position: absolute;
-  top: 122px;
-  left: 0px;
-  max-height: 100%;
-  width: 390px;
-}
-
-.starIcon {
-  width: 24px;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
   position: relative;
-  height: 24px;
-  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.default {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 150%;
+}
+
+hr {
+  border: solid 1px #8f91e8;
+  margin-top: -10%;
+}
+
+.filter-menu {
+  display: flex;
+  background-color: #1a1c74;
+  color: #ffffff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 1%;
+  z-index: 1;
+}
+
+.fa-filter {
   color: #ffffff;
 }
-
-.title {
-  align-self: stretch;
+.bel-nning,
+.bel-nning * {
+  box-sizing: border-box;
+}
+.bel-nning {
+  background: var(--white, #ffffff);
+  height: 1085px;
   position: relative;
-  line-height: 20px;
-  font-weight: 500;
+  overflow: hidden;
 }
-.get-immediate-alerts {
-  align-self: stretch;
-  position: relative;
-  font-size: 14px;
-  line-height: 16px;
+.bel-nning2 {
+  color: var(--primary, #1a1c74);
+  text-align: left;
+  font-family: var(--title-2-font-family, "Inter-Bold", sans-serif);
+  font-size: var(--title-2-font-size, 32px);
+  line-height: var(--title-2-line-height, 36px);
+  font-weight: var(--title-2-font-weight, 700);
+  position: absolute;
+  left: 116px;
+  top: 68px;
 }
-.text {
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 4px;
-}
-.content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+.line-2 {
+  width: 390px;
+  height: 0px;
+  position: absolute;
+  left: 0px;
+  top: 122px;
+  transform: translate(0px, -1px);
+  overflow: visible;
 }
 .alert {
-  margin: 32px 0px;
-  gap: 10%;
-  margin-top: 1%;
-  margin-bottom: 99%;
-  flex-shrink: 0;
-  border-radius: 8px;
-  background-color: #1a1c74;
-  overflow: hidden;
+  background: var(--primary, #1a1c74);
+  border-radius: var(--corner-radius-buttons-giant-small, 8px);
+  padding: 16px;
   display: flex;
   flex-direction: row;
-  padding: 16px;
-  box-sizing: border-box;
-  font-size: 1rem;
-  color: #fff;
-}
-/* .f-minst-5 {
-  display: flex;
-  align-items: center;
+  gap: 16px;
+  align-items: flex-start;
   justify-content: flex-start;
-  margin-left: 31px;
-  line-height: 17px;
-  color: #1a1c74;
-  width: 100%;
-  border: 1px solid red; /* Temporarily added for debugging */
- .txt_undrpoints {
-  font-family: Inter;
-  float: left;
-  margin: 32px 0px;
-  margin-top: -98%;
-  margin-bottom:102% ;
-
-}
-.component-child {
+  width: 326px;
+  height: 53px;
   position: absolute;
-  height: 67.86%;
-
-  top: 11.73%;
-  right: 0%;
-  bottom: 20.41%;
-
-  left: 0%;
-  border-radius: 8px;
-  background-color: #f4f4f4;
-  border: 1px solid #1a1c74;
-  box-sizing: border-box;
-}
-.premierBilde {
-  position: absolute;
-  height: 52.55%;
-  width: 40.55%;
-  top: 18.88%;
-  right: 54.04%;
-  bottom: 28.57%;
-  left: 5.41%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-  object-fit: cover;
-}
-.for-en-god {
-  position: absolute;
-  width: 40.89%;
-  top: 17.86%;
-  left: 49.32%;
-  line-height: 17px;
-  display: inline-block;
-}
-.poeng {
-  position: absolute;
-  width: 28.04%;
-  top: 60.2%;
-  left: 50%;
-  font-size: 16px;
-  line-height: 20px;
-  display: inline-block;
-  color: #1a1c74;
-}
-.p-spylervske {
-  position: absolute;
-  width: 49.66%;
-  top: 0%;
-  left: 0.34%;
-  line-height: 14px;
-  display: inline-block;
-}
-.du-mangler-15-container {
-  position: absolute;
-  top: 84.18%;
-  left: 0%;
-  font-size: 12px;
-  line-height: 14px;
-  display: inline-block;
-}
-
-.rectangle-parent {
-  position: absolute;
-  top: 317px;
   left: 32px;
+  top: 140px;
+  overflow: hidden;
+}
+.star {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  overflow: visible;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.title {
+  color: var(--white, #ffffff);
+  text-align: left;
+  font-family: var(--regular-medium-font-family, "Inter-Medium", sans-serif);
+  font-size: var(--regular-medium-font-size, 16px);
+  line-height: var(--regular-medium-line-height, 20px);
+  font-weight: var(--regular-medium-font-weight, 500);
+  position: relative;
+  align-self: stretch;
+}
+.get-immediate-alerts-and-a-notification-badge {
+  color: var(--white, #ffffff);
+  text-align: left;
+  font-family: var(--small-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--small-font-size, 14px);
+  line-height: var(--small-line-height, 16px);
+  font-weight: var(--small-font-weight, 400);
+  position: relative;
+  align-self: stretch;
+}
+.f-minst-5-up-votes-p-en-av-dine-varslinger-for-oppn-poeng {
+  color: var(--primary, #1a1c74);
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+  position: absolute;
+  left: 31px;
+  top: 202px;
+  width: 327px;
+}
+.group-6 {
   width: 326px;
   height: 196px;
-}
-
-.rectangle-group {
   position: absolute;
-  height: 88.29%;
-  width: 100.31%;
-  top: 0%;
-  right: -3.42%;
-  bottom: 11.71%;
-  left: 3.12%;
+  left: 32px;
+  top: 317px;
 }
-/* .hent {
-  position: relative;
-  line-height: 14px;
-  font-weight: 500;
-} */
-.hent-wrapper {
-  position: absolute;
-  height: 18.47%;
-  width: 28.03%;
-  top: 84.23%;
-  right: 68.85%;
-  bottom: -2.7%;
-  left: 3.12%;
+.rectangle-4 {
+  background: var(--light-x2-grey, #f4f4f4);
   border-radius: 8px;
-  background-color: #1a1c74;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 9px 16px;
-  box-sizing: border-box;
-  text-align: center;
-  color: #fff;
+  border-style: solid;
+  border-color: var(--primary, #1a1c74);
+  border-width: 1px;
+  width: 100%;
+  height: 67.86%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 20.41%;
+  top: 11.73%;
+}
+.screenshot-2024-04-25-at-20-51-1 {
+  width: 40.54%;
+  height: 52.55%;
+  position: absolute;
+  right: 54.05%;
+  left: 5.41%;
+  bottom: 28.57%;
+  top: 18.88%;
+  object-fit: cover;
+}
+.for-en-god-deal-her-f-r-du-20-p-spylerv-ske-hos-biltema {
+  color: var(--black, #000000);
+  text-align: left;
+  font-family: var(--small-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--small-font-size, 14px);
+  line-height: var(--small-line-height, 16px);
+  font-weight: var(--small-font-weight, 400);
+  position: absolute;
+  right: 5.83%;
+  left: 49.39%;
+  width: 44.79%;
+  bottom: 49.49%;
+  top: 17.86%;
+  height: 32.65%;
+}
+._40-poeng {
+  color: var(--primary, #1a1c74);
+  text-align: left;
+  font-family: var(--regular-bold-font-family, "Inter-Bold", sans-serif);
+  font-size: var(--regular-bold-font-size, 16px);
+  line-height: var(--regular-bold-line-height, 20px);
+  font-weight: var(--regular-bold-font-weight, 700);
+  position: absolute;
+  right: 21.96%;
+  left: 50%;
+  width: 28.04%;
+  bottom: 29.59%;
+  top: 60.2%;
+  height: 10.2%;
+}
+._20-p-spylerv-ske {
+  color: var(--black, #000000);
+  text-align: left;
+  font-family: var(--small-bold-font-family, "Inter-Bold", sans-serif);
+  font-size: var(--small-bold-font-size, 14px);
+  line-height: var(--small-bold-line-height, 14px);
+  font-weight: var(--small-bold-font-weight, 700);
+  position: absolute;
+  right: 50%;
+  left: 0.34%;
+  width: 49.66%;
+  bottom: 92.86%;
+  top: 0%;
+  height: 7.14%;
+}
+.icon-solid-x {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: 27px;
+  top: 72px;
+  overflow: visible;
 }
 .component-1 {
-  position: absolute;
-  top: 531px;
-  left: 22px;
   width: 325px;
   height: 222px;
-}
-
-.b {
-  font-size: 14px;
-}
-
-.component-2 {
   position: absolute;
-  top: 788px;
-  left: 22px;
+  left: 31px;
+  top: 531px;
+}
+.group-7 {
+  width: 100.31%;
+  height: 88.29%;
+  position: absolute;
+  right: -0.31%;
+  left: 0%;
+  bottom: 11.71%;
+  top: 0%;
+}
+.du-mangler-15-poeng-for-pne-denne-bel-nningen {
+  color: var(--black, #000000);
+  text-align: left;
+  font-family: var(--tiny-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--tiny-font-size, 12px);
+  line-height: var(--tiny-line-height, 12px);
+  font-weight: var(--tiny-font-weight, 400);
+  position: absolute;
+  right: 1.69%;
+  left: 0%;
+  width: 98.31%;
+  bottom: 9.69%;
+  top: 84.18%;
+  height: 6.12%;
+}
+.frame-8 {
+  background: var(--primary, #1a1c74);
+  border-radius: 8px;
+  padding: 9px 16px 9px 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 28.04%;
+  height: 18.47%;
+  position: absolute;
+  right: 68.84%;
+  left: 3.12%;
+  bottom: -2.7%;
+  top: 84.23%;
+  overflow: hidden;
+}
+.hent {
+  color: var(--white, #ffffff);
+  text-align: center;
+  font-family: var(--small-medium-font-family, "Inter-Medium", sans-serif);
+  font-size: var(--small-medium-font-size, 14px);
+  line-height: var(--small-medium-line-height, 14px);
+  font-weight: var(--small-medium-font-weight, 500);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.component-2 {
   width: 326px;
   height: 222px;
-}
-.text1 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 0px 8px;
-}
-.sort_button {
-  margin: 32px 0px;
-  margin-top: -96%;
-  margin-bottom: 104%;
-  display: flex;
-  border-radius: 8px;
-  background-color: #1a1c74;
-  border: 1.5px solid #1a1c74;
-  box-sizing: border-box;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 16px;
-}
-.fa-sort-amount-down-alt {
   position: absolute;
-  top: 8px;
-  left: 83.16px;
-  width: 26.3px;
-  height: 25px;
+  left: 31px;
+  top: 792px;
 }
-.sorter {
-  cursor: pointer;
+.for-en-god-deal-her-f-r-du-20-p-spylerv-ske-hos-biltema2 {
+  color: var(--black, #000000);
+  text-align: left;
+  font-family: var(--small-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--small-font-size, 14px);
+  line-height: var(--small-line-height, 16px);
+  font-weight: var(--small-font-weight, 400);
+  position: absolute;
+  right: 5.83%;
+  left: 49.39%;
+  width: 44.79%;
+  bottom: 57.65%;
+  top: 17.86%;
+  height: 24.49%;
+}
+.du-mangler-15-poeng-for-pne-denne-bel-nningen2 {
+  color: var(--black, #000000);
+  text-align: left;
+  position: absolute;
+  right: 1.69%;
+  left: 0%;
+  width: 98.31%;
+  bottom: 8.67%;
+  top: 84.18%;
+  height: 7.14%;
+}
+.du-mangler-15-poeng-for-pne-denne-bel-nningen-2-span {
+  color: var(--black, #000000);
+  font-family: var(--tiny-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--tiny-font-size, 12px);
+  line-height: var(--tiny-line-height, 12px);
+  font-weight: var(--tiny-font-weight, 400);
+}
+.du-mangler-15-poeng-for-pne-denne-bel-nningen-2-span2 {
+  color: var(--black, #000000);
+  font-family: var(--small-bold-font-family, "Inter-Bold", sans-serif);
+  font-size: var(--small-bold-font-size, 14px);
+  line-height: var(--small-bold-line-height, 14px);
+  font-weight: var(--small-bold-font-weight, 700);
+}
+.du-mangler-15-poeng-for-pne-denne-bel-nningen-2-span3 {
+  color: var(--black, #000000);
+  font-family: var(--tiny-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--tiny-font-size, 12px);
+  line-height: var(--tiny-line-height, 12px);
+  font-weight: var(--tiny-font-weight, 400);
+}
+.filter {
+  position: absolute;
+  inset: 0;
+}
+.button-medium-default-icons-text-filled {
+  background: var(--primary, #1a1c74);
+  border-radius: var(--corner-radius-buttons-giant-small, 8px);
+  padding: 12px 16px 12px 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  position: absolute;
+  left: 31px;
+  top: 254px;
+  overflow: hidden;
+}
+.text2 {
+  padding: 0px 8px 0px 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.button {
+  color: var(--white, #ffffff);
   text-align: center;
-  color: #fff;
+  font-family: var(--small-medium-font-family, "Inter-Medium", sans-serif);
+  font-size: var(--small-medium-font-size, 14px);
+  line-height: var(--small-medium-line-height, 14px);
+  font-weight: var(--small-medium-font-weight, 500);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arrow-right {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.icon-outline-filter {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 101px;
+  top: 262px;
+}
+.icon-outline-filter2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+  overflow: visible;
+}
+.navbar {
+  height: 79px;
+  position: sticky;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+}
+.rectangle-1 {
+  background: var(--primary, #1a1c74);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+}
+.frame-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 89.74%;
+  position: absolute;
+  right: 5.13%;
+  left: 5.13%;
+  top: calc(50% - 19.5px);
+}
+.icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  overflow: visible;
+}
+.icon2 {
+  flex-shrink: 0;
+  width: 32px;
+  height: 31.99px;
+  position: relative;
+  overflow: visible;
+}
+.car-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 25.6px;
+  position: relative;
+  overflow: visible;
+}
+.icon3 {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  overflow: visible;
+}
+.icon4 {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  overflow: visible;
+}
+.vector-563 {
+  width: 5.64%;
+  height: 0%;
+  position: absolute;
+  right: 7.44%;
+  left: 86.92%;
+  bottom: 16.46%;
+  top: 83.54%;
+  transform: translate(0px, -1px);
+  overflow: visible;
+}
+
+/* Figma Styles of your File */
+:root {
+  /* Colors */
+  --error: #e43700;
+  --warning: #f49e00;
+  --info: #004cdf;
+  --primary: #1a1c74;
+  --secondary: #3e6048;
+  --black: #000000;
+  --white: #ffffff;
+  --tertiary: #ffaf75;
+
+  /* Fonts */
+  --title-1-font-family: Inter-Bold, sans-serif;
+  --title-1-font-size: 48px;
+  --title-1-line-height: 56px;
+  --title-1-font-weight: 700;
+  --title-1-font-style: normal;
+  --title-2-font-family: Inter-Bold, sans-serif;
+  --title-2-font-size: 32px;
+  --title-2-line-height: 36px;
+  --title-2-font-weight: 700;
+  --title-2-font-style: normal;
+  --title-3-font-family: Inter-Bold, sans-serif;
+  --title-3-font-size: 24px;
+  --title-3-line-height: 32px;
+  --title-3-font-weight: 700;
+  --title-3-font-style: normal;
+  --large-bold-font-family: Inter-Bold, sans-serif;
+  --large-bold-font-size: 18px;
+  --large-bold-line-height: 18px;
+  --large-bold-font-weight: 700;
+  --large-bold-font-style: normal;
+  --large-medium-font-family: Inter-Medium, sans-serif;
+  --large-medium-font-size: 18px;
+  --large-medium-line-height: 18px;
+  --large-medium-font-weight: 500;
+  --large-medium-font-style: normal;
+  --large-font-family: Inter-Regular, sans-serif;
+  --large-font-size: 18px;
+  --large-line-height: 18px;
+  --large-font-weight: 400;
+  --large-font-style: normal;
+  --regular-bold-font-family: Inter-Bold, sans-serif;
+  --regular-bold-font-size: 16px;
+  --regular-bold-line-height: 20px;
+  --regular-bold-font-weight: 700;
+  --regular-bold-font-style: normal;
+  --regular-medium-font-family: Inter-Medium, sans-serif;
+  --regular-medium-font-size: 16px;
+  --regular-medium-line-height: 20px;
+  --regular-medium-font-weight: 500;
+  --regular-medium-font-style: normal;
+  --regular-font-family: Inter-Regular, sans-serif;
+  --regular-font-size: 16px;
+  --regular-line-height: 20px;
+  --regular-font-weight: 400;
+  --regular-font-style: normal;
+  --small-bold-font-family: Inter-Bold, sans-serif;
+  --small-bold-font-size: 14px;
+  --small-bold-line-height: 14px;
+  --small-bold-font-weight: 700;
+  --small-bold-font-style: normal;
+  --small-medium-font-family: Inter-Medium, sans-serif;
+  --small-medium-font-size: 14px;
+  --small-medium-line-height: 14px;
+  --small-medium-font-weight: 500;
+  --small-medium-font-style: normal;
+  --small-font-family: Inter-Regular, sans-serif;
+  --small-font-size: 14px;
+  --small-line-height: 16px;
+  --small-font-weight: 400;
+  --small-font-style: normal;
+  --tiny-bold-font-family: Inter-Bold, sans-serif;
+  --tiny-bold-font-size: 12px;
+  --tiny-bold-line-height: 12px;
+  --tiny-bold-font-weight: 700;
+  --tiny-bold-font-style: normal;
+  --tiny-medium-font-family: Inter-Medium, sans-serif;
+  --tiny-medium-font-size: 12px;
+  --tiny-medium-line-height: 12px;
+  --tiny-medium-font-weight: 500;
+  --tiny-medium-font-style: normal;
+  --tiny-font-family: Inter-Regular, sans-serif;
+  --tiny-font-size: 12px;
+  --tiny-line-height: 12px;
+  --tiny-font-weight: 400;
+  --tiny-font-style: normal;
+  --regular-italic-font-family: Inter-Italic, sans-serif;
+  --regular-italic-font-size: 16px;
+  --regular-italic-line-height: 20px;
+  --regular-italic-font-weight: 400;
+  --regular-italic-font-style: italic;
+  --small-italic-font-family: Inter-Italic, sans-serif;
+  --small-italic-font-size: 14px;
+  --small-italic-line-height: 14px;
+  --small-italic-font-weight: 400;
+  --small-italic-font-style: italic;
+  --tiny-italic-font-family: Inter-Italic, sans-serif;
+  --tiny-italic-font-size: 12px;
+  --tiny-italic-line-height: 12px;
+  --tiny-italic-font-weight: 400;
+  --tiny-italic-font-style: italic;
+  --large-italic-font-family: Inter-Italic, sans-serif;
+  --large-italic-font-size: 18px;
+  --large-italic-line-height: 18px;
+  --large-italic-font-weight: 400;
+  --large-italic-font-style: italic;
+  --tiny-bold-undelined-font-family: Inter-Bold, sans-serif;
+  --tiny-bold-undelined-font-size: 12px;
+  --tiny-bold-undelined-line-height: 12px;
+  --tiny-bold-undelined-font-weight: 700;
+  --tiny-bold-undelined-font-style: normal;
+
+  /* Effects */
+  --shadow-small-box-shadow: 0px 0px 8px 0px rgba(20, 20, 20, 0.08);
+  --shadow-medium-box-shadow: 0px 1px 8px 2px rgba(20, 20, 20, 0.08);
+  --shadow-large-box-shadow: 0px 1px 24px 8px rgba(20, 20, 20, 0.08);
+  --focus-box-shadow: 0px 0px 0px 3px rgba(174, 182, 251, 1);
+  --active-box-shadow: 0px 3px 1px 0px rgba(255, 255, 255, 0.33);
+  --shadow-boxes-box-shadow: 3px 3px 5px 2px rgba(226, 226, 226, 1);
 }
