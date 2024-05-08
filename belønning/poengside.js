@@ -1,11 +1,18 @@
+// document.addEventListener("DOMContentLoaded", function () {
+//   var goBackButton = document.getElementById("goBackButton");
+//   if (goBackButton) {
+//     goBackButton.addEventListener("click", function (e) {
+//       // Redirect to hjemside.html
+//       window.location.href = "../minprofil/minprofil.html";
+//     });
+//   }
+// });
 document.addEventListener("DOMContentLoaded", function () {
-  var goBackButton = document.getElementById("goBackButton");
-  if (goBackButton) {
-    goBackButton.addEventListener("click", function (e) {
-      // Redirect to hjemside.html
-      window.location.href = "../minprofil/minprofil.html";
-    });
-  }
+  // Event listener for the goBackButton
+  const goBackButton = document.getElementById("goBackButton");
+  goBackButton.addEventListener("click", function () {
+    history.back();
+  });
 });
 
 document.addEventListener("DOMContentLoaded", function () {

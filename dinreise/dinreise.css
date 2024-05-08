@@ -306,3 +306,8 @@ button {
   background-color: lightgreen;
   z-index: inherit;
 }
+
+.text-wrapper:hover,
+.button-car-mode:hover {
+  cursor: pointer;
+}
