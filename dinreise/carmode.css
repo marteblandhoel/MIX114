@@ -102,132 +102,113 @@ header {
   z-index: 19;
 }
 
-.frame-3 {
+.frame-7,
+.frame-7 * {
+  box-sizing: border-box;
+}
+.frame-7 {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  gap: 17px;
   align-items: center;
   justify-content: center;
-  flex-wrap: nowrap;
-  gap: 17px;
+  height: 245px;
   position: relative;
-  margin: 38px 0 0 326px;
-  z-index: 4;
 }
-.group {
+.group-2 {
   flex-shrink: 0;
-  position: relative;
   width: 64px;
   height: 64px;
-  background: url(./assets/images/26c48e2e-fff1-49dc-a9cc-b72209f78f4b.png)
-    no-repeat center;
-  background-size: cover;
-  z-index: 5;
+  position: relative;
+}
+.ellipse-1 {
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 2.5px solid #fcb93f;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+}
+.slippery {
+  width: 77.08%;
+  height: 75.48%;
+  position: absolute;
+  right: 11.98%;
+  left: 10.94%;
+  bottom: 11.33%;
+  top: 13.19%;
+  overflow: visible;
 }
 .sykler {
   flex-shrink: 0;
-  position: relative;
   width: 64px;
   height: 64px;
-  z-index: 6;
+  position: relative;
+}
+.ellipse-3 {
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 3px solid #004cdf;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
 }
 .vector {
-  position: relative;
-  width: 37px;
-  height: 37px;
-  margin: 13px 0 0 13px;
-  z-index: 8;
-}
-.vector-4 {
+  width: 57.81%;
+  height: 57.81%;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: url(./assets/images/e939dd3e-d141-4d2c-95f9-2aa09b582351.png)
-    no-repeat center;
-  background-size: 100% 100%;
-  z-index: 9;
-}
-.ellipse {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: url(./assets/images/e1ad2a75-64e4-4cb9-b941-5e6d7d65c27e.png)
-    no-repeat center;
-  background-size: 100% 100%;
-  z-index: 7;
-  border-radius: 50%;
-  box-sizing: content-box;
+  right: 21.88%;
+  left: 20.31%;
+  bottom: 21.88%;
+  top: 20.31%;
+  overflow: visible;
 }
 .barn-leker {
   flex-shrink: 0;
-  position: relative;
   width: 64px;
   height: 64px;
-  z-index: 10;
-}
-.vector-5 {
   position: relative;
-  width: 37px;
-  height: 37px;
-  margin: 14px 0 0 13px;
-  z-index: 12;
 }
-.vector-6 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: url(./assets/images/24f453ce-04c1-48e9-ac48-3fd5d7e812be.png)
-    no-repeat center;
-  background-size: 100% 100%;
-  z-index: 13;
-}
-.ellipse-7 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: url(./assets/images/9e264d61-a2aa-4897-92ab-74cd00ad584a.png)
-    no-repeat center;
-  background-size: 100% 100%;
-  z-index: 11;
+.ellipse-2 {
+  background-color: #ffffff;
   border-radius: 50%;
-  box-sizing: content-box;
+  border: 3px solid #004cdf;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
 }
+.vector2 {
+  width: 57.81%;
+  height: 57.81%;
+  position: absolute;
+  right: 21.88%;
+  left: 20.31%;
+  bottom: 20.31%;
+  top: 21.88%;
+  overflow: visible;
+}
+
 .car-mode-maps {
   position: absolute;
-  width: 432px;
-  height: 655px;
-  top: 0;
-  left: 0;
-  z-index: 2;
-}
-.img {
-  position: absolute;
   width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: url(./assets/images/19c7de4af1fd3481fa5b1d88a2533471f5c852d1.png)
-    no-repeat center;
-  background-size: cover;
-  z-index: 3;
-}
-.line {
-  position: absolute;
-  width: 390px;
-  height: 2px;
   top: 121px;
   left: 0;
-  background: url(./assets/images/4f9e6563-010f-43fc-8cbd-d03bec47a695.png)
-    no-repeat center;
-  background-size: cover;
+  right: 0;
+  z-index: 1;
 }
+
 .rectangle {
   position: absolute;
   width: 100%;
@@ -236,93 +217,4 @@ header {
   left: 0;
   background: #1a1c74;
   z-index: 22;
-}
-.frame-8 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  position: relative;
-  width: 350px;
-  margin: 20px 0 0 20px;
-  z-index: 23;
-}
-.icon-9 {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  z-index: 24;
-  overflow: hidden;
-}
-.icon-a {
-  position: relative;
-  width: 29.667px;
-  height: 34.362px;
-  margin: 3.5px 0 0 5.167px;
-  background: url(./assets/images/7b50e5fb-5ce7-4fc1-9cd6-98bcead744c4.png)
-    no-repeat center;
-  background-size: 100% 100%;
-  z-index: 25;
-}
-.icon-b {
-  position: relative;
-  width: 32px;
-  height: 31.986px;
-  background: url(./assets/images/fcddc407-eb43-4f47-a442-3d9d74d19d8a.png)
-    no-repeat center;
-  background-size: cover;
-  z-index: 26;
-}
-.car-icon {
-  position: relative;
-  width: 32px;
-  height: 25.6px;
-  background: url(./assets/images/54f26270-fe86-49f0-be15-6f99dfb3c012.png)
-    no-repeat center;
-  background-size: 100% 100%;
-  z-index: 27;
-}
-.icon-c {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  z-index: 28;
-  overflow: hidden;
-}
-.icon-d {
-  position: relative;
-  width: 32.775px;
-  height: 29.667px;
-  margin: 3.5px 0 0 3.613px;
-  background: url(./assets/images/32424a7d-9b79-44c2-a906-d18dfab7e00d.png)
-    no-repeat center;
-  background-size: 100% 100%;
-  z-index: 29;
-}
-.icon-e {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  z-index: 30;
-  overflow: hidden;
-}
-.icon-f {
-  position: relative;
-  width: 33px;
-  height: 33px;
-  margin: 3.5px 0 0 3.5px;
-  background: url(./assets/images/bb8d8f09-3fcb-4ab1-ad47-fbdaece8f9ed.png)
-    no-repeat center;
-  background-size: 100% 100%;
-  z-index: 31;
-}
-.vector-10 {
-  position: relative;
-  width: 22px;
-  height: 2px;
-  margin: 5px 0 0 29px;
-  background: url(./assets/images/5f8dfafd-c346-4cdd-8ba2-793f16bb90e5.png)
-    no-repeat center;
-  background-size: 100% 100%;
-  z-index: 32;
 }
