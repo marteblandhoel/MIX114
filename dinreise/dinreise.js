@@ -80,4 +80,9 @@ document.addEventListener("DOMContentLoaded", function () {
   statistikkButton.addEventListener("click", function () {
     window.location.href = "../Statestikk/statestikk.html";
   });
+  // Event listener for "Car Mode" knappen
+  const carmodeButton = document.querySelector(".button-car-mode");
+  carmodeButton.addEventListener("click", function () {
+    window.location.href = "../dinreise/carmode.html";
+  });
 });
