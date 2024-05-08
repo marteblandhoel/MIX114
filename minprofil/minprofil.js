@@ -51,4 +51,11 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = "../dinreise/dinreise.html";
     });
   }
+  var poengArrowIcon = document.querySelector(".arrowRight");
+
+  if (poengArrowIcon) {
+    poengArrowIcon.addEventListener("click", function () {
+      window.location.href = "../belønning/poengside.html";
+    });
+  }
 });

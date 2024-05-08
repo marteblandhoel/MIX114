@@ -46,9 +46,9 @@ document.addEventListener("DOMContentLoaded", function () {
 // Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", function () {
   const sortIcon = document.querySelector(".fa-sort");
-  const filterIcon = document.querySelector(".fa-filter");
   const sortMenu = document.getElementById("sortMenu");
   const filterMenu = document.getElementById("filterMenu");
+  const filterIcon = document.querySelector(".fa-filter");
 
   // Toggle sort menu
   sortIcon.addEventListener("click", function (event) {

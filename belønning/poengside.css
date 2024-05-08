@@ -49,6 +49,43 @@ header {
   color: #ffffff;
 }
 
+.component {
+  position: relative;
+  width: 325px;
+  height: 115px;
+  background-color: white;
+  border-radius: 8px;
+  border: 2px solid;
+  border-color: blue;
+  z-index: 15;
+}
+
+.component .text-wrapper {
+  position: absolute;
+  top: 58px;
+  left: 61px;
+  color: var(--variable-collection-success);
+  font-size: var(--title-3-font-size);
+  letter-spacing: var(--title-3-letter-spacing);
+  line-height: var(--title-3-line-height);
+  white-space: nowrap;
+  font-style: var(--title-3-font-style);
+}
+
+.component .div {
+  position: absolute;
+  top: 23px;
+  left: 36px;
+  font-family: var(--regular-bold-font-family);
+  font-weight: var(--regular-bold-font-weight);
+  color: var(--primary);
+  font-size: var(--regular-bold-font-size);
+  letter-spacing: var(--regular-bold-letter-spacing);
+  line-height: var(--regular-bold-line-height);
+  white-space: nowrap;
+  font-style: var(--regular-bold-font-style);
+}
+
 .title {
   align-self: stretch;
   position: relative;
@@ -92,22 +129,13 @@ header {
   font-size: 1rem;
   color: #fff;
 }
-/* .f-minst-5 {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-left: 31px;
-  line-height: 17px;
-  color: #1a1c74;
-  width: 100%;
-  border: 1px solid red; /* Temporarily added for debugging */
- .txt_undrpoints {
+
+.txt_undrpoints {
   font-family: Inter;
   float: left;
   margin: 32px 0px;
   margin-top: -98%;
-  margin-bottom:102% ;
-
+  margin-bottom: 102%;
 }
 .component-child {
   position: absolute;
@@ -174,8 +202,8 @@ header {
 .rectangle-parent {
   position: absolute;
   top: 317px;
-  left: 32px;
-  width: 326px;
+  left: 42px;
+  width: 310px;
   height: 196px;
 }
 
@@ -239,7 +267,7 @@ header {
   justify-content: center;
   padding: 0px 8px;
 }
-.sort_button {
+/* .sort_button {
   margin: 32px 0px;
   margin-top: -96%;
   margin-bottom: 104%;
@@ -252,7 +280,7 @@ header {
   align-items: center;
   justify-content: center;
   padding: 12px 16px;
-}
+} */
 .fa-sort-amount-down-alt {
   position: absolute;
   top: 8px;

@@ -51,6 +51,13 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = "../dinreise/dinreise.html";
     });
   }
+  var carIcon = document.querySelector(".fa-car");
+
+  if (carIcon) {
+    carIcon.addEventListener("click", function () {
+      window.location.href = "../hjemside/hjemside.html";
+    });
+  }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
