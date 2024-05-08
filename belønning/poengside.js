@@ -89,6 +89,18 @@ document.addEventListener("DOMContentLoaded", function () {
     dinePoengDiv.textContent = "Dine poeng: 5";
   });
 
+  // Get reference to the "Bruk" button inside the coupon component
+  var brukButton = document.querySelector(".hent-wrapper .hent");
+
+  // Get reference to the coupon container
+  var couponContainer = document.querySelector(".component-1");
+
+  // Add click event listener to the "Bruk" button
+  brukButton.addEventListener("click", function () {
+    // Hide the coupon container
+    couponContainer.style.display = "none";
+  });
+
   // Add click event listener to the document body
   document.body.addEventListener("click", function (event) {
     // Check if the clicked element is not inside the popup component

@@ -59,19 +59,18 @@ header {
   background-color: white;
   border-radius: 8px;
   border: 2px solid;
-  border-color:#1A1C74;
+  border-color: #1a1c74;
   z-index: 15;
 }
 
 .component .tekst-brukt {
   position: absolute;
   top: 60px;
-  
+
   left: 57px;
   font-size: 24px;
   font-weight: 900;
-  color:#11B95C; 
-
+  color: #11b95c;
 }
 
 .component .brukt {
@@ -80,7 +79,7 @@ header {
   left: 25px;
   font-size: 16px;
   font-weight: 600;
-  color:#1A1C74;
+  color: #1a1c74;
 }
 
 .title {
@@ -197,7 +196,7 @@ header {
 }
 
 .rectangle-parent {
-  display:block;
+  display: block;
   position: absolute;
   top: 282px;
   left: 42px;
@@ -207,11 +206,10 @@ header {
 
 .rectangle-group {
   position: absolute;
-  top:-30px;
+  top: -30px;
   left: 18px;
   width: 310px;
   height: 196px;
-
 }
 
 .rectangle-group_2 {
@@ -220,7 +218,6 @@ header {
   left: 18px;
   width: 310px;
   height: 196px;
-
 }
 /* .hent {
   position: relative;
@@ -228,7 +225,7 @@ header {
   font-weight: 500;
 } */
 .hent-wrapper {
-  display:block;
+  display: block;
   position: absolute;
   height: 18.47%;
   width: 28.03%;
@@ -287,4 +284,3 @@ header {
   justify-content: center;
   padding: 12px 16px;
 } */
-
