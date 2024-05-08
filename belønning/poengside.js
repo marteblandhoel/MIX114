@@ -71,6 +71,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // Get reference to the popup component
   var popupComponent = document.querySelector(".component");
 
+  // Get reference to the "Dine poeng" div
+  var dinePoengDiv = document.querySelector(".title");
+
   // Add click event listener to the hent button
   hentButton.addEventListener("click", function () {
     // Toggle the display property of the popup component
@@ -82,13 +85,18 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       popupComponent.style.display = "none";
     }
+    // Update the content of the "Dine poeng" div after using the popup
+    dinePoengDiv.textContent = "Dine poeng: 5";
   });
+
   // Add click event listener to the document body
   document.body.addEventListener("click", function (event) {
     // Check if the clicked element is not inside the popup component
     if (!popupComponent.contains(event.target) && event.target !== hentButton) {
       // Hide the popup component
       popupComponent.style.display = "none";
+      // Update the content of the "Dine poeng" div when clicking outside the popup
+      dinePoengDiv.textContent = "Dine poeng: 5";
     }
   });
 });
