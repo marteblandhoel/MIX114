@@ -1,5 +1,4 @@
-
-    .belnning {
+.belnning {
   margin: 0px 32px;
   margin-top: 68px;
   margin-bottom: 100px;
@@ -58,6 +57,7 @@ header {
   border-radius: 8px;
   border: 2px solid;
   border-color: var(--primary);
+  z-index: 15;
 }
 
 .component .text-wrapper {
@@ -85,9 +85,6 @@ header {
   white-space: nowrap;
   font-style: var(--regular-bold-font-style);
 }
-
-
-
 
 .title {
   align-self: stretch;
@@ -133,13 +130,12 @@ header {
   color: #fff;
 }
 
- .txt_undrpoints {
+.txt_undrpoints {
   font-family: Inter;
   float: left;
   margin: 32px 0px;
   margin-top: -98%;
-  margin-bottom:102% ;
-
+  margin-bottom: 102%;
 }
 .component-child {
   position: absolute;
