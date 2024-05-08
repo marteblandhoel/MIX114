@@ -31,20 +31,6 @@
           <input type="text" placeholder="Til:" />
         </div>
       </div>
-      <div class="framkomstmiddel">
-        <div class="chosen">
-          <i class="fa-solid fa-car"></i>
-          <p>20 min</p>
-        </div>
-        <div class="unactive">
-          <i class="fa-solid fa-bus-simple"></i>
-          <p>35 min</p>
-        </div>
-        <div class="unactive">
-          <i class="fa-solid fa-person-walking"></i>
-          <p>1 time</p>
-        </div>
-      </div>
       <div id="shortContainer" class="container short">
         <i class="fa-solid fa-triangle-exclamation"></i>
         <div>
@@ -142,6 +128,61 @@
       </div>
 
       <div class="kart"></div>
+      <gmp-map
+        center="60.38562287749684,5.332862485028679"
+        zoom="10"
+        map-id="gcloud certificate-manager maps create kart_bergen"
+      >
+        <gmp-advanced-marker
+          position="-33.890542, 151.274856"
+          title="Bondi Beach"
+        >
+          <img
+            class="flag-icon"
+            src="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"
+          />
+        </gmp-advanced-marker>
+        <gmp-advanced-marker
+          position="-33.923036, 151.259052"
+          title="Coogee Beach"
+        >
+          <img
+            class="flag-icon"
+            src="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"
+          />
+        </gmp-advanced-marker>
+        <gmp-advanced-marker
+          position="-34.028249, 151.157507"
+          title="Cronulla Beach"
+        >
+          <img
+            class="flag-icon"
+            src="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"
+          />
+        </gmp-advanced-marker>
+        <gmp-advanced-marker
+          position="-33.800101, 151.287478"
+          title="Manly Beach"
+        >
+          <img
+            class="flag-icon"
+            src="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"
+          />
+        </gmp-advanced-marker>
+        <gmp-advanced-marker
+          position="-33.950198, 151.259302"
+          title="Maroubra Beach"
+        >
+          <img
+            class="flag-icon"
+            src="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"
+          />
+        </gmp-advanced-marker>
+      </gmp-map>
+      <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAO68vhCtj-hvYqBbzkKIUv967TCNAH&loading=async&libraries=marker&v=beta&solution_channel=GMP_CCS_complexmarkers_v2"
+        defer
+      ></script>
     </div>
     <nav class="navbar">
       <div class="navbar-child"></div>
