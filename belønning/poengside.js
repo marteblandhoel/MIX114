@@ -62,3 +62,33 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// Wait for the DOM content to be fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+  // Get reference to the button with class "hent"
+  var hentButton = document.querySelector(".hent");
+
+  // Get reference to the popup component
+  var popupComponent = document.querySelector(".component");
+
+  // Add click event listener to the hent button
+  hentButton.addEventListener("click", function () {
+    // Toggle the display property of the popup component
+    if (
+      popupComponent.style.display === "none" ||
+      popupComponent.style.display === ""
+    ) {
+      popupComponent.style.display = "block";
+    } else {
+      popupComponent.style.display = "none";
+    }
+  });
+  // Add click event listener to the document body
+  document.body.addEventListener("click", function (event) {
+    // Check if the clicked element is not inside the popup component
+    if (!popupComponent.contains(event.target) && event.target !== hentButton) {
+      // Hide the popup component
+      popupComponent.style.display = "none";
+    }
+  });
+});
