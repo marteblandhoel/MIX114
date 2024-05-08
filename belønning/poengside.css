@@ -30,7 +30,7 @@ header {
 .overskrift {
   flex-grow: 1; /* Allows the h2 to grow and fill the space */
   text-align: center; /* Ensures text is centered within the growing space */
-  line-height: 1.2;
+  margin-top: -10%;
 }
 
 .belnning-child {
@@ -209,12 +209,11 @@ header {
 
 .rectangle-group {
   position: absolute;
-  height: 88.29%;
-  width: 100.31%;
-  top: 0%;
-  right: -3.42%;
-  bottom: 11.71%;
-  left: 3.12%;
+  top: 1px;
+  left: 16px;
+  width: 310px;
+  height: 196px;
+
 }
 /* .hent {
   position: relative;
