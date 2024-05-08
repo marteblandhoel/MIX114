@@ -200,6 +200,7 @@ header {
 }
 
 .rectangle-parent {
+  display:block;
   position: absolute;
   top: 317px;
   left: 42px;
@@ -215,12 +216,22 @@ header {
   height: 196px;
 
 }
+
+.rectangle-group_2 {
+  position: absolute;
+  top: 1px;
+  left: 18px;
+  width: 310px;
+  height: 196px;
+
+}
 /* .hent {
   position: relative;
   line-height: 14px;
   font-weight: 500;
 } */
 .hent-wrapper {
+  display:block;
   position: absolute;
   height: 18.47%;
   width: 28.03%;
