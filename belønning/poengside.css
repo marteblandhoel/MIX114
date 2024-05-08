@@ -51,9 +51,10 @@ header {
 }
 
 .component {
-  display: block;
+  bottom: 150px;
+  display: none;
   position: relative;
-  width: 305px;
+  width: 306px;
   height: 112px;
   background-color: white;
   border-radius: 8px;
@@ -64,22 +65,20 @@ header {
 
 .component .tekst-brukt {
   position: absolute;
-  top: 58px;
-  left: 61px;
-  color: var(--variable-collection-success);
-  font-size: var(--title-3-font-size);
-  letter-spacing: var(--title-3-letter-spacing);
-  line-height: var(--title-3-line-height);
-  white-space: nowrap;
-  font-style: var(--title-3-font-style);
+  top: 60px;
+  left: 57px;
+  font-size: 24px;
+  font-weight: 900;
+  color:#11B95C; 
+
 }
 
 .component .brukt {
   position: absolute;
   top: 23px;
-  left: 36px;
+  left: 25px;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   color:#1A1C74;
 }
 
