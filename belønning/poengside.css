@@ -219,11 +219,9 @@ header {
   width: 310px;
   height: 196px;
 }
-/* .hent {
-  position: relative;
-  line-height: 14px;
-  font-weight: 500;
-} */
+.hent {
+  cursor: pointer;
+}
 .hent-wrapper {
   display: block;
   position: absolute;
