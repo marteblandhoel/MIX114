@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (goBackButton) {
     goBackButton.addEventListener("click", function (e) {
       // Redirect to hjemside.html
-      window.location.href = "../hjemside/hjemside.html";
+      window.location.href = "../minprofil/minprofil.html";
     });
   }
 });

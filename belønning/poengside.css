@@ -289,6 +289,32 @@ hr {
 .component-2 {
   width: 326px;
   height: 222px;
+<<<<<<< HEAD
+=======
+}
+.text1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 8px;
+}
+/* .sort_button {
+  margin: 32px 0px;
+  margin-top: -96%;
+  margin-bottom: 104%;
+  display: flex;
+  border-radius: 8px;
+  background-color: #1a1c74;
+  border: 1.5px solid #1a1c74;
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+} */
+.fa-sort-amount-down-alt {
+>>>>>>> cd8f7fa3e8d7460b8f15e5d6c74f161ae4183118
   position: absolute;
   left: 31px;
   top: 792px;
