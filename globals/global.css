@@ -22,7 +22,6 @@ h2 {
   flex-grow: 1; /* Allows the h2 to grow and fill the space */
   text-align: center; /* Ensures text is centered within the growing space */
   line-height: 1.2;
-  margin-left: -6%;
 }
 
 .navbar {

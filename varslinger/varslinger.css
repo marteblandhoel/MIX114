@@ -10,17 +10,24 @@
   text-align: left;
   line-height: 20px;
   color: #1a1c74;
-  font-family: Inter;
-  text-align: center;
   box-sizing: border-box;
 }
 
 header {
   display: flex;
+  flex-direction: row;
   align-items: center; /* Aligns children vertically in the center */
   justify-content: space-between; /* Distributes space between and around content items */
   width: 100%; /* Ensures the header takes full width */
 }
+
+#goBackButton {
+  margin-left: 10px; /* Adjust as needed to align the icon within the header */
+  font-size: 24px; /* Icon size */
+  justify-content: flex-start;
+}
+
+.overskrift {margin-top: -10%;}
 
 .controls {
   display: flex;
