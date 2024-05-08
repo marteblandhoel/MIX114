@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     profileIcon.addEventListener("click", function () {
-      window.location.href = "minprofil.html";
+      window.location.href = "../minprofil/minprofil.html";
     });
   }
 });
