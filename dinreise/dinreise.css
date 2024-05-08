@@ -118,6 +118,7 @@ input {
   max-height: fit-content;
   margin-bottom: 20%;
   gap: 16px;
+  z-index: 100;
 }
 
 .linje1 {
@@ -198,6 +199,8 @@ input {
 }
 
 .frame {
+  position: relative; /* Ensures it stays within the flow but can also work with absolute elements above it */
+  z-index: 5; /* Lower than the expanded container */
   display: flex;
   width: 120px;
   height: 43px;
@@ -205,7 +208,6 @@ input {
   justify-content: center;
   gap: 10px;
   padding: 10px 0px;
-  position: relative;
   background-color: #80abff;
   border-radius: 8px;
   overflow: hidden;
@@ -250,16 +252,22 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  flex-wrap: nowrap;
-  position: relative;
-  margin-top: 10px;
+  position: fixed; /* Changed from relative to fixed */
+  bottom: 100px; /* Set the button 100px above the bottom */
+  left: 50%; /* Position the left edge of the button at 50% of the screen */
+  transform: translateX(
+    -50%
+  ); /* Shift it back by 50% of its width to center it */
   width: 188px;
   height: 64px;
-  padding: 16px 40px 16px 40px;
+  padding: 16px 40px;
   background: #1a1c74;
-  overflow: hidden;
   border-radius: 8px;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  z-index: 10;
 }
 
 .text {
