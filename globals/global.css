@@ -53,10 +53,6 @@ h2 {
   overflow: hidden;
 }
 
-.active {
-  text-decoration-line: underline;
-}
-
 .iconFooter {
   cursor: pointer;
 }
