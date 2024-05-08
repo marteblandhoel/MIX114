@@ -8,38 +8,57 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-function filterVarslinger() {
-  const checkbox = document.getElementById("nokPoeng");
-  const userPointsText = document.querySelector(".title").textContent;
-  const userPoints = parseInt(userPointsText.split(":")[1].trim()); // Henter brukerens poeng
-  const rewards = document.querySelectorAll(".rectangle-group"); // Alle belønnings-elementer
+document.addEventListener("DOMContentLoaded", function () {
+  var profileIcon = document.querySelector(".fa-user-circle-o");
 
-  rewards.forEach((reward) => {
-    const pointsRequiredText = reward.querySelector(".poeng").textContent;
-    const pointsRequired = parseInt(pointsRequiredText.split(" ")[0]); // Henter poengkravet for belønningen
-
-    if (checkbox.checked) {
-      // Vis kun belønninger der brukeren har nok poeng
-      reward.style.display = userPoints >= pointsRequired ? "block" : "none";
-    } else {
-      // Vis alle belønninger når boksen ikke er avkrysset
-      reward.style.display = "block";
+  if (profileIcon) {
+    // Check if current page is "minprofil.html"
+    if (window.location.href.includes("minprofil.html")) {
+      profileIcon.classList.add("active");
     }
-  });
-}
 
-document.addEventListener("DOMContentLoaded", () => {
-  const filterTrigger = document.querySelector(".filter .default");
-  const filterMenu = document.getElementById("filterMenu");
-
-  if (filterTrigger) {
-    filterTrigger.addEventListener("click", () => {
-      filterMenu.style.display =
-        filterMenu.style.display === "none" ? "block" : "none";
+    profileIcon.addEventListener("click", function () {
+      window.location.href = "minprofil.html";
     });
   }
+});
 
-  // Attach event listener for changes on the checkbox
-  const nokPoengCheckbox = document.getElementById("nokPoeng");
-  nokPoengCheckbox.addEventListener("change", filterVarslinger);
+document.addEventListener("DOMContentLoaded", function () {
+  var carIcon = document.querySelector(".fa-car");
+
+  if (carIcon) {
+    carIcon.addEventListener("click", function () {
+      window.location.href = "../hjemside/hjemside.html";
+    });
+  }
+  var varselIcon = document.querySelector(
+    ".iconFooter.fa.fa-exclamation-triangle"
+  );
+
+  if (varselIcon) {
+    varselIcon.addEventListener("click", function () {
+      console.log("Icon clicked!"); // Debugging line
+      window.location.href = "../varslinger/varslinger.html";
+    });
+  }
+  var mapsIcon = document.querySelector(
+    ".iconFooter.fa-solid.fa-map-location-dot"
+  );
+
+  if (mapsIcon) {
+    mapsIcon.addEventListener("click", function () {
+      // Redirect to kart.html
+      window.location.href = "../kart/kart.html";
+    });
+  }
+  var locationIcon = document.querySelector(
+    ".iconFooter.fa-solid.fa-location-dot"
+  );
+
+  if (locationIcon) {
+    locationIcon.addEventListener("click", function () {
+      // Redirect to dinrute.html
+      window.location.href = "../dinreise/dinreise.html";
+    });
+  }
 });
