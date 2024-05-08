@@ -230,6 +230,67 @@ input {
   margin-bottom: -2.21px;
 }
 
+.main-container {
+  overflow: hidden;
+}
+
+.main-container,
+.main-container * {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+.carmodeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  flex-wrap: nowrap;
+  position: relative;
+  margin-top: 10px;
+  width: 188px;
+  height: 64px;
+  padding: 16px 40px 16px 40px;
+  background: #1a1c74;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  position: relative;
+  width: 130px;
+  padding: 0 8px 0 8px;
+}
+.button-car-mode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  width: 114px;
+  height: 32px;
+  color: #ffffff;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 1;
+}
+
 .kart {
   display: inline;
   width: 100%;
