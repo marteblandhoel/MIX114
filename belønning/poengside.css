@@ -1,8 +1,199 @@
 .filter {
   color: #ffffff;
+<<<<<<< HEAD
   background-color: #1a1c74;
   border-radius: 8px;
   padding: 12px 16px 12px 16px;
+=======
+}
+
+.component {
+  position: relative;
+  width: 325px;
+  height: 115px;
+  background-color: white;
+  border-radius: 8px;
+  border: 2px solid;
+  border-color: var(--primary);
+}
+
+.component .text-wrapper {
+  position: absolute;
+  top: 58px;
+  left: 61px;
+  color: var(--variable-collection-success);
+  font-size: var(--title-3-font-size);
+  letter-spacing: var(--title-3-letter-spacing);
+  line-height: var(--title-3-line-height);
+  white-space: nowrap;
+  font-style: var(--title-3-font-style);
+}
+
+.component .div {
+  position: absolute;
+  top: 23px;
+  left: 36px;
+  font-family: var(--regular-bold-font-family);
+  font-weight: var(--regular-bold-font-weight);
+  color: var(--primary);
+  font-size: var(--regular-bold-font-size);
+  letter-spacing: var(--regular-bold-letter-spacing);
+  line-height: var(--regular-bold-line-height);
+  white-space: nowrap;
+  font-style: var(--regular-bold-font-style);
+}
+
+
+
+
+.title {
+  align-self: stretch;
+  position: relative;
+  line-height: 20px;
+  font-weight: 500;
+}
+.get-immediate-alerts {
+  align-self: stretch;
+  position: relative;
+  font-size: 14px;
+  line-height: 16px;
+}
+.text {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 4px;
+}
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.alert {
+  margin: 32px 0px;
+  gap: 10%;
+  margin-top: 1%;
+  margin-bottom: 99%;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background-color: #1a1c74;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  color: #fff;
+}
+
+ .txt_undrpoints {
+  font-family: Inter;
+  float: left;
+  margin: 32px 0px;
+  margin-top: -98%;
+  margin-bottom:102% ;
+
+}
+.component-child {
+  position: absolute;
+  height: 67.86%;
+
+  top: 11.73%;
+  right: 0%;
+  bottom: 20.41%;
+
+  left: 0%;
+  border-radius: 8px;
+  background-color: #f4f4f4;
+  border: 1px solid #1a1c74;
+  box-sizing: border-box;
+}
+.premierBilde {
+  position: absolute;
+  height: 52.55%;
+  width: 40.55%;
+  top: 18.88%;
+  right: 54.04%;
+  bottom: 28.57%;
+  left: 5.41%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.for-en-god {
+  position: absolute;
+  width: 40.89%;
+  top: 17.86%;
+  left: 49.32%;
+  line-height: 17px;
+  display: inline-block;
+}
+.poeng {
+  position: absolute;
+  width: 28.04%;
+  top: 60.2%;
+  left: 50%;
+  font-size: 16px;
+  line-height: 20px;
+  display: inline-block;
+  color: #1a1c74;
+}
+.p-spylervske {
+  position: absolute;
+  width: 49.66%;
+  top: 0%;
+  left: 0.34%;
+  line-height: 14px;
+  display: inline-block;
+}
+.du-mangler-15-container {
+  position: absolute;
+  top: 84.18%;
+  left: 0%;
+  font-size: 12px;
+  line-height: 14px;
+  display: inline-block;
+}
+
+.rectangle-parent {
+  position: absolute;
+  top: 317px;
+  left: 32px;
+  width: 326px;
+  height: 196px;
+}
+
+.rectangle-group {
+  position: absolute;
+  height: 88.29%;
+  width: 100.31%;
+  top: 0%;
+  right: -3.42%;
+  bottom: 11.71%;
+  left: 3.12%;
+}
+/* .hent {
+  position: relative;
+  line-height: 14px;
+  font-weight: 500;
+} */
+.hent-wrapper {
+  position: absolute;
+  height: 18.47%;
+  width: 28.03%;
+  top: 84.23%;
+  right: 68.85%;
+  bottom: -2.7%;
+  left: 3.12%;
+  border-radius: 8px;
+  background-color: #1a1c74;
+  overflow: hidden;
+>>>>>>> 52a625d (endret css)
   display: flex;
   flex-direction: row;
   gap: 0px;
