@@ -6,7 +6,7 @@
 }
 #map {
   position: absolute;
-  top: 30%;
+  top: 33%;
   left: 0;
   z-index: 1;
   display: flex;
@@ -15,7 +15,7 @@
 }
 
 gmp-map {
-  height: 400px;
+  height: 300px;
   width: 508px;
 }
 .main-container {
@@ -44,16 +44,6 @@ gmp-map {
   width: 100%;
   box-sizing: border-box;
 }
-
-/*input {
-  display: flex;
-  width: 100%;
-  border: none;
-  outline: none;
-  text-align: left;
-  font-size: 16px;
-  width: 100%;
-}*/
 
 .from,
 .to {
@@ -90,6 +80,7 @@ gmp-map {
 #shortContainer {
   flex-direction: row;
   justify-content: space-between;
+  z-index: 2;
 }
 
 .container {
@@ -101,6 +92,7 @@ gmp-map {
   padding: 5%;
   box-sizing: border-box;
   transition: max-height 0.3s ease;
+  z-index: inherit;
 }
 
 .tittel {
@@ -299,14 +291,6 @@ button {
   text-align: center;
   white-space: nowrap;
   z-index: 1;
-}
-
-.kart {
-  display: inline;
-  width: 100%;
-  height: auto;
-  background-color: lightgreen;
-  z-index: inherit;
 }
 
 .text-wrapper:hover,

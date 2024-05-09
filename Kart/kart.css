@@ -15,12 +15,14 @@
   background-color: red;
 }
 gmp-map {
+  margin: none;
   height: 100%;
   width: 100%;
   z-index: 5;
 }
 
 .innhold {
+  margin: none;
   margin-top: 68px;
   display: flex;
   flex-direction: column;
@@ -30,6 +32,7 @@ gmp-map {
   line-height: 20px;
   color: #1a1c74;
   text-align: center;
+
 }
 
 .maps {
@@ -44,8 +47,9 @@ gmp-map {
   border: 1px solid #1a1c74;
   border-radius: 20px;
   position: relative;
-  padding: 20px;
-  width: 100%;
+  padding: 18px 20px;
+  margin: 0 8%;
+  width: 84%;
   box-sizing: border-box;
 }
 .email-address {
@@ -116,6 +120,6 @@ gmp-map {
   display: flex;
   overflow: hidden;
   padding: 6px;
-  color: #f49e00;
+  color: red;
   justify-content: center;
 }

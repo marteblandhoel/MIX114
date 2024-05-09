@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (planleggReiseButton) {
     planleggReiseButton.addEventListener("click", function (e) {
       // Redirect to planlegg.html
-      window.location.href = "../dinreise/dinreise.html";
+      window.location.href = "../dinreise/finnreise.html";
     });
   }
 
