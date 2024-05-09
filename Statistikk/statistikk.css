@@ -20,6 +20,8 @@
   justify-content: space-between;
 }
 
+#dropdownMenu {font-size: 14px; color: #1a1c74; border: 1px solid #1a1c74; border-radius: 5px;}
+
 .highcharts-series-group {
   padding: -100px -30px -30px -30px;
 }
