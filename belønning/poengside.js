@@ -92,11 +92,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Get reference to the coupon container
   var couponContainer = document.querySelector(".component-1");
+  // Get reference to the coupon container 1
+  var couponContainer1 = document.querySelector(".rectangle-parent");
+
+  // Get reference to the b element inside the coupon container 1
+  var bElement1 = couponContainer1.querySelector(".du-mangler-15-container b");
+
+  // Get reference to the coupon container 2
+  var couponContainer2 = document.querySelector(".component-2");
+
+  // Get reference to the b element inside the coupon container 2
+  var bElement2 = couponContainer2.querySelector(".du-mangler-15-container b");
 
   // Add click event listener to the "Bruk" button
   brukButton.addEventListener("click", function () {
     // Hide the coupon container
     couponContainer.style.display = "none";
+    var currentPoints1 = parseInt(bElement1.textContent);
+    var currentPoints2 = parseInt(bElement2.textContent);
+    bElement1.textContent = currentPoints1 + 20;
+    bElement2.textContent = currentPoints2 + 20;
   });
 
   // Add click event listener to the document body
