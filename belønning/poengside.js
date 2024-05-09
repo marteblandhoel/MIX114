@@ -108,3 +108,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+  // Get reference to the "Bruk" button inside the coupon component
+  var brukButton = document.querySelector(".hent-wrapper .hent");
+
+  // Get reference to the coupon container
+  var couponContainer = document.querySelector(".component-1");
+
+  // Get reference to the next component after the coupon container
+  var nextComponent = document.querySelector(".component-2");
+
+  // Add click event listener to the "Bruk" button
+  brukButton.addEventListener("click", function () {
+    // Hide the coupon container
+    couponContainer.style.display = "none";
+
+    // Adjust the positioning of the next component
+    nextComponent.style.position = "absolute"; // Change position to absolute
+    nextComponent.style.top = "531px"; // Adjust top position to match component-1
+  });
+});
