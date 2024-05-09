@@ -65,17 +65,28 @@ async function initMap() {
   customImage1.style.height = "40px"; // Set height of the SVG
   customImage1.style.backgroundColor = "gray";
 
-  const customImage2 = document.createElement("img");
-  customImage2.src = "../globals/danger.svg"; // Path to your SVG file
-  customImage2.style.width = "40px"; // Set width of the SVG
-  customImage2.style.height = "40px"; // Set height of the SVG
-  customImage2.style.backgroundColor = "red";
+  // bruker ikonene fra fontawasome
+  const customImage2 = document.createElement("i");
+  customImage2.className = "fa-solid fa-triangle-exclamation"; // FontAwesome class
+  customImage2.style.fontSize = "40px"; // Set the size of the icon
+  customImage2.style.color = "red"; // Set the color of the icon
+  customImage2.style.backgroundColor = "white"; // Background color
+  customImage2.style.padding = "5px"; // Padding to ensure background visibility
+  customImage2.style.borderRadius = "50%"; // Circular background
+  customImage2.style.display = "flex"; // Ensures it behaves like an image
+  customImage2.style.justifyContent = "center"; // Center the icon
+  customImage2.style.alignItems = "center"; // Vertically center the icon
 
-  const customImage3 = document.createElement("img");
-  customImage3.src = "../globals/danger.svg"; // Path to your SVG file
-  customImage3.style.width = "40px"; // Set width of the SVG
-  customImage3.style.height = "40px"; // Set height of the SVG
-  customImage3.style.backgroundColor = "blue";
+  const customImage3 = document.createElement("i");
+  customImage3.className = "fa-solid fa-snowflake"; // FontAwesome class
+  customImage3.style.fontSize = "40px"; // Set the size of the icon
+  customImage3.style.color = "blue"; // Set the color of the icon
+  customImage3.style.backgroundColor = "white"; // Background color
+  customImage3.style.padding = "5px"; // Padding to ensure background visibility
+  customImage3.style.borderRadius = "50%"; // Circular background
+  customImage3.style.display = "flex"; // Ensures it behaves like an image
+  customImage3.style.justifyContent = "center"; // Center the icon
+  customImage3.style.alignItems = "center"; // Vertically center the icon
 
   // Initialize markers with custom SVG images
   marker1 = new google.maps.marker.AdvancedMarkerElement({

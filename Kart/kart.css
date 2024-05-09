@@ -17,7 +17,9 @@
 gmp-map {
   height: 100%;
   width: 100%;
+  z-index: 5;
 }
+
 .innhold {
   margin-top: 68px;
   display: flex;
@@ -56,6 +58,24 @@ gmp-map {
   width: 100%;
 }
 
+.kart {
+  position: relative; /* Needed for absolute positioning inside */
+}
+
+.varsling-container {
+  position: absolute;
+  bottom: 100px; /* Adjust as needed to position correctly */
+  left: 32px; /* Adjust to not overlap unwanted elements */
+  z-index: 10; /* Higher than the map to overlay it */
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.infotekst {
+  margin-left: 5px; /* Spacing between icon and text */
+}
+
 .fa-triangle-exclamation {
   font-size: 24px;
   display: flex;
@@ -67,19 +87,20 @@ gmp-map {
 .varsling {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
   border-radius: 18px;
   background-color: #fff;
   border: 1px solid hsl(238, 46%, 41%);
   box-sizing: border-box;
   width: max-content;
-  padding: 6px;
+  padding: 2px 5px;
 }
 
 .infotekst {
   font-size: 12px;
-  line-height: 16px;
+  margin-top: 12px;
   text-align: left;
-  justify-content: flex-start;
 }
 .fa-snowflake {
   font-size: 24px;
@@ -90,11 +111,11 @@ gmp-map {
   justify-content: center;
 }
 
-.iconsolidinformation-circle {
-  position: absolute;
-  top: 240px;
-  left: 317px;
-  width: 43px;
-  height: 43px;
+.varsling .fa-exclamation-triangle {
+  font-size: 24px;
+  display: flex;
   overflow: hidden;
+  padding: 6px;
+  color: #f49e00;
+  justify-content: center;
 }
