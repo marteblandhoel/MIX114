@@ -12,13 +12,13 @@
 .flag-icon {
   position: relative;
   left: 10px;
+  background-color: red;
 }
 gmp-map {
   height: 100%;
-  width: 200px;
+  width: 100%;
 }
 .innhold {
-  margin: 0 32px;
   margin-top: 68px;
   display: flex;
   flex-direction: column;
