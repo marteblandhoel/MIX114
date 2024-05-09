@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Din Reise</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+    />
+    <link rel="stylesheet" href="finnreise.css" type="text/css" />
+    <link rel="stylesheet" href="../globals//global.css" />
+    <script src="finnreise.js"></script>
+    <script
+      src="https://kit.fontawesome.com/c941d0ea4c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <h2 class="overskrift">Din Reise</h2>
+      <div class="velgReise">
+        <div class="from">
+          <input id="fromInput" type="text" placeholder="Fra:" />
+        </div>
+        <div class="line-with-icon">
+          <div class="line"></div>
+          <i class="fa-solid icon fa-arrows-up-down"></i>
+        </div>
+        <div class="to">
+          <input id="toInput" type="text" placeholder="Til:" />
+        </div>
+      </div>
+      <button id="goButton">Vis Rute</button>
+      <div class="kart"></div>
+      <gmp-map
+        center="60.38562287749684,5.332862485028679"
+        zoom="10"
+        map-id="gcloud certificate-manager maps create kart_bergen"
+      >
+        <gmp-advanced-marker
+          position="-33.890542, 151.274856"
+          title="Bondi Beach"
+        >
+          <img
+            class="flag-icon"
+            src="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"
+          />
+        </gmp-advanced-marker>
+        <gmp-advanced-marker
+          position="-33.923036, 151.259052"
+          title="Coogee Beach"
+        >
+          <img
+            class="flag-icon"
+            src="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"
+          />
+        </gmp-advanced-marker>
+        <gmp-advanced-marker
+          position="-34.028249, 151.157507"
+          title="Cronulla Beach"
+        >
+          <img
+            class="flag-icon"
+            src="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"
+          />
+        </gmp-advanced-marker>
+        <gmp-advanced-marker
+          position="-33.800101, 151.287478"
+          title="Manly Beach"
+        >
+          <img
+            class="flag-icon"
+            src="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"
+          />
+        </gmp-advanced-marker>
+        <gmp-advanced-marker
+          position="-33.950198, 151.259302"
+          title="Maroubra Beach"
+        >
+          <img
+            class="flag-icon"
+            src="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"
+          />
+        </gmp-advanced-marker>
+      </gmp-map>
+      <!-- <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAO68vhCtj-hvYqBbzkKIUv967TCNAH&loading=async&libraries=marker&v=beta&solution_channel=GMP_CCS_complexmarkers_v2"
+        defer
+      ></script>-->
+    </div>
+    <nav class="navbar">
+      <div class="navbar-child"></div>
+      <div class="icon-parent">
+        <i
+          class="iconFooter fa-solid fa-location-dot"
+          aria-label="location pin"
+        ></i>
+        <i
+          class="iconFooter fa-solid fa-map-location-dot"
+          aria-label="maps icon"
+        ></i>
+        <i class="iconFooter fa fa-car" aria-label="car icon"></i>
+        <i
+          class="iconFooter fa fa-exclamation-triangle"
+          aria-label="varsel icon"
+        ></i>
+        <i class="iconFooter fa fa-user-circle-o" aria-label="profile icon"></i>
+      </div>
+    </nav>
+  </body>
+  <script src="dinreise.js"></script>
+</html>

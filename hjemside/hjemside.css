@@ -103,3 +103,11 @@
   justify-content: flex-start;
   color: #595959;
 }
+
+#carIcon {
+  background-color: white;
+  color: #1a1c74;
+  border-radius: 50%;
+  padding: 10px; /* Same padding as other icons */
+  box-sizing: border-box;
+}

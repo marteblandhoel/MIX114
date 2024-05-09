@@ -28,6 +28,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  var planleggReiseButton = document.getElementById("planlegg-reise");
+  if (planleggReiseButton) {
+    planleggReiseButton.addEventListener("click", function (e) {
+      // Redirect to planlegg.html
+      window.location.href = "../dinreise/dinreise.html";
+    });
+  }
+
+  var seKartButton = document.getElementById("se-kart");
+  if (seKartButton) {
+    seKartButton.addEventListener("click", function (e) {
+      // Redirect to kart.html
+      window.location.href = "../Kart/kart.html";
+    });
+  }
+
   var seVarslingerButton = document.querySelector(".text-button .button");
 
   if (seVarslingerButton) {

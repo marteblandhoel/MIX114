@@ -27,18 +27,12 @@ gmp-map {
   overflow: hidden;
   line-height: 20px;
   color: #1a1c74;
-  font-family: Inter;
   text-align: center;
 }
 
 .maps {
   display: flex;
   width: 100%;
-}
-.kart {
-  font-size: 32px;
-  width: 100%;
-  margin: 0;
 }
 
 .inputContainer {

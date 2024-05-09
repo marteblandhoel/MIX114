@@ -1,11 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var goBackButton = document.getElementById("goBackButton");
-  if (goBackButton) {
-    goBackButton.addEventListener("click", function (e) {
-      // Redirect to hjemside.html
-      window.location.href = "../minprofil/minprofil.html";
-    });
-  }
+  // Event listener for the goBackButton
+  const goBackButton = document.getElementById("goBackButton");
+  goBackButton.addEventListener("click", function () {
+    history.back();
+  });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -61,4 +59,54 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = "../dinreise/dinreise.html";
     });
   }
+});
+
+// Wait for the DOM content to be fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+  // Get reference to the button with class "hent"
+  var hentButton = document.querySelector(".hent");
+
+  // Get reference to the popup component
+  var popupComponent = document.querySelector(".component");
+
+  // Get reference to the "Dine poeng" div
+  var dinePoengDiv = document.querySelector(".title");
+
+  // Add click event listener to the hent button
+  hentButton.addEventListener("click", function () {
+    // Toggle the display property of the popup component
+    if (
+      popupComponent.style.display === "none" ||
+      popupComponent.style.display === ""
+    ) {
+      popupComponent.style.display = "block";
+    } else {
+      popupComponent.style.display = "none";
+    }
+    // Update the content of the "Dine poeng" div after using the popup
+    dinePoengDiv.textContent = "Dine poeng: 5";
+  });
+
+  // Get reference to the "Bruk" button inside the coupon component
+  var brukButton = document.querySelector(".hent-wrapper .hent");
+
+  // Get reference to the coupon container
+  var couponContainer = document.querySelector(".component-1");
+
+  // Add click event listener to the "Bruk" button
+  brukButton.addEventListener("click", function () {
+    // Hide the coupon container
+    couponContainer.style.display = "none";
+  });
+
+  // Add click event listener to the document body
+  document.body.addEventListener("click", function (event) {
+    // Check if the clicked element is not inside the popup component
+    if (!popupComponent.contains(event.target) && event.target !== hentButton) {
+      // Hide the popup component
+      popupComponent.style.display = "none";
+      // Update the content of the "Dine poeng" div when clicking outside the popup
+      dinePoengDiv.textContent = "Dine poeng: 5";
+    }
+  });
 });

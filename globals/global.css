@@ -22,7 +22,6 @@ h2 {
   flex-grow: 1; /* Allows the h2 to grow and fill the space */
   text-align: center; /* Ensures text is centered within the growing space */
   line-height: 1.2;
-  margin-left: -6%;
 }
 
 .navbar {
@@ -37,27 +36,35 @@ h2 {
   background-color: #1a1c74;
   z-index: 100;
   box-sizing: border-box;
+  display: flex; /* Ensures the navbar is a flex container */
+  align-items: center; /* Vertically aligns all children in the center */
+  justify-content: center; /* Horizontally centers the content */
 }
 .icon-parent {
   display: flex;
-  padding: 24px 20px;
   justify-content: space-between;
+  align-items: center; /* Ensure vertical alignment of all child elements */
   flex-wrap: wrap;
   position: relative;
   z-index: 1;
   color: #ffffff;
+  width: 100%; /* Takes full width of the navbar */
+  padding: 10px 20px; /* Adjusted padding */
 }
 
 .iconFooter {
   font-size: 32px;
   z-index: 2;
+  cursor: pointer;
   overflow: hidden;
-}
-
-.active {
-  text-decoration-line: underline;
+  padding: 5px; /* Uniform padding for all icons */
+  transition: transform 0.3s; /* Optional: for a hover effect */
 }
 
 .iconFooter {
   cursor: pointer;
+}
+
+.iconFooter:hover {
+  transform: scale(1.1); /* Optional: Slight enlargement on hover */
 }

@@ -74,3 +74,15 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("shortContainer").style.display = "flex"; // Same here for consistency
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const statistikkButton = document.querySelector(".text-wrapper");
+  statistikkButton.addEventListener("click", function () {
+    window.location.href = "../Statestikk/statestikk.html";
+  });
+  // Event listener for "Car Mode" knappen
+  const carmodeButton = document.querySelector(".button-car-mode");
+  carmodeButton.addEventListener("click", function () {
+    window.location.href = "../dinreise/carmode.html";
+  });
+});

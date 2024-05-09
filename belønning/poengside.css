@@ -11,6 +11,7 @@
   line-height: 20px;
   color: #1a1c74;
   font-family: Inter;
+  height: 105vh;
 }
 
 header {
@@ -50,40 +51,35 @@ header {
 }
 
 .component {
+  bottom: 150px;
+  display: none;
   position: relative;
-  width: 325px;
-  height: 115px;
+  width: 306px;
+  height: 112px;
   background-color: white;
   border-radius: 8px;
   border: 2px solid;
-  border-color: blue;
+  border-color: #1a1c74;
   z-index: 15;
 }
 
-.component .text-wrapper {
+.component .tekst-brukt {
   position: absolute;
-  top: 58px;
-  left: 61px;
-  color: var(--variable-collection-success);
-  font-size: var(--title-3-font-size);
-  letter-spacing: var(--title-3-letter-spacing);
-  line-height: var(--title-3-line-height);
-  white-space: nowrap;
-  font-style: var(--title-3-font-style);
+  top: 60px;
+
+  left: 57px;
+  font-size: 24px;
+  font-weight: 900;
+  color: #11b95c;
 }
 
-.component .div {
+.component .brukt {
   position: absolute;
   top: 23px;
-  left: 36px;
-  font-family: var(--regular-bold-font-family);
-  font-weight: var(--regular-bold-font-weight);
-  color: var(--primary);
-  font-size: var(--regular-bold-font-size);
-  letter-spacing: var(--regular-bold-letter-spacing);
-  line-height: var(--regular-bold-line-height);
-  white-space: nowrap;
-  font-style: var(--regular-bold-font-style);
+  left: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1c74;
 }
 
 .title {
@@ -200,8 +196,9 @@ header {
 }
 
 .rectangle-parent {
+  display: block;
   position: absolute;
-  top: 317px;
+  top: 282px;
   left: 42px;
   width: 310px;
   height: 196px;
@@ -209,25 +206,30 @@ header {
 
 .rectangle-group {
   position: absolute;
-  top: 1px;
+  top: -30px;
   left: 18px;
   width: 310px;
   height: 196px;
-
 }
-/* .hent {
-  position: relative;
-  line-height: 14px;
-  font-weight: 500;
-} */
+
+.rectangle-group_2 {
+  position: absolute;
+  top: -25px;
+  left: 18px;
+  width: 310px;
+  height: 196px;
+}
+.hent {
+  cursor: pointer;
+}
 .hent-wrapper {
+  display: block;
   position: absolute;
   height: 18.47%;
   width: 28.03%;
-  top: 84.23%;
-  right: 68.85%;
+  top: 95.23%;
+  right: 72%;
   bottom: -2.7%;
-  left: 3.12%;
   border-radius: 8px;
   background-color: #1a1c74;
   overflow: hidden;
@@ -280,15 +282,3 @@ header {
   justify-content: center;
   padding: 12px 16px;
 } */
-.fa-sort-amount-down-alt {
-  position: absolute;
-  top: 8px;
-  left: 83.16px;
-  width: 26.3px;
-  height: 25px;
-}
-.sorter {
-  cursor: pointer;
-  text-align: center;
-  color: #fff;
-}
