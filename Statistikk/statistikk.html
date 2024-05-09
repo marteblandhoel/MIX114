@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ulykke-statistikk</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap"
+    />
+    <script
+      src="https://kit.fontawesome.com/c941d0ea4c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="statistikk.css" />
+    <link rel="stylesheet" href="../globals/global.css" type="text/css" />
+    <script src="statistikk.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/gantt/modules/gantt.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/dashboards/dashboards.js"></script>
+    <script src="https://code.highcharts.com/dashboards/modules/layout.js"></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <h2 class="overskrift">Ulykke-statistikk</h2>
+      <div id="statesikk_top">
+        <div class="dropdown">
+          <label for="dropdownMenu">Tidligere ulykker på din reiserute:</label>
+          <select id="dropdownMenu">
+            <option value="">1 År</option>
+            <option value="5" selected>5 År</option>
+            <option value="10">10 År</option>
+            <option value="20">20 År</option>
+          </select>
+        </div>
+      </div>
+      <div class="background" id="container">
+        <div class="row">
+          <div class="cell" id="current-sprint-kpi">
+            <div class="row" id="current-sprint">
+              <div class="cell" id="dashboard-kpi-1"></div>
+              <div class="cell" id="dashboard-kpi-2"></div>
+            </div>
+          </div>
+          <div class="cell" id="dashboard-kpi-4"></div>
+        </div>
+        <div class="row" id="charts-1">
+          <div class="cell" id="dashboard-chart-1"></div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar">
+      <div class="icon-parent">
+        <i
+          class="iconFooter fa-solid fa-location-dot"
+          aria-label="location pin"
+        ></i>
+        <i
+          class="iconFooter fa-solid fa-map-location-dot"
+          aria-label="maps icon"
+        ></i>
+        <i class="iconFooter fa fa-car" aria-label="car icon"></i>
+        <i
+          class="iconFooter fa fa-exclamation-triangle"
+          aria-label="varsel icon"
+        ></i>
+        <i class="iconFooter fa fa-user-circle-o" aria-label="profile icon"></i>
+      </div>
+    </nav>
+    <script href="statistikk.js"></script>
+  </body>
+</html>

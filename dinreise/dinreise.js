@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const statistikkButton = document.querySelector(".text-wrapper");
   statistikkButton.addEventListener("click", function () {
-    window.location.href = "../Statestikk/statestikk.html";
+    window.location.href = "../Statistikk/statistikk.html";
   });
   // Event listener for "Car Mode" knappen
   const carmodeButton = document.querySelector(".button-car-mode");

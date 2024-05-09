@@ -1,110 +1,35 @@
-.accident-statistics {
-  display: block;
-  position: relative;
-  height: 36px;
-  margin: 67px 0 0 55px;
-  color: #1a1c74;
-  font-family: Inter, var(--default-font-family);
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 36px;
-  text-align: left;
-  white-space: nowrap;
-}
-#statesikk_top {
-  margin-bottom: 30px;
-}
-.icon {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  z-index: 11;
+.main-container {
+  margin: 0 32px;
+  margin-top: 68px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: #fff;
   overflow: hidden;
-}
-.icon-1 {
-  position: relative;
-  width: 29.667px;
-  height: 34.362px;
-  margin: 3.5px 0 0 5.167px;
-  background: url(./assets/images/6be26a8e-3a4c-4b7f-9f2f-77ef5d41d2ab.png)
-    no-repeat center;
-  background-size: 100% 100%;
-  z-index: 12;
-}
-.icon-2 {
-  position: relative;
-  width: 32px;
-  height: 31.986px;
-  background: url(./assets/images/d8374879-4129-44f1-9ab6-2b03feb35d31.png)
-    no-repeat center;
-  background-size: cover;
-  z-index: 13;
+  text-align: left;
+  color: #1a1c74;
 }
 
-.antall_år {
-  position: absolute;
-  width: 55px;
-  height: 28px;
-  top: 133px;
-  left: 310px;
-  background: #1a1c74;
-  z-index: 5;
-  border-radius: 10px;
-  color: white;
-}
-.antall_år:hover {
-  background: gray;
-}
-.span {
+.dropdown {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: absolute;
-  height: 14px;
-  top: 8px;
-  left: 7px;
-  color: #ffffff;
-  font-family: Inter, var(--default-font-family);
+  flex-direction: row;
   font-size: 14px;
-  font-weight: 500;
-  line-height: 14px;
-  text-align: left;
-  white-space: nowrap;
-  z-index: 6;
+  color: #1a1c74;
+  width: 100%;
+  justify-content: space-between;
 }
-.polygon {
-  position: absolute;
-  width: 11px;
-  height: 11px;
-  top: 9px;
-  left: 38px;
-  background: url(./assets/images/f3f68c9c-0141-4c27-b9ea-bc36fba4d4c0.png)
-    no-repeat center;
-  background-size: cover;
-  z-index: 7;
-}
-.previous-accidents {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: absolute;
-  height: 20px;
-  top: 138px;
-  left: 31px;
-  color: #000000;
-  font-family: Inter, var(--default-font-family);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20px;
-  text-align: left;
-  white-space: nowrap;
-  z-index: 3;
-}
-@import url("https://code.highcharts.com/css/highcharts.css");
 
-body {
-  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+.highcharts-series-group {
+  padding: -100px -30px -30px -30px;
 }
+
+.row {
+  width: 100%;
+  margin: none;
+}
+
+@import url("https://code.highcharts.com/css/highcharts.css");
 
 :root,
 .highcharts-light {
@@ -136,31 +61,33 @@ body {
     --gray: #333;
 
     /* UI colors */
-    --highcharts-background-color: #333;
-    --highcharts-neutral-color-100: rgb(255, 255, 255);
-    --highcharts-neutral-color-5: rgb(61, 61, 61);
-    --highcharts-neutral-color-3: rgb(57, 57, 57);
-    --highcharts-neutral-color-0: rgb(0, 0, 0);
+    --highcharts-background-color: #1a1c74;
+    --highcharts-neutral-color-100: #ffffff;
+    --highcharts-neutral-color-5: #ffffff;
+    --highcharts-neutral-color-3: #ffffff;
+    --highcharts-neutral-color-0: #ffffff;
   }
 }
 
 #container {
   background-color: var(--highcharts-neutral-color-5);
-  padding: 20px 10px;
   position: relative;
 }
 
 .row {
   display: flex;
+  flex-direction: row;
+  width: 100%;
   position: relative;
+  margin: -10px 0;
 }
 
 .cell {
   border: 1px solid transparent;
   border-radius: 10px;
   position: relative;
-  min-width: 20px;
-  height: 300px;
+  font-size: 12px;
+  margin: 10px 0;
 }
 
 .highcharts-dashboards-component {
@@ -168,8 +95,9 @@ body {
 }
 
 .highcharts-dashboards-component-title {
-  font-size: 1.2em;
-  text-align: left;
+  font-size: 1.4em;
+  font-weight: 500;
+  text-align: center;
   margin: 1em;
 }
 
@@ -177,7 +105,6 @@ body {
   position: relative;
   background-color: var(--highcharts-background-color);
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  margin: 5px;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -191,7 +118,6 @@ body {
   background-color: var(--highcharts-neutral-color-5);
   color: var(--highcharts-neutral-color-100);
   margin: 0;
-  padding-left: 20px;
 }
 
 .highcharts-dashboards-component-kpi-content {
@@ -200,8 +126,8 @@ body {
 }
 
 .highcharts-dashboards-component.highcharts-dashboards-component-kpi-value {
-  font-size: 4em;
-  margin-top: 40px;
+  font-size: 3em;
+  margin: 10px;
 }
 
 .highcharts-dashboards-component-kpi {
@@ -210,7 +136,8 @@ body {
 
 .highcharts-dashboards-component-kpi-content
   .highcharts-dashboards-component-subtitle {
-  font-size: 1.4em;
+  font-size: 1.1em;
+  margin-bottom: 20px;
 }
 
 #dashboard-kpi-3
