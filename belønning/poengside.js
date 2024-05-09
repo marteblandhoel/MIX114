@@ -105,8 +105,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!popupComponent.contains(event.target) && event.target !== hentButton) {
       // Hide the popup component
       popupComponent.style.display = "none";
-      // Update the content of the "Dine poeng" div when clicking outside the popup
-      dinePoengDiv.textContent = "Dine poeng: 5";
     }
   });
 });
