@@ -34,11 +34,6 @@ gmp-map {
   display: flex;
   width: 100%;
 }
-.kart {
-  font-size: 32px;
-  width: 100%;
-  margin: 0;
-}
 
 .inputContainer {
   display: flex;
