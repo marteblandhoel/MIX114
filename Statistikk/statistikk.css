@@ -11,6 +11,26 @@
   color: #1a1c74;
 }
 
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Aligns children vertically in the center */
+  justify-content: space-between; /* Distributes space between and around content items */
+  width: 100%; /* Ensures the header takes full width */
+}
+
+#goBackButton {
+  font-size: 24px; /* Icon size */
+  position: absolute;
+  left: 42px;
+}
+
+.overskrift {
+  margin-top: 20px;
+  flex-grow: 1; /* Allows the h2 to grow and fill the space */
+  text-align: center; /* Ensures text is centered within the growing space */
+}
+
 .dropdown {
   display: flex;
   flex-direction: row;
@@ -20,7 +40,12 @@
   justify-content: space-between;
 }
 
-#dropdownMenu {font-size: 14px; color: #1a1c74; border: 1px solid #1a1c74; border-radius: 5px;}
+#dropdownMenu {
+  font-size: 14px;
+  color: #1a1c74;
+  border: 1px solid #1a1c74;
+  border-radius: 5px;
+}
 
 .highcharts-series-group {
   padding: -100px -30px -30px -30px;
@@ -92,15 +117,26 @@
   margin: 10px 0;
 }
 
+.first {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+}
+
 .highcharts-dashboards-component {
   color: var(--highcharts-neutral-color-100);
 }
 
 .highcharts-dashboards-component-title {
-  font-size: 1.4em;
+  font-size: 1.25em;
   font-weight: 500;
   text-align: center;
   margin: 1em;
+}
+
+.cell.blue-cell:nth-child(1),
+.cell.blue-cell:nth-child(2) {
+  height: 170px; /* Adjust this value to the desired height */
 }
 
 .cell > .highcharts-dashboards-component {
@@ -138,7 +174,7 @@
 
 .highcharts-dashboards-component-kpi-content
   .highcharts-dashboards-component-subtitle {
-  font-size: 1.1em;
+  font-size: 1em;
   margin-bottom: 20px;
 }
 
@@ -178,6 +214,10 @@
   stroke: #f00;
 }
 
+.highcharts-root {
+  padding: 0;
+}
+
 .highcharts-plot-line-label {
   fill: var(--highcharts-neutral-color-100);
   font-size: 1em;
@@ -185,11 +225,20 @@
 }
 
 #dashboard-kpi-1,
-#dashboard-kpi-2,
+#dashboard-kpi-2 {
+  width: 50%;
+}
+
+#current-sprint-kpi {
+  height: 170px;
+}
+.cell.blue-cell {
+  max-height: 170px; /* or any other appropriate value */
+}
+
 #dashboard-kpi-4,
 #current-sprint-kpi {
-  flex: 1 1 50%;
-  height: 300px;
+  height: fit-content;
 }
 
 #dashboard-chart-1,
@@ -198,6 +247,9 @@
   height: 350px;
 }
 
+#current-sprint-kpi .row {
+  margin-bottom: -140px;
+}
 #dashboard-chart-1 {
   flex: 1 1 20%;
 }
@@ -235,7 +287,7 @@
   }
 
   #current-sprint-kpi {
-    height: auto;
+    height: 170px;
   }
 
   #current-sprint.row {

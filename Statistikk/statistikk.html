@@ -24,8 +24,10 @@
   </head>
   <body>
     <div class="main-container">
-      <i id="goBackButton" class="iconsolidx fa-solid fa-xmark"></i>
-      <h2 class="overskrift">Ulykke-statistikk</h2>
+      <div class="header">
+        <i id="goBackButton" class="iconsolidx fa-solid fa-xmark"></i>
+        <h2 class="overskrift">Ulykke-statistikk</h2>
+      </div>
       <div id="statesikk_top">
         <div class="dropdown">
           <label for="dropdownMenu">Tidligere ulykker på din reiserute:</label>
@@ -39,10 +41,10 @@
       </div>
       <div class="background" id="container">
         <div class="row">
-          <div class="cell" id="current-sprint-kpi">
+          <div class="first cell" id="current-sprint-kpi">
             <div class="row" id="current-sprint">
-              <div class="cell" id="dashboard-kpi-1"></div>
-              <div class="cell" id="dashboard-kpi-2"></div>
+              <div class="cell blue-cell" id="dashboard-kpi-1"></div>
+              <div class="cell blue-cell" id="dashboard-kpi-2"></div>
             </div>
           </div>
           <div class="cell" id="dashboard-kpi-4"></div>
