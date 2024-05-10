@@ -89,7 +89,7 @@ gmp-map {
   background-color: #f49e00;
   border: 2px solid #1a1c74;
   border-radius: 8px;
-  padding: 5%;
+  padding: 2% 5%;
   box-sizing: border-box;
   transition: max-height 0.3s ease;
   z-index: inherit;
@@ -98,11 +98,11 @@ gmp-map {
 .tittel {
   font-size: 150%;
   font-weight: 500;
+  margin-bottom: 5px;
 }
 
 .tekst {
   font-size: 133%;
-  margin-bottom: 0;
 }
 
 #expandedContainer {
@@ -200,8 +200,9 @@ gmp-map {
   height: 43px;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 10px 0px;
+  gap: 5px;
+  margin-top: -12px;
+  padding: 8px 0px;
   background-color: #80abff;
   border-radius: 8px;
   overflow: hidden;
