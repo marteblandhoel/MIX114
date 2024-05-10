@@ -87,8 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-let map;
-
 function initMap() {
   const mapOptions = {
     center: { lat: 60.3898141, lng: 5.3333388 },
@@ -101,31 +99,44 @@ function initMap() {
 
   const map = new google.maps.Map(document.getElementById("map"), mapOptions);
   const directionsService = new google.maps.DirectionsService();
-  const directionsRenderer = new google.maps.DirectionsRenderer({
-    map: map,
-    suppressMarkers: false,
-    preserveViewport: true,
-  });
 
-  calculateAndDisplayRoute(directionsService, directionsRenderer);
-}
+  const request = {
+    origin: "Bergen Sentrum, Bergen",
+    destination: "Nesttun Terminal, Bergen",
+    travelMode: google.maps.TravelMode.DRIVING,
+    provideRouteAlternatives: true,
+  };
 
-function calculateAndDisplayRoute(directionsService, directionsRenderer) {
-  const start = "Bergen Sentrum, Bergen";
-  const end = "Nesttun Terminal, Bergen";
-
-  directionsService.route(
-    {
-      origin: start,
-      destination: end,
-      travelMode: google.maps.TravelMode.DRIVING,
-    },
-    (response, status) => {
-      if (status === "OK") {
+  directionsService.route(request, (response, status) => {
+    if (status === "OK") {
+      response.routes.forEach((route, index) => {
+        const directionsRenderer = new google.maps.DirectionsRenderer({
+          map: map,
+          suppressMarkers: false,
+          preserveViewport: true,
+          routeIndex: index,
+        });
         directionsRenderer.setDirections(response);
-      } else {
-        window.alert("Directions request failed due to " + status);
-      }
+
+        // Assume the first leg of this route
+        const midPointIndex = Math.floor(route.legs[0].steps.length / 2);
+        const midPoint = route.legs[0].steps[midPointIndex].start_location;
+
+        const contentString = `<div style="padding: 5px; background: white; border: 1px solid black;">Route ${
+          index + 1
+        }: Time: ${route.legs[0].duration.text}, Distance: ${
+          route.legs[0].distance.text
+        }</div>`;
+
+        const infoBox = new google.maps.InfoWindow({
+          content: contentString,
+          position: midPoint,
+        });
+
+        infoBox.open(map);
+      });
+    } else {
+      window.alert("Directions request failed due to " + status);
     }
-  );
+  });
 }

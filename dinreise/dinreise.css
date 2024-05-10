@@ -802,3 +802,21 @@ body {
 .hide {
   display: none;
 }
+#routeInfo {
+  position: absolute;
+  top: 35%; /* Adjusts to be visible on top of the map */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Semi-transparent to see the map beneath */
+  padding: 8px 16px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  z-index: 2; /* Ensures it is above the map */
+  color: #333; /* Text color for visibility */
+  font-size: 16px;
+}
