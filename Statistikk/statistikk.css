@@ -20,7 +20,12 @@
   justify-content: space-between;
 }
 
-#dropdownMenu {font-size: 14px; color: #1a1c74; border: 1px solid #1a1c74; border-radius: 5px;}
+#dropdownMenu {
+  font-size: 14px;
+  color: #1a1c74;
+  border: 1px solid #1a1c74;
+  border-radius: 5px;
+}
 
 .highcharts-series-group {
   padding: -100px -30px -30px -30px;
@@ -92,15 +97,25 @@
   margin: 10px 0;
 }
 
+.first {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+}
+
 .highcharts-dashboards-component {
   color: var(--highcharts-neutral-color-100);
 }
 
 .highcharts-dashboards-component-title {
-  font-size: 1.4em;
+  font-size: 1.25em;
   font-weight: 500;
   text-align: center;
   margin: 1em;
+}
+
+.cell.blue-cell:nth-child(1), .cell.blue-cell:nth-child(2) {
+  height: 170px; /* Adjust this value to the desired height */
 }
 
 .cell > .highcharts-dashboards-component {
@@ -138,7 +153,7 @@
 
 .highcharts-dashboards-component-kpi-content
   .highcharts-dashboards-component-subtitle {
-  font-size: 1.1em;
+  font-size: 1em;
   margin-bottom: 20px;
 }
 
@@ -185,11 +200,18 @@
 }
 
 #dashboard-kpi-1,
-#dashboard-kpi-2,
+#dashboard-kpi-2 {
+  width: 50%;
+}
+
+#current-sprint-kpi {height: fit-content;}
+.cell.blue-cell {
+  max-height: 170px; /* or any other appropriate value */
+}
+
 #dashboard-kpi-4,
 #current-sprint-kpi {
-  flex: 1 1 50%;
-  height: 300px;
+  height: fit-content;
 }
 
 #dashboard-chart-1,
@@ -235,7 +257,7 @@
   }
 
   #current-sprint-kpi {
-    height: auto;
+    height: 170px;
   }
 
   #current-sprint.row {
