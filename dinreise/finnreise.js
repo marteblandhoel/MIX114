@@ -77,24 +77,26 @@ document.addEventListener("DOMContentLoaded", function () {
     if (fromInput.value === "") {
       fromInput.value = defaultFromAddress;
     }
+    updateGoButtonVisibility(); // Update button visibility when focused
   });
   fromInput.addEventListener("blur", function () {
     if (fromInput.value === defaultFromAddress) {
       fromInput.value = defaultFromAddress; // Keep default if not changed
     }
-    updateGoButtonVisibility();
+    updateGoButtonVisibility(); // Update button visibility when blurred
   });
 
   toInput.addEventListener("focus", function () {
     if (toInput.value === "") {
       toInput.value = defaultToAddress;
     }
+    updateGoButtonVisibility(); // Update button visibility when focused
   });
   toInput.addEventListener("blur", function () {
     if (toInput.value === defaultToAddress) {
       toInput.value = defaultToAddress; // Keep default if not changed
     }
-    updateGoButtonVisibility();
+    updateGoButtonVisibility(); // Update button visibility when blurred
   });
 
   // Function to update button visibility
