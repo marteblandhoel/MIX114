@@ -441,13 +441,21 @@
     left: 19px;
   }
   
-  .innstillinger .navbar {
+  .navbar {
     position: fixed;
-    width: 390px;
+    top: auto; /* Ensures it sticks to the bottom */
+    left: 0; /* Aligns it to the left edge */
+    right: 0; /* Aligns it to the right edge */
+    bottom: 0; /* Sticks to the bottom of the viewport */
+    width: 100%;
     height: 79px;
-    top: 765px;
-    left: 0;
-    background-color: var(--primary);
+    color: #ffffff;
+    background-color: #1a1c74;
+    z-index: 100;
+    box-sizing: border-box;
+    display: flex; /* Ensures the navbar is a flex container */
+    align-items: center; /* Vertically aligns all children in the center */
+    justify-content: center; /* Horizontally centers the content */
   }
   
   .innstillinger .frame {
