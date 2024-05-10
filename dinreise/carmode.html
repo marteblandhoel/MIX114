@@ -15,6 +15,11 @@
       src="https://kit.fontawesome.com/c941d0ea4c.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAO68vhCtj-hvYqBbzkKIUv967TCNAH-CE&callback=initMap&libraries=marker"
+      async
+      defer
+    ></script>
   </head>
   <body>
     <div class="frame">
@@ -41,13 +46,10 @@
             <img class="barn-leker_ikon" src="kidsWalking.png" />
           </div>
         </div>
-        <div id="car-mode-maps" class="car-mode-maps"></div>
-
-        <!--<script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAO68vhCtj-hvYqBbzkKIUv967TCNAH-CE&callback=initMap&v=weekly&libraries=marker"
-            defer
-          ></script>-->
       </div>
+    </div>
+    <div id="map" style="height: 100%px">
+      <!-- Ensure the map div has a defined height -->
     </div>
 
     <nav class="navbar">
