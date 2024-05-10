@@ -17,9 +17,9 @@
     position: absolute;
     top: 67px;
     left: 101px;
-    font-family: var(--title-2-font-family);
-    font-weight: var(--title-2-font-weight);
-    color: var(--primary);
+    font-family: Inter;
+    font-weight: 100;
+    color: #1A1C74;
     font-size: var(--title-2-font-size);
     letter-spacing: var(--title-2-letter-spacing);
     line-height: var(--title-2-line-height);
