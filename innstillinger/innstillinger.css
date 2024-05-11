@@ -13,8 +13,12 @@ height: 124px;
 flex-shrink: 0;
 border-radius: 8px;
 background-color:#E2E2E2;
-}
 
+}
+.tekst_i_boks {
+
+}
 .linje1, .linje2 {
     display: flex;
+    justify-content: space-between;
 }
