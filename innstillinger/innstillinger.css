@@ -15,6 +15,6 @@ border-radius: 8px;
 background-color:#E2E2E2;
 }
 
-.linje1 {
+.linje1, .linje2 {
     display: flex;
 }
