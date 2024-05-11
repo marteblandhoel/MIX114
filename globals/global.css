@@ -9,15 +9,20 @@ body {
 
 h4 {
   margin: 0;
+  color: #1a1c74;
 }
 p {
-  margin-top: 0;
+  margin: 0;
 }
 h2 {
   margin-top: 0;
   font-size: 32px;
 }
-
+b {
+  color: black;
+  font-size: 14px;
+  font-weight: 400;
+}
 .overskrift {
   flex-grow: 1; /* Allows the h2 to grow and fill the space */
   text-align: center; /* Ensures text is centered within the growing space */

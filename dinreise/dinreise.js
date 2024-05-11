@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function initMap() {
   const mapOptions = {
-    center: { lat: 60.3898141, lng: 5.3333388 },
+    center: { lat: 60.38564, lng: 5.333326 },
     zoom: 13,
     mapTypeControl: false,
     streetViewControl: false,
@@ -109,31 +109,74 @@ function initMap() {
 
   directionsService.route(request, (response, status) => {
     if (status === "OK") {
+      let fastestRouteIndex = 0;
+      let shortestDuration = response.routes[0].legs[0].duration.value; // Initialize with the duration of the first route
+
+      // Determine the fastest route
       response.routes.forEach((route, index) => {
+        if (route.legs[0].duration.value < shortestDuration) {
+          fastestRouteIndex = index;
+          shortestDuration = route.legs[0].duration.value;
+        }
+      });
+
+      // Manually add markers for the start and end points
+      new google.maps.Marker({
+        position: response.routes[0].legs[0].start_location,
+        map: map,
+        title: "Start Point",
+        icon: {
+          url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+          scaledSize: new google.maps.Size(42, 42), // Larger red marker
+        },
+      });
+
+      new google.maps.Marker({
+        position: response.routes[0].legs[0].end_location,
+        map: map,
+        title: "End Point",
+        icon: {
+          url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+          scaledSize: new google.maps.Size(42, 42), // Larger red marker
+        },
+      });
+
+      // Render each route with specific styles
+      response.routes.forEach((route, index) => {
+        const isFastest = index === fastestRouteIndex;
+        const isSafest = index === 2; // Designate the third route as the safest
         const directionsRenderer = new google.maps.DirectionsRenderer({
           map: map,
-          suppressMarkers: false,
+          suppressMarkers: true,
           preserveViewport: true,
           routeIndex: index,
+          polylineOptions: {
+            strokeColor: isFastest ? "#0000FF" : "#6699FF", // Dark blue for fastest, light blue for others
+            strokeOpacity: 0.8,
+            strokeWeight: isFastest ? 7 : 5, // Thicker and on top for the fastest route
+            zIndex: isFastest ? 1000 : 500, // Ensure fastest route is on top
+          },
         });
         directionsRenderer.setDirections(response);
 
-        // Assume the first leg of this route
-        const midPointIndex = Math.floor(route.legs[0].steps.length / 2);
-        const midPoint = route.legs[0].steps[midPointIndex].start_location;
+        if (index === 0 || isSafest) {
+          // Only for the fastest and safest routes
+          const midPointIndex = Math.floor(route.legs[0].steps.length / 2);
+          const midPoint = route.legs[0].steps[midPointIndex].start_location;
 
-        const contentString = `<div style="padding: 5px; background: white; border: 1px solid black;">Route ${
-          index + 1
-        }: Time: ${route.legs[0].duration.text}, Distance: ${
-          route.legs[0].distance.text
-        }</div>`;
+          const routeTitle = isFastest ? "Raskest" : "Tryggest";
+          const contentString = `<div style="padding: 4px; font-size: 14px; color: #333;">
+                                    <h4>${routeTitle}</h4>
+                                    <p> Tid: <strong>${route.legs[0].duration.text}</strong><br>Avstand: <strong>${route.legs[0].distance.text}</strong></p>
+                                  </div>`;
 
-        const infoBox = new google.maps.InfoWindow({
-          content: contentString,
-          position: midPoint,
-        });
+          const infoBox = new google.maps.InfoWindow({
+            content: contentString,
+            position: midPoint,
+          });
 
-        infoBox.open(map);
+          infoBox.open(map);
+        }
       });
     } else {
       window.alert("Directions request failed due to " + status);
