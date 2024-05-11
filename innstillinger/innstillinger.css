@@ -14,3 +14,7 @@ flex-shrink: 0;
 border-radius: 8px;
 background-color:#E2E2E2;
 }
+
+.linje1 {
+    display: flex;
+}
