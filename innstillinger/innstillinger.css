@@ -7,7 +7,7 @@
 .innstillinger_innhold {
     margin: 0px 32px;
 }
-.min_konto_innhold {
+.min_konto_innhold, .vars_sted_innhold{
 width: 325px;
 height: 124px;
 flex-shrink: 0;
@@ -17,7 +17,7 @@ line-height: 24px;
 
 }
 
-.linje1, .linje2 {
+.linje1, .linje2, .linje5 , .linje6 {
     display: flex;
     justify-content: space-between;
 }
