@@ -1,43 +1,58 @@
 #goBackButton {
-    margin-left: 10px; /* Adjust as needed to align the icon within the header */
-    font-size: 24px; /* Icon size */
-    justify-content: flex-start;
-  }
+  margin-left: 10px; /* Adjust as needed to align the icon within the header */
+  font-size: 24px; /* Icon size */
+  justify-content: flex-start;
+}
 
 .innstillinger_innhold {
-    margin: 0px 32px;
+  margin: 0px 32px;
 }
-.min_konto_innhold, .vars_sted_innhold, .personvern_innhold {
-
-line-height: 24px;
-color: black;
-margin-left: 10px;
-margin-right: 10px;
-
-}
-
-.linje1, .linje2, .linje5 , .linje6 {
-    display: flex;
-    justify-content: space-between;
+.min_konto_innhold,
+.vars_sted_innhold,
+.personvern_innhold {
+  line-height: 24px;
+  color: black;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.innlogg, .passord{
-    font-weight: 700;
+.linje1,
+.linje2,
+.linje5,
+.linje6 {
+  display: flex;
+  justify-content: space-between;
 }
 
-  header {
-    display: flex;
-    flex-direction: row;
-    align-items: center; /* Aligns children vertically in the center */
-    justify-content: space-between; /* Distributes space between and around content items */
-    width: 100%; /* Ensures the header takes full width */
-  }
-  
-  .min_konto, .varsel_steds, .personvern {
-width: 325px;
-height: 145px;
-flex-shrink: 0;
-border-radius: 8px;
-background-color:#E2E2E2;
+.innlogg,
+.passord {
+  font-weight: 700;
+}
 
-  }
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Aligns children vertically in the center */
+  justify-content: space-between; /* Distributes space between and around content items */
+  width: 100%; /* Ensures the header takes full width */
+}
+
+.min_konto {
+  width: 325px;
+  height: 101px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background-color: #e2e2e2;
+}
+
+.varsel_steds {
+  width: 325px;
+  border-radius: 8px;
+  background-color: #e2e2e2;
+}
+
+.personvern {
+  width: 325px;
+  border-radius: 8px;
+  background-color: #e2e2e2;
+}
