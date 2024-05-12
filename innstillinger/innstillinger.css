@@ -10,10 +10,11 @@
 .min_konto_innhold,
 .vars_sted_innhold,
 .personvern_innhold {
-  line-height: 24px;
+  line-height: 30px;
   color: black;
   margin-left: 12px;
   margin-right: 12px;
+  font-size: 16px;
 }
 
 .linje1,
@@ -26,7 +27,7 @@
 
 .innlogg,
 .passord {
-  font-weight: 700;
+  font-weight: 900;
 }
 
 header {
@@ -39,28 +40,30 @@ header {
 
 .min_konto {
   width: 325px;
-  height: 104px;
+  height: 123px;
   flex-shrink: 0;
   border-radius: 8px;
   background-color: #e2e2e2;
+  
 }
 
 .varsel_steds {
   width: 325px;
-  height: 127px;
+  height: 153px;
   border-radius: 8px;
   background-color: #e2e2e2;
 }
 
 .personvern {
   width: 325px;
-  height: 78px;
+  height: 94px;
   border-radius: 8px;
   background-color: #e2e2e2;
 }
 
 #per, #var, #min {
-    margin-top: 45px; 
+    margin-top: 38px; 
+    font-size: 18px;
 }
 .navbar {
   position: fixed;
