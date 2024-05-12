@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const goButton = document.getElementById("goButton");
 
   // Default addresses
-  const defaultFromAddress = "Bergen Sentrum";
+  const defaultFromAddress = "Media City Bergen";
   const defaultToAddress = "Nesttun Terminal";
 
   // Initially hide the button

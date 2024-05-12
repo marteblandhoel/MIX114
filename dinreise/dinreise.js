@@ -101,7 +101,7 @@ function initMap() {
   const directionsService = new google.maps.DirectionsService();
 
   const request = {
-    origin: "Bergen Sentrum, Bergen",
+    origin: "Media City Bergen, Bergen",
     destination: "Nesttun Terminal, Bergen",
     travelMode: google.maps.TravelMode.DRIVING,
     provideRouteAlternatives: true,

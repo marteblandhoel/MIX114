@@ -76,32 +76,38 @@ function initMap() {
   directionsService = new google.maps.DirectionsService();
   directionsRenderer = new google.maps.DirectionsRenderer({
     polylineOptions: {
-      strokeColor: "#0000FF", // Blue color for the route
+      strokeColor: "#0000FF",
       strokeOpacity: 0.8,
-      strokeWeight: 5,
+      strokeWeight: 8,
     },
+    preserveViewport: true, // Prevents the map from auto-zooming and auto-centering to fit the route
   });
   const mapOptions = {
-    zoom: 18, // Adjusted zoom for closer view
-    center: { lat: 60.392, lng: 5.324 }, // Centered around Bergen
+    zoom: 18, // Set your desired initial zoom level
+    center: { lat: 60.392, lng: 5.324 }, // Set your desired initial center
+
+    streetViewControl: false,
   };
 
   map = new google.maps.Map(document.getElementById("map"), mapOptions);
   directionsRenderer.setMap(map);
 
-  calculateAndDisplayRoute(); // Call this function on init or based on an event (e.g., form submission)
+  calculateAndDisplayRoute();
 }
 
 function calculateAndDisplayRoute() {
   const request = {
-    origin: "Bergen Sentrum, Bergen", // Bergen Centrum as start location
-    destination: "Nesttun Terminal, Bergen", // Nesttun Terminal as destination
+    origin: "Media city Bergen, Bergen", // Set origin
+    destination: "Nesttun Terminal, Bergen", // Set destination
     travelMode: "DRIVING",
   };
 
   directionsService.route(request, (response, status) => {
     if (status === "OK") {
       directionsRenderer.setDirections(response);
+      // Optional: Manually set center and zoom again if needed
+      map.setCenter({ lat: 60.385853, lng: 5.332325 });
+      map.setZoom(17);
     } else {
       window.alert("Directions request failed due to " + status);
     }
