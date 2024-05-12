@@ -87,6 +87,8 @@ function initMap() {
     center: { lat: 60.392, lng: 5.324 }, // Set your desired initial center
 
     streetViewControl: false,
+    mapTypeControl: false,
+    fullscreenControl: false,
   };
 
   map = new google.maps.Map(document.getElementById("map"), mapOptions);
@@ -97,7 +99,7 @@ function initMap() {
 
 function calculateAndDisplayRoute() {
   const request = {
-    origin: "Media city Bergen, Bergen", // Set origin
+    origin: "Media City Bergen, Bergen", // Set origin
     destination: "Nesttun Terminal, Bergen", // Set destination
     travelMode: "DRIVING",
   };
@@ -105,9 +107,23 @@ function calculateAndDisplayRoute() {
   directionsService.route(request, (response, status) => {
     if (status === "OK") {
       directionsRenderer.setDirections(response);
-      // Optional: Manually set center and zoom again if needed
+      // Manually set center and zoom again if needed
       map.setCenter({ lat: 60.385853, lng: 5.332325 });
       map.setZoom(17);
+
+      // Extract the starting point from the response
+      const startLocation = response.routes[0].legs[0].start_location;
+
+      // Create and place the custom marker
+      const marker = new google.maps.Marker({
+        position: { lat: 60.385635, lng: 5.332388 },
+        map: map,
+        title: "Start Point",
+        icon: {
+          url: "../globals/navigation.svg", // Path to the custom SVG icon
+          scaledSize: new google.maps.Size(64, 64), // Adjust size as needed
+        },
+      });
     } else {
       window.alert("Directions request failed due to " + status);
     }

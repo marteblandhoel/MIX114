@@ -144,7 +144,7 @@ function initMap() {
       // Render each route with specific styles
       response.routes.forEach((route, index) => {
         const isFastest = index === fastestRouteIndex;
-        const isSafest = index === 2; // Designate the third route as the safest
+        const isSafest = index === 1; // Designate the third route as the safest
         const directionsRenderer = new google.maps.DirectionsRenderer({
           map: map,
           suppressMarkers: true,

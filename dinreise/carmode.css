@@ -6,12 +6,11 @@
 .main-container * {
   box-sizing: border-box;
 }
-#map {
-  height: 600px;
+.fa-arrow-left {
+  transform: rotate(180deg); /* Rotates the image 180 degrees */
 }
 html,
 body {
-  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -157,7 +156,7 @@ header {
 .car-mode-maps {
   position: absolute;
   width: 100%;
-  top: 121px;
+  top: 140px;
   left: 0;
   right: 0;
   z-index: 1;
@@ -171,13 +170,6 @@ header {
   left: 0;
   background: #1a1c74;
   z-index: 22;
-}
-
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 .commutes {
