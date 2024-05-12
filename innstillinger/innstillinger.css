@@ -8,11 +8,7 @@
     margin: 0px 32px;
 }
 .min_konto_innhold, .vars_sted_innhold, .personvern_innhold {
-width: 325px;
-height: 124px;
-flex-shrink: 0;
-border-radius: 8px;
-background-color:#E2E2E2;
+
 line-height: 24px;
 color: black;
 
@@ -36,5 +32,9 @@ color: black;
   }
   
   .min_konto, .varsel_steds, .personvern {
-
+width: 325px;
+height: 145px;
+flex-shrink: 0;
+border-radius: 8px;
+background-color:#E2E2E2;
   }
