@@ -12,8 +12,8 @@
 .personvern_innhold {
   line-height: 24px;
   color: black;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 .linje1,
@@ -39,7 +39,7 @@ header {
 
 .min_konto {
   width: 325px;
-  height: 101px;
+  height: 104px;
   flex-shrink: 0;
   border-radius: 8px;
   background-color: #e2e2e2;
@@ -47,12 +47,60 @@ header {
 
 .varsel_steds {
   width: 325px;
+  height: 127px;
   border-radius: 8px;
   background-color: #e2e2e2;
 }
 
 .personvern {
   width: 325px;
+  height: 78px;
   border-radius: 8px;
   background-color: #e2e2e2;
 }
+
+.navbar {
+    position: fixed;
+    top: auto; /* Ensures it sticks to the bottom */
+    left: 0; /* Aligns it to the left edge */
+    right: 0; /* Aligns it to the right edge */
+    bottom: 0; /* Sticks to the bottom of the viewport */
+    width: 100%;
+    height: 79px;
+    color: #ffffff;
+    background-color: #1a1c74;
+    z-index: 100;
+    box-sizing: border-box;
+    display: flex; /* Ensures the navbar is a flex container */
+    align-items: center; /* Vertically aligns all children in the center */
+    justify-content: center; /* Horizontally centers the content */
+  }
+  .icon-parent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensure vertical alignment of all child elements */
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    width: 100%; /* Takes full width of the navbar */
+    padding: 10px 20px; /* Adjusted padding */
+  }
+  
+  .iconFooter {
+    font-size: 32px;
+    z-index: 2;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 5px; /* Uniform padding for all icons */
+    transition: transform 0.3s; /* Optional: for a hover effect */
+  }
+  
+  .iconFooter {
+    cursor: pointer;
+  }
+  
+  .iconFooter:hover {
+    transform: scale(1.1); /* Optional: Slight enlargement on hover */
+  }
+  
