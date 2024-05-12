@@ -6,7 +6,7 @@
 }
 #map {
   position: absolute;
-  top: 27%;
+  top: 29%;
   left: 0;
   z-index: 1;
   display: flex;
@@ -45,6 +45,7 @@ gmp-map {
   position: relative;
   padding: 5%;
   width: 100%;
+  margin: none;
   box-sizing: border-box;
 }
 
