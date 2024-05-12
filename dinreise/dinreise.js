@@ -90,10 +90,10 @@ document.addEventListener("DOMContentLoaded", function () {
 function initMap() {
   const mapOptions = {
     center: { lat: 60.38564, lng: 5.333326 },
-    zoom: 13,
+    zoom: 12,
     mapTypeControl: false,
     streetViewControl: false,
-    fullscreenControl: true,
+    fullscreenControl: false,
     zoomControl: true,
   };
 
@@ -161,7 +161,7 @@ function initMap() {
 
         if (index === 0 || isSafest) {
           // Only for the fastest and safest routes
-          const midPointIndex = Math.floor(route.legs[0].steps.length / 2);
+          const midPointIndex = Math.floor(route.legs[0].steps.length / 1.5);
           const midPoint = route.legs[0].steps[midPointIndex].start_location;
 
           const routeTitle = isFastest ? "Raskest" : "Tryggest";

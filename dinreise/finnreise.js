@@ -115,3 +115,15 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.href = `dinreise.html?from=${from}&to=${to}`;
   });
 });
+function initMap() {
+  const mapOptions = {
+    center: { lat: 60.38564, lng: 5.333326 },
+    zoom: 15,
+    mapTypeControl: false,
+    streetViewControl: false,
+    fullscreenControl: false,
+    zoomControl: true,
+  };
+
+  const map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
