@@ -22,3 +22,7 @@ background-color:#E2E2E2;
     display: flex;
     justify-content: space-between;
 }
+
+.innlogg, .passord{
+    font-weight: 700;
+}
