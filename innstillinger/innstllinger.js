@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     carIcon.addEventListener("click", function () {
-      window.location.href = "hjemside.html";
+      window.location.href = "../hjemside/hjemside.html";
     });
   }
 
@@ -83,4 +83,8 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = "../kart/kart.html";
     });
   }
+  const goBackButton = document.getElementById("goBackButton");
+  goBackButton.addEventListener("click", function () {
+    history.back();
+  });
 });

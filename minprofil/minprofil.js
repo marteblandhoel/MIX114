@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  var innstillingerIcon = document.getElementById(".innstillinger");
+  var innstillingerIcon = document.getElementById("innstillinger");
 
   if (innstillingerIcon) {
     innstillingerIcon.addEventListener("click", function () {

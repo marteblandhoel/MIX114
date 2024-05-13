@@ -15,12 +15,6 @@
   text-align: center;
 }
 
-.overskrift {
-  display: inline;
-  line-height: 36px;
-  margin-bottom: 24px;
-}
-
 .bruker {
   display: flex;
   flex-direction: row;
