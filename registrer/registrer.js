@@ -6,3 +6,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("fullName").addEventListener("click", function () {
+    document.getElementById("fullName").value = "Anders Andresen";
+    document.getElementById("email").value = "anders.andresen@gmail.com";
+    document.getElementById("phoneNumber").value = "12345678";
+    document.getElementById("password").value = "123";
+    document.getElementById("confirmPassword").value = "123";
+  });
+});
