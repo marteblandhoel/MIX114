@@ -57,6 +57,7 @@
 .title {
   line-height: 20px;
   font-weight: 500;
+  color: #ffffff;
 }
 
 .info {
@@ -119,4 +120,3 @@
   flex-direction: column;
   z-index: 2;
 }
-
