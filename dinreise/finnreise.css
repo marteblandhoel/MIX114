@@ -21,6 +21,11 @@ gmp-map {
   height: 400px;
   width: 508px;
 }
+#statestikkKnapp {
+  margin: auto;
+  text-align: center;
+  background-color: #8f91e8;
+}
 .main-container {
   margin: 0 32px;
   margin-top: 68px;

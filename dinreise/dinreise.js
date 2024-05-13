@@ -80,11 +80,6 @@ function getCurrentSelectedIndex() {
   return currentSelectedIndex; // Returns the current index
 }
 document.addEventListener("DOMContentLoaded", function () {
-  const statistikkButton = document.querySelector(".text-wrapper");
-  statistikkButton.addEventListener("click", function () {
-    const currentSelectedIndex = getCurrentSelectedIndex(); // Ensure this function returns the current selected route index
-    window.location.href = `../Statistikk/statistikk.html?selectedIndex=${currentSelectedIndex}`;
-  });
   // Event listener for "Car Mode" knappen
   const carmodeButton = document.querySelector(".button-car-mode");
   carmodeButton.addEventListener("click", function () {
@@ -94,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function initMap(selectedIndex = 0) {
   const mapOptions = {
-    zoom: 12,
+    zoom: 14,
     mapTypeControl: false,
     streetViewControl: false,
     fullscreenControl: false,
@@ -124,7 +119,7 @@ function initMap(selectedIndex = 0) {
 
       response.routes.forEach((route, index) => {
         const isFastest = index === fastestRouteIndex;
-        const isSafest = index === 2; // Designate the third route as the safest
+        const isSafest = index === 1; // Designate the third route as the safest
         renderRoute(map, response, index, isFastest, isSafest, selectedIndex);
       });
     } else {
@@ -175,11 +170,12 @@ function renderRoute(map, response, index, isFastest, isSafest, selectedIndex) {
       ].start_location;
 
     const routeTitle = isFastest ? "Raskeste Rute" : "Tryggeste Rute";
-    const currentRouteIndex = isFastest ? 0 : 2; // Set the currentRouteIndex based on the route type
+    const currentRouteIndex = isFastest ? 0 : 1; // Set the currentRouteIndex based on the route type
 
     const contentString = `<div onclick="changeSelectedIndexAndRerender(${currentRouteIndex})" style="cursor: pointer; padding: 4px; font-size: 14px; color: #333;">
                               <h4>${routeTitle}</h4>
                               <p>Tid: <strong>${response.routes[index].legs[0].duration.text}</strong><br>Distanse: <strong>${response.routes[index].legs[0].distance.text}</strong></p>
+                              <button class="infoBoxButton" onclick="window.location.href='../Statistikk/statistikk.html?selectedIndex=${index}'">Se Statistikk</button>
                             </div>`;
 
     const infoBox = new google.maps.InfoWindow({
