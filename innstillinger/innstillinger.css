@@ -110,3 +110,8 @@ button {
   display: flex;
   margin-top: 20px;
 }
+
+
+.pers_sikkerhet .fa-chevron-right {
+  color: green !important;
+}
