@@ -19,24 +19,43 @@
     <div class="registrer-deg">
       <h2 class="overskrift">Registrer deg</h2>
       <div class="inputs">
-        <input type="text" class="input-field" placeholder="Fullt navn" />
-        <input type="email" class="input-field" placeholder="Email-addresse" />
-        <input type="tel" class="input-field" placeholder="Tlf-nummer" />
+        <input
+          type="text"
+          class="input-field"
+          placeholder="Fullt navn"
+          id="fullName"
+        />
+        <input
+          type="email"
+          class="input-field"
+          placeholder="Email-addresse"
+          id="email"
+        />
+        <input
+          type="tel"
+          class="input-field"
+          placeholder="Tlf-nummer"
+          id="phoneNumber"
+        />
         <div class="input-container with-icon">
           <input
             type="password"
             class="input-field with-icon"
             placeholder="Passord"
+            id="password"
           />
-          <i class="icon fa-solid fa-eye-slash"></i>
+          <!-- <i class="icon fa-solid fa-eye-slash"></i> -->
+          <i class="icon fa-solid fa-eye-slash" id="togglePassword"></i>
         </div>
         <div class="input-container with-icon">
           <input
             type="password"
             class="input-field with-icon"
             placeholder="Gjenta passord"
+            id="confirmPassword"
           />
-          <i class="icon fa-solid fa-eye-slash"></i>
+          <!-- <i class="icon fa-solid fa-eye-slash"></i> -->
+          <i class="icon fa-solid fa-eye-slash" id="toggleConfirmPassword"></i>
         </div>
       </div>
       <button id="buttonContainer">Registrer deg</button>

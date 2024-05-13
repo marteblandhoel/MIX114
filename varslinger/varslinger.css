@@ -78,7 +78,6 @@ header {
 }
 
 hr {
-  margin-top: -10%;
   border: solid 1px #8f91e8;
 }
 
@@ -107,7 +106,7 @@ hr {
   border-radius: 8px;
   border: 1px solid black;
   padding: 5.6%;
-  gap: 2%;
+  gap: 3%;
   color: black;
   text-align: left;
 }
@@ -122,6 +121,7 @@ hr {
 .underoverskrift {
   font-size: 150%;
   font-weight: bold;
+  margin-bottom: 5%;
 }
 
 .tilbakemeling {

@@ -25,12 +25,6 @@ header {
   left: 42px;
 }
 
-.overskrift {
-  margin-top: 20px;
-  flex-grow: 1; /* Allows the h2 to grow and fill the space */
-  text-align: center; /* Ensures text is centered within the growing space */
-}
-
 .dropdown {
   display: flex;
   flex-direction: row;
