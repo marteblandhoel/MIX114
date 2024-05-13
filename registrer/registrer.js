@@ -16,3 +16,28 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("confirmPassword").value = "123";
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Function to toggle password visibility
+  function togglePasswordVisibility(inputFieldId) {
+    var inputField = document.getElementById(inputFieldId);
+    if (inputField.type === "password") {
+      inputField.type = "text";
+    } else {
+      inputField.type = "password";
+    }
+  }
+
+  // Toggle password visibility when eye icon is clicked
+  document
+    .getElementById("togglePassword")
+    .addEventListener("click", function () {
+      togglePasswordVisibility("password");
+    });
+
+  document
+    .getElementById("toggleConfirmPassword")
+    .addEventListener("click", function () {
+      togglePasswordVisibility("confirmPassword");
+    });
+});
