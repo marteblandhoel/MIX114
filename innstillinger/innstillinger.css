@@ -68,7 +68,9 @@
 
 
 button {
-  padding: 12px 12px;
+  padding: 9px 12px;
   color: white;
   background-color: #1a1c74;
+  border: #1a1c74;
+  border-radius: 5px;
 }
