@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (locationIcon) {
     locationIcon.addEventListener("click", function () {
       // Redirect to dinrute.html
-      window.location.href = "../dinreise/dinreise.html";
+      window.location.href = "../dinreise/finnreise.html";
     });
   }
 
