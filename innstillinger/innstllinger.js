@@ -87,4 +87,46 @@ document.addEventListener("DOMContentLoaded", function () {
   goBackButton.addEventListener("click", function () {
     history.back();
   });
+  // Event listener for "Logg ut" button
+  var loggUtButton = document.querySelector("button[type='knapp']");
+  if (loggUtButton) {
+    loggUtButton.addEventListener("click", function () {
+      // Show logout popup
+      var popup = document.querySelector(".component");
+      popup.style.display = "block";
+    });
+  }
+
+  // Event listener for "Avbryt" button in popup
+  var avbrytButton = document.querySelector(
+    ".component .popup_innhold button:first-of-type"
+  );
+  if (avbrytButton) {
+    avbrytButton.addEventListener("click", function () {
+      // Hide the popup
+      var popup = document.querySelector(".component");
+      popup.style.display = "none";
+    });
+  }
+
+  // Event listener for "Logg ut" button in popup
+  var loggUtPopupButton = document.querySelector(
+    ".component .popup_innhold button:last-of-type"
+  );
+  if (loggUtPopupButton) {
+    loggUtPopupButton.addEventListener("click", function () {
+      // Perform logout action here
+      console.log("Logging out..."); // Placeholder for logout action
+      // After logout action, you might want to redirect to login page or do something else
+    });
+  }
+  var loggUtPopupButton = document.querySelector(
+    ".component .popup_innhold button:last-of-type"
+  );
+  if (loggUtPopupButton) {
+    loggUtPopupButton.addEventListener("click", function () {
+      // Redirect to åpningsside.html after "Logg ut" button in popup is clicked
+      window.location.href = "../åpningsside/åpningsside.html";
+    });
+  }
 });
