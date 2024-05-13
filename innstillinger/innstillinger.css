@@ -1,12 +1,29 @@
-#goBackButton {
-  margin-left: 10px; /* Adjust as needed to align the icon within the header */
-  font-size: 24px; /* Icon size */
-  justify-content: flex-start;
+.innstillinger {
+  margin: 0 32px;
+  margin-top: 68px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: #fff;
+  overflow: hidden;
+  text-align: left;
+  color: #1a1c74;
 }
 
-.innstillinger_innhold {
-  margin: 0px 32px;
+.innhold {
+  display: inline;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  gap: 24px;
+  font-size: 16px;
+  color: #fff;
 }
+
 .min_konto_innhold,
 .vars_sted_innhold,
 .personvern_innhold {
@@ -15,6 +32,15 @@
   margin-left: 12px;
   margin-right: 12px;
   font-size: 14px;
+}
+
+.min_konto,
+.varsel_steds,
+.personvern {
+  width: 100%; /* Adjusts to the width of its container */
+  height: auto; /* Adjusts height automatically based on content */
+  border-radius: 8px;
+  background-color: #e2e2e2;
 }
 
 .linje1,
@@ -30,83 +56,9 @@
   font-weight: 900;
 }
 
-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center; /* Aligns children vertically in the center */
-  justify-content: space-between; /* Distributes space between and around content items */
-  width: 100%; /* Ensures the header takes full width */
+#per,
+#var,
+#min {
+  margin-top: 38px;
+  font-size: 18px;
 }
-
-.min_konto {
-  width: 325px;
-  height: 123px;
-  flex-shrink: 0;
-  border-radius: 8px;
-  background-color: #e2e2e2;
-  
-}
-
-.varsel_steds {
-  width: 325px;
-  height: 153px;
-  border-radius: 8px;
-  background-color: #e2e2e2;
-}
-
-.personvern {
-  width: 325px;
-  height: 94px;
-  border-radius: 8px;
-  background-color: #e2e2e2;
-}
-
-#per, #var, #min {
-    margin-top: 38px; 
-    font-size: 18px;
-}
-.navbar {
-  position: fixed;
-  top: auto; /* Ensures it sticks to the bottom */
-  left: 0; /* Aligns it to the left edge */
-  right: 0; /* Aligns it to the right edge */
-  bottom: 0; /* Sticks to the bottom of the viewport */
-  width: 100%;
-  height: 79px;
-  color: #ffffff;
-  background-color: #1a1c74;
-  z-index: 100;
-  box-sizing: border-box;
-  display: flex; /* Ensures the navbar is a flex container */
-  align-items: center; /* Vertically aligns all children in the center */
-  justify-content: center; /* Horizontally centers the content */
-}
-.icon-parent {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* Ensure vertical alignment of all child elements */
-  flex-wrap: wrap;
-  position: relative;
-  z-index: 1;
-  color: #ffffff;
-  width: 100%; /* Takes full width of the navbar */
-  padding: 10px 20px; /* Adjusted padding */
-}
-
-.iconFooter {
-  font-size: 32px;
-  z-index: 2;
-  cursor: pointer;
-  overflow: hidden;
-  padding: 5px; /* Uniform padding for all icons */
-  transition: transform 0.3s; /* Optional: for a hover effect */
-}
-
-.iconFooter {
-  cursor: pointer;
-}
-
-.iconFooter:hover {
-  transform: scale(1.1); /* Optional: Slight enlargement on hover */
-}
-
