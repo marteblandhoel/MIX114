@@ -12,13 +12,6 @@
   font-family: Inter;
 }
 
-.belnning-child {
-  position: absolute;
-  top: 122px;
-  left: 0px;
-  max-height: 100%;
-  width: 390px;
-}
 
 .starIcon {
   width: 24px;
@@ -238,6 +231,7 @@
   left: 22px;
   width: 326px;
   height: 222px;
+  padding-bottom: 50px;
 }
 .text1 {
   display: flex;
