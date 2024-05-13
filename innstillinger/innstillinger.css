@@ -1,6 +1,6 @@
 .innstillinger {
   margin: 0 32px;
-  margin-top: 68px;
+  margin-top: 100px;
   margin-bottom: 100px;
   display: flex;
   flex-direction: column;
@@ -18,7 +18,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   text-align: left;
-  gap: 24px;
+  gap: -22%;
   font-size: 16px;
   color: #1a1c74;
   margin: 0;
@@ -64,4 +64,11 @@
 #per,
 #var {
   margin-top: 38px;
+}
+
+
+button {
+  padding: 12px 12px;
+  color: white;
+  background-color: #1a1c74;
 }
