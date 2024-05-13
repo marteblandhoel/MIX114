@@ -4,7 +4,6 @@
   margin-bottom: 100px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
   background-color: #fff;
   overflow: hidden;
   text-align: left;
@@ -18,7 +17,6 @@
   align-items: flex-start;
   justify-content: flex-start;
   text-align: left;
-  gap: -22%;
   font-size: 16px;
   color: #1a1c74;
   margin: 0;
@@ -37,7 +35,6 @@
   font-size: 14px;
   border-radius: 8px;
   box-sizing: border-box;
-  margin-bottom: 20px;
 }
 
 .min_konto {
@@ -66,7 +63,6 @@
   margin-top: 38px;
 }
 
-
 button {
   padding: 9px 12px;
   color: white;
@@ -75,11 +71,12 @@ button {
   border-radius: 5px;
 }
 
-
 .component {
-  margin: 0px 32px;
-  bottom: 770px;
   position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 400px;
   width: 306px;
   height: 112px;
   background-color: white;
@@ -87,10 +84,29 @@ button {
   border: 2px solid;
   border-color: #1a1c74;
   z-index: 15;
+  display: none;
+}
+.tekst_popup {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
 }
 
-.tekst_popup {
-  font-size: 18px;
-  font-weight: 600;
-  text-align: center;
+.popup_innhold {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 12px;
+  justify-content: center;
+  gap: 20px;
+}
+
+.popup_innhold button {
+  margin: 12px 0;
+}
+
+.button_div {
+  display: flex;
+  margin-top: 20px;
 }
