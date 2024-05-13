@@ -140,9 +140,10 @@ h4 {
 }
 
 #expandedContainer {
-  display: flex;
+  display: none;
   flex-direction: column;
-  max-height: fit-content;
+  overflow-y: scroll; /* Enables vertical scrolling */
+  max-height: 502px;
   margin-bottom: 20%;
   gap: 16px;
   z-index: 100;
@@ -161,6 +162,16 @@ h4 {
   margin-left: -20px;
 }
 
+#trekant {
+  -webkit-font-smoothing: antialiased;
+  display: var(--fa-display, inline-block);
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+  display: flex;
+  align-items: center;
+}
 .fa-triangle-exclamation,
 #expand-icon,
 #collapse-icon {
@@ -227,9 +238,9 @@ h4 {
 #expand-icon,
 #collapse-icon {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-end;
-  justify-content: right;
+  justify-content: center;
   cursor: pointer;
 }
 
