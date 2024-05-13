@@ -60,6 +60,8 @@ document.addEventListener("DOMContentLoaded", function () {
   if (selectedIndex !== null) {
     // Use selectedIndex as needed
     console.log("Selected Index:", selectedIndex); // or perform actions based on selectedIndex
+  } else {
+    selectedIndex = 0;
   }
   var selectedOption = "5"; // Default value to initialize the dashboard
   var dropdownMenu = document.getElementById("dropdownMenu");
