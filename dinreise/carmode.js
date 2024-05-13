@@ -100,7 +100,7 @@ function initMap() {
 function calculateAndDisplayRoute() {
   const request = {
     origin: "Media City Bergen, Bergen", // Set origin
-    destination: "Nesttun Terminal, Bergen", // Set destination
+    destination: "Syfteland, 5212", // Set destination
     travelMode: "DRIVING",
   };
 
