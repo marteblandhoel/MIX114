@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     carIcon.addEventListener("click", function () {
-      window.location.href = "hjemside.html";
+      window.location.href = "../hjemside/hjemside.html";
     });
   }
 
