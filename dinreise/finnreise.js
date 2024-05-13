@@ -115,15 +115,33 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.href = `dinreise.html?from=${from}&to=${to}`;
   });
 });
-function initMap() {
-  const mapOptions = {
-    center: { lat: 60.38564, lng: 5.333326 },
-    zoom: 15,
+let map;
+let marker1;
+
+async function initMap() {
+  // Import Advanced Marker Library
+  // Initialize map
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 60.38541107522735, lng: 5.332866370276517 },
+    zoom: 16,
     mapTypeControl: false,
     streetViewControl: false,
     fullscreenControl: false,
     zoomControl: true,
+    mapId: "DEMO_MAP_ID", // Added mapId required for advanced markers
+  });
+  var imageIcon = {
+    url: "../globals/dinPosisjon.png", // URL to the image
+    size: new google.maps.Size(60, 60), // Original size of your image (not necessarily displayed size)
+    scaledSize: new google.maps.Size(60, 60), // Size to display the icon
+    origin: new google.maps.Point(0, 0), // Origin of the image, typically (0,0)
+    anchor: new google.maps.Point(20, 20), // Anchor point, centers the image by width/2, height/2
   };
-
-  const map = new google.maps.Map(document.getElementById("map"), mapOptions);
+  // Initialize markers with custom SVG images
+  marker1 = new google.maps.Marker({
+    position: { lat: 60.38541107522735, lng: 5.332866370276517 },
+    map: map,
+    title: "Your Position",
+    icon: imageIcon, // URL to the image you want to use as the marker
+  });
 }

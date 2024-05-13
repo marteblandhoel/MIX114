@@ -11,7 +11,7 @@
   z-index: 1;
   display: flex;
   width: 100%;
-  height: 605px; /* or any other suitable height */
+  height: 523px; /* or any other suitable height */
 }
 .flag-icon {
   position: relative;
@@ -109,6 +109,10 @@ input {
   text-align: center;
   z-index: 10;
   border: none;
+}
+#goButton:hover {
+  cursor: pointer;
+  background: #010361;
 }
 
 .main-container {
