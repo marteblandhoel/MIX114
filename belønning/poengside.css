@@ -145,11 +145,12 @@
   top: 60.2%;
   left: 50%;
   font-size: 16px;
+  font-weight: 600;
   line-height: 20px;
   display: inline-block;
   color: #1a1c74;
 }
-.p-spylervske {
+.kupong_info {
   position: absolute;
   width: 49.66%;
   top: 0%;
@@ -157,13 +158,15 @@
   line-height: 14px;
   display: inline-block;
 }
-.du-mangler-15-container {
+.du-mangler {
   position: absolute;
   top: 84.18%;
   left: 0%;
   font-size: 12px;
   line-height: 14px;
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
 }
 
 .rectangle-parent {
@@ -223,6 +226,7 @@
 
 .b {
   font-size: 14px;
+  font-weight: 600;
 }
 
 .component-2 {
