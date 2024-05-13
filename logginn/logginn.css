@@ -63,7 +63,7 @@
 .text {
   align-self: center;
   width: fit-content;
-  padding: 5% 10% 0;
+  padding: 5% 10%;
   border-radius: 8px;
   background-color: #1a1c74;
   color: #fff;
