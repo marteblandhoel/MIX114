@@ -129,25 +129,26 @@ function initMap(selectedIndex = 0) {
 }
 
 function renderRoute(map, response, index, isFastest, isSafest, selectedIndex) {
+  // Existing code for setting route styles
   const isCurrentlySelected = selectedIndex === index;
   let strokeColor, strokeWeight, zIndex;
 
   if (isCurrentlySelected && isSafest) {
-    strokeColor = "#0000FF"; // Blue for the safest route when selected
+    strokeColor = "#0000FF";
     strokeWeight = 8;
-    zIndex = 1000; // Highest zIndex for the selected route
+    zIndex = 1000;
   } else if (isCurrentlySelected && isFastest) {
-    strokeColor = "#0000FF"; // Blue for the fastest route when selected
+    strokeColor = "#0000FF";
     strokeWeight = 7;
-    zIndex = 1000; // Ensure it's on top when selected
+    zIndex = 1000;
   } else if (!isCurrentlySelected && isFastest) {
-    strokeColor = "#6699FF"; // Lighter blue for fastest when not selected
+    strokeColor = "#6699FF";
     strokeWeight = 4;
-    zIndex = 500; // Lower zIndex when not selected
+    zIndex = 500;
   } else {
-    strokeColor = "#6699FF"; // Standard color for non-selected routes
+    strokeColor = "#6699FF";
     strokeWeight = 5;
-    zIndex = 500; // Normal zIndex for non-selected routes
+    zIndex = 500;
   }
 
   const directionsRenderer = new google.maps.DirectionsRenderer({
@@ -163,6 +164,94 @@ function renderRoute(map, response, index, isFastest, isSafest, selectedIndex) {
   });
   directionsRenderer.setDirections(response);
 
+  // Function to add markers
+  function addCustomMarker(lat, lng, title, iconUrl, content) {
+    const marker = new google.maps.Marker({
+      position: { lat: lat, lng: lng },
+      map: map,
+      title: title,
+      icon: {
+        url: iconUrl,
+        scaledSize: new google.maps.Size(60, 60), // Adjust size according to your preference
+      },
+    });
+
+    const infoBox = new google.maps.InfoWindow({
+      content: `<div style="cursor: pointer;">
+                  <strong>${title}</strong><br>
+                  ${content}
+                </div>`,
+    });
+
+    marker.addListener("click", function () {
+      infoBox.open(map, marker);
+    });
+
+    // Close info window when clicking outside
+    google.maps.event.addListener(map, "click", function () {
+      infoBox.close();
+    });
+
+    google.maps.event.addListener(infoBox, "domready", () => {
+      const infoWindowDiv = document.querySelector(".gm-style-iw").parentNode;
+      infoWindowDiv.style.cursor = "pointer";
+      infoWindowDiv.addEventListener("click", () => {
+        infoBox.close();
+      });
+    });
+  }
+
+  // Add the original marker
+  addCustomMarker(
+    60.302029,
+    5.371312,
+    "Ny asfalt",
+    "../globals/veiarbeid1.png",
+    "Vei: 583"
+  );
+
+  addCustomMarker(
+    60.275569,
+    5.359156,
+    "Veiarbeid",
+    "../globals/veiarbeid1.png",
+    "Vei: 583"
+  );
+  addCustomMarker(
+    60.271275,
+    5.429612,
+    "Glatt Vei",
+    "../globals/glattSkilt.png",
+    "Vei: E39"
+  );
+
+  // Draw a line between the markers
+  const linePath = new google.maps.Polyline({
+    path: [
+      { lat: 60.302299, lng: 5.370753 },
+      { lat: 60.300813, lng: 5.373323 },
+    ],
+    geodesic: true,
+    strokeColor: "#FF0000",
+    strokeOpacity: 1.0,
+    strokeWeight: 8,
+    zIndex: 10000,
+  });
+  linePath.setMap(map);
+  // Draw a line between the markers
+  const linePath2 = new google.maps.Polyline({
+    path: [
+      { lat: 60.271275, lng: 5.429612 },
+
+      { lat: 60.266655, lng: 5.430878 },
+    ],
+    geodesic: true,
+    strokeColor: "#00B2FF",
+    strokeOpacity: 1.0,
+    strokeWeight: 8,
+    zIndex: 10000,
+  });
+  linePath2.setMap(map);
   if (isFastest || isSafest) {
     const midPoint =
       response.routes[index].legs[0].steps[
