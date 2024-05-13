@@ -21,7 +21,7 @@
   text-align: left;
   gap: 24px;
   font-size: 16px;
-  color: #fff;
+  color: #1a1c74;
 }
 
 .min_konto_innhold,
@@ -29,15 +29,17 @@
 .personvern_innhold {
   line-height: 30px;
   color: black;
+  background-color: #e2e2e2;
   margin-left: 12px;
   margin-right: 12px;
   font-size: 14px;
+  border-radius: 8px;
 }
 
 .min_konto {
   width: 100%; /* Adjusts to the width of its container */
-  border-radius: 8px;
   background-color: #e2e2e2;
+  height: fit-content;
 }
 
 .linje1,
