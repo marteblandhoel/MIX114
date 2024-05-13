@@ -78,10 +78,6 @@ gmp-map {
   gap: 5px;
 }
 
-.infotekst {
-  margin-left: 5px; /* Spacing between icon and text */
-}
-
 .fa-triangle-exclamation {
   font-size: 24px;
   display: flex;
@@ -105,7 +101,7 @@ gmp-map {
 
 .infotekst {
   font-size: 12px;
-  margin-top: 12px;
+  margin-left: 5px;
   text-align: left;
 }
 .fa-snowflake {
