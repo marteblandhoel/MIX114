@@ -78,7 +78,7 @@ button {
 
 .component {
   margin: 0px 32px;
-  bottom: 150px;
+  bottom: 770px;
   position: relative;
   width: 306px;
   height: 112px;
@@ -87,4 +87,10 @@ button {
   border: 2px solid;
   border-color: #1a1c74;
   z-index: 15;
+}
+
+.tekst_popup {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
 }
