@@ -4,10 +4,6 @@
   margin-bottom: 100px;
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
-=======
-  gap: -9px;
->>>>>>> 2c30c2f64c9facc7e24278c719fe6e7ee33bc29f
   background-color: #fff;
   overflow: hidden;
   text-align: left;
@@ -25,7 +21,6 @@
   color: #1a1c74;
   margin: 0;
 }
-
 
 .min_konto_innhold,
 .vars_sted_innhold,
@@ -92,7 +87,6 @@ button {
   z-index: 15;
   display: none;
 }
-
 .tekst_popup {
   font-size: 16px;
   font-weight: bold;
@@ -104,10 +98,8 @@ button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: 52px;
+  margin-left: 12px;
   justify-content: center;
-<<<<<<< HEAD
-
   gap: 20px;
 }
 
@@ -118,9 +110,4 @@ button {
 .button_div {
   display: flex;
   margin-top: 20px;
-=======
-  justify-content: space-between;
-  margin-top: 19px;
-  margin-right: 52px;
->>>>>>> 2c30c2f64c9facc7e24278c719fe6e7ee33bc29f
 }
