@@ -46,69 +46,114 @@ let map;
 let marker1;
 let marker2;
 let marker3;
+let marker4;
+let marker5;
 
 async function initMap() {
   // Import Advanced Marker Library
-  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
   // Initialize map
   map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 60.3856, lng: 5.3329 },
+    center: { lat: 60.38541107522735, lng: 5.332866370276517 },
     zoom: 16,
     mapId: "DEMO_MAP_ID", // Added mapId required for advanced markers
   });
+  var imageIcon = {
+    url: "../globals/dinPosisjon.png", // URL to the image
+    size: new google.maps.Size(60, 60), // Original size of your image (not necessarily displayed size)
+    scaledSize: new google.maps.Size(60, 60), // Size to display the icon
+    origin: new google.maps.Point(0, 0), // Origin of the image, typically (0,0)
+    anchor: new google.maps.Point(20, 20), // Anchor point, centers the image by width/2, height/2
+  };
 
-  // Custom SVG image for markers
-  const customImage1 = document.createElement("img");
-  customImage1.src = "../globals/danger.svg"; // Path to your SVG file
-  customImage1.style.width = "40px"; // Set width of the SVG
-  customImage1.style.height = "40px"; // Set height of the SVG
-  customImage1.style.backgroundColor = "gray";
-
-  // bruker ikonene fra fontawasome
-  const customImage2 = document.createElement("i");
-  customImage2.className = "fa-solid fa-triangle-exclamation"; // FontAwesome class
-  customImage2.style.fontSize = "40px"; // Set the size of the icon
-  customImage2.style.color = "red"; // Set the color of the icon
-  customImage2.style.backgroundColor = "white"; // Background color
-  customImage2.style.padding = "5px"; // Padding to ensure background visibility
-  customImage2.style.borderRadius = "50%"; // Circular background
-  customImage2.style.display = "flex"; // Ensures it behaves like an image
-  customImage2.style.justifyContent = "center"; // Center the icon
-  customImage2.style.alignItems = "center"; // Vertically center the icon
-
-  const customImage3 = document.createElement("i");
-  customImage3.className = "fa-solid fa-snowflake"; // FontAwesome class
-  customImage3.style.fontSize = "40px"; // Set the size of the icon
-  customImage3.style.color = "blue"; // Set the color of the icon
-  customImage3.style.backgroundColor = "white"; // Background color
-  customImage3.style.padding = "5px"; // Padding to ensure background visibility
-  customImage3.style.borderRadius = "50%"; // Circular background
-  customImage3.style.display = "flex"; // Ensures it behaves like an image
-  customImage3.style.justifyContent = "center"; // Center the icon
-  customImage3.style.alignItems = "center"; // Vertically center the icon
+  var koIcon = {
+    url: "../globals/ko.png", // URL to the image
+    size: new google.maps.Size(60, 60), // Original size of your image (not necessarily displayed size)
+    scaledSize: new google.maps.Size(50, 50), // Size to display the icon
+    origin: new google.maps.Point(0, 0), // Origin of the image, typically (0,0)
+    anchor: new google.maps.Point(20, 20), // Anchor point, centers the image by width/2, height/2
+  };
+  var koIcon1 = {
+    url: "../globals/ko.png", // URL to the image
+    size: new google.maps.Size(60, 60), // Original size of your image (not necessarily displayed size)
+    scaledSize: new google.maps.Size(50, 50), // Size to display the icon
+    origin: new google.maps.Point(0, 0), // Origin of the image, typically (0,0)
+    anchor: new google.maps.Point(20, 20), // Anchor point, centers the image by width/2, height/2
+  };
+  var snoIcon = {
+    url: "../globals/glattSkilt.png", // URL to the image
+    size: new google.maps.Size(60, 60), // Original size of your image (not necessarily displayed size)
+    scaledSize: new google.maps.Size(50, 50), // Size to display the icon
+    origin: new google.maps.Point(0, 0), // Origin of the image, typically (0,0)
+    anchor: new google.maps.Point(20, 20), // Anchor point, centers the image by width/2, height/2
+  };
+  var snoIcon1 = {
+    url: "../globals/glattSkilt.png", // URL to the image
+    size: new google.maps.Size(60, 60), // Original size of your image (not necessarily displayed size)
+    scaledSize: new google.maps.Size(50, 50), // Size to display the icon
+    origin: new google.maps.Point(0, 0), // Origin of the image, typically (0,0)
+    anchor: new google.maps.Point(20, 20), // Anchor point, centers the image by width/2, height/2
+  };
 
   // Initialize markers with custom SVG images
-  marker1 = new google.maps.marker.AdvancedMarkerElement({
-    position: { lat: 60.38657, lng: 5.332119 },
+  marker1 = new google.maps.Marker({
+    position: { lat: 60.38541107522735, lng: 5.332866370276517 },
     map: map,
     title: "Your Position",
-    content: customImage1,
+    icon: imageIcon, // URL to the image you want to use as the marker
+  });
+  marker2 = new google.maps.Marker({
+    position: { lat: 60.388561, lng: 5.333082 },
+    map: map,
+    title: "Moderat Kø",
+    icon: koIcon, // URL to the image you want to use as the marker
+  });
+  marker3 = new google.maps.Marker({
+    position: { lat: 60.391509, lng: 5.312936 },
+    map: map,
+    title: "Moderat Kø",
+    icon: koIcon1, // URL to the image you want to use as the marker
+  });
+  marker4 = new google.maps.Marker({
+    position: { lat: 60.393169, lng: 5.31828 },
+    map: map,
+    title: "Glatt Vei",
+    icon: snoIcon, // URL to the image you want to use as the marker
+  });
+  marker5 = new google.maps.Marker({
+    position: { lat: 60.387156, lng: 5.326728 },
+    map: map,
+    title: "Glatt Vei",
+    icon: snoIcon1, // URL to the image you want to use as the marker
   });
 
-  marker2 = new google.maps.marker.AdvancedMarkerElement({
-    position: { lat: 60.388315, lng: 5.332535 },
-    map: map,
-    title: "Interest Point 1",
-    content: customImage2,
-  });
+  function addCustomMarker(lat, lng, title, iconUrl, width, height) {
+    // Main Custom Marker
+    const marker = new google.maps.Marker({
+      position: { lat: lat, lng: lng },
+      map: map,
+      title: title,
+      icon: {
+        url: iconUrl,
+        scaledSize: new google.maps.Size(width, height),
+      },
+    });
 
-  marker3 = new google.maps.marker.AdvancedMarkerElement({
-    position: { lat: 60.386632, lng: 5.326443 },
-    map: map,
-    title: "Glatt",
-    content: customImage3,
-  });
+    // Small Red Dot Marker
+    const dotMarker = new google.maps.Marker({
+      position: { lat: lat, lng: lng },
+      map: map,
+      icon: {
+        path: google.maps.SymbolPath.CIRCLE,
+        scale: 3, // Size of the dot
+        fillColor: "red",
+        fillOpacity: 1,
+        strokeColor: "red",
+        strokeOpacity: 1,
+      },
+      zIndex: 1, // Ensures it appears below the main marker if they overlap
+    });
+  }
 
   // Draw a line between the markers
   const linePath = new google.maps.Polyline({
@@ -119,7 +164,7 @@ async function initMap() {
     geodesic: true,
     strokeColor: "#FF0000",
     strokeOpacity: 1.0,
-    strokeWeight: 8,
+    strokeWeight: 10,
   });
   const linePath2 = new google.maps.Polyline({
     path: [
@@ -131,7 +176,70 @@ async function initMap() {
     strokeOpacity: 1.0,
     strokeWeight: 8,
   });
+  const linePath3 = new google.maps.Polyline({
+    path: [
+      { lat: 60.390348, lng: 5.313155 },
+      { lat: 60.391693, lng: 5.314728 },
+    ],
+    geodesic: true,
+    strokeColor: "#FF0000",
+    strokeOpacity: 1.0,
+    strokeWeight: 9,
+  });
+  const linePath4 = new google.maps.Polyline({
+    path: [
+      { lat: 60.391829, lng: 5.317615 },
+      { lat: 60.3932, lng: 5.319393 },
+    ],
+    geodesic: true,
+    strokeColor: "blue",
+    strokeOpacity: 0.9,
+    strokeWeight: 8,
+  });
+
+  addCustomMarker(
+    60.395332,
+    5.327558,
+    "Veiarbeid",
+    "../globals/veiarbeid1.png",
+    60,
+    60
+  );
+  addCustomMarker(
+    60.396828,
+    5.312616,
+    "Veiarbeid",
+    "../globals/veiarbeid1.png",
+    60,
+    60
+  );
+  addCustomMarker(
+    60.389803,
+    5.322221,
+    "Veiarbeid",
+    "../globals/veiarbeid1.png",
+    60,
+    60
+  );
+  addCustomMarker(
+    60.394082,
+    5.331983,
+    "Veiarbeid",
+    "../globals/veiarbeid1.png",
+    60,
+    60
+  );
+  addCustomMarker(
+    60.391735,
+    5.33666,
+    "Veiarbeid",
+    "../globals/veiarbeid1.png",
+    60,
+    60
+  );
 
   linePath.setMap(map);
   linePath2.setMap(map);
+  linePath3.setMap(map);
+  linePath4.setMap(map);
 }
