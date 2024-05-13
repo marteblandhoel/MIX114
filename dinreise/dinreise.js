@@ -94,7 +94,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function initMap(selectedIndex = 0) {
   const mapOptions = {
-    center: { lat: 60.38564, lng: 5.333326 },
     zoom: 12,
     mapTypeControl: false,
     streetViewControl: false,
@@ -175,12 +174,12 @@ function renderRoute(map, response, index, isFastest, isSafest, selectedIndex) {
         Math.floor(response.routes[index].legs[0].steps.length / 1.5)
       ].start_location;
 
-    const routeTitle = isFastest ? "Fastest Route" : "Safest Route";
+    const routeTitle = isFastest ? "Raskeste Rute" : "Tryggeste Rute";
     const currentRouteIndex = isFastest ? 0 : 2; // Set the currentRouteIndex based on the route type
 
     const contentString = `<div onclick="changeSelectedIndexAndRerender(${currentRouteIndex})" style="cursor: pointer; padding: 4px; font-size: 14px; color: #333;">
                               <h4>${routeTitle}</h4>
-                              <p>Time: <strong>${response.routes[index].legs[0].duration.text}</strong><br>Distance: <strong>${response.routes[index].legs[0].distance.text}</strong></p>
+                              <p>Tid: <strong>${response.routes[index].legs[0].duration.text}</strong><br>Distanse: <strong>${response.routes[index].legs[0].distance.text}</strong></p>
                             </div>`;
 
     const infoBox = new google.maps.InfoWindow({
