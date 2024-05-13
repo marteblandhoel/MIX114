@@ -74,11 +74,16 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("shortContainer").style.display = "flex"; // Same here for consistency
   });
 });
+let currentSelectedIndex = 0; // Default to 0
 
+function getCurrentSelectedIndex() {
+  return currentSelectedIndex; // Returns the current index
+}
 document.addEventListener("DOMContentLoaded", function () {
   const statistikkButton = document.querySelector(".text-wrapper");
   statistikkButton.addEventListener("click", function () {
-    window.location.href = "../Statistikk/statistikk.html";
+    const currentSelectedIndex = getCurrentSelectedIndex(); // Ensure this function returns the current selected route index
+    window.location.href = `../Statistikk/statistikk.html?selectedIndex=${currentSelectedIndex}`;
   });
   // Event listener for "Car Mode" knappen
   const carmodeButton = document.querySelector(".button-car-mode");
@@ -87,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-function initMap() {
+function initMap(selectedIndex = 0) {
   const mapOptions = {
     center: { lat: 60.38564, lng: 5.333326 },
     zoom: 12,
@@ -107,14 +112,10 @@ function initMap() {
     provideRouteAlternatives: true,
   };
 
-  let renderers = [];
-
   directionsService.route(request, (response, status) => {
     if (status === "OK") {
       let fastestRouteIndex = 0;
-      let shortestDuration = response.routes[0].legs[0].duration.value;
-
-      // Determine the fastest route
+      let shortestDuration = Number.MAX_SAFE_INTEGER;
       response.routes.forEach((route, index) => {
         if (route.legs[0].duration.value < shortestDuration) {
           fastestRouteIndex = index;
@@ -122,55 +123,80 @@ function initMap() {
         }
       });
 
-      // Render each route with specific styles
       response.routes.forEach((route, index) => {
         const isFastest = index === fastestRouteIndex;
         const isSafest = index === 2; // Designate the third route as the safest
-
-        const directionsRenderer = new google.maps.DirectionsRenderer({
-          map: map,
-          suppressMarkers: true,
-          preserveViewport: true,
-          routeIndex: index,
-          polylineOptions: {
-            strokeColor: isFastest ? "#0000FF" : "#6699FF",
-            strokeWeight: isFastest ? 7 : 5,
-            zIndex: isFastest ? 1000 : 500,
-          },
-        });
-        directionsRenderer.setDirections(response);
-        renderers.push(directionsRenderer);
-
-        if (index === 0 || isSafest) {
-          const midPoint =
-            route.legs[0].steps[Math.floor(route.legs[0].steps.length / 2)]
-              .start_location;
-          const routeTitle = isFastest ? "Fastest Route" : "Safest Route";
-          const contentString = `<div onclick="selectRoute(${index})" style="cursor: pointer; padding: 4px; font-size: 14px; color: #333;">
-                                    <h4>${routeTitle}</h4>
-                                    <p> Time: <strong>${route.legs[0].duration.text}</strong><br>Distance: <strong>${route.legs[0].distance.text}</strong></p>
-                                  </div>`;
-
-          const infoBox = new google.maps.InfoWindow({
-            content: contentString,
-            position: midPoint,
-          });
-          infoBox.open(map);
-        }
+        renderRoute(map, response, index, isFastest, isSafest, selectedIndex);
       });
     } else {
       window.alert("Directions request failed due to " + status);
     }
   });
-  window.selectRoute = function (selectedIndex) {
-    renderers.forEach((renderer, index) => {
-      renderer.setOptions({
-        polylineOptions: {
-          strokeColor: index === selectedIndex ? "#0000FF" : "#6699FF",
-          strokeWeight: index === selectedIndex ? 7 : 5,
-          zIndex: index === selectedIndex ? 1000 : 500,
-        },
-      });
+}
+
+function renderRoute(map, response, index, isFastest, isSafest, selectedIndex) {
+  const isCurrentlySelected = selectedIndex === index;
+  let strokeColor, strokeWeight, zIndex;
+
+  if (isCurrentlySelected && isSafest) {
+    strokeColor = "#0000FF"; // Blue for the safest route when selected
+    strokeWeight = 8;
+    zIndex = 1000; // Highest zIndex for the selected route
+  } else if (isCurrentlySelected && isFastest) {
+    strokeColor = "#0000FF"; // Blue for the fastest route when selected
+    strokeWeight = 7;
+    zIndex = 1000; // Ensure it's on top when selected
+  } else if (!isCurrentlySelected && isFastest) {
+    strokeColor = "#6699FF"; // Lighter blue for fastest when not selected
+    strokeWeight = 4;
+    zIndex = 500; // Lower zIndex when not selected
+  } else {
+    strokeColor = "#6699FF"; // Standard color for non-selected routes
+    strokeWeight = 5;
+    zIndex = 500; // Normal zIndex for non-selected routes
+  }
+
+  const directionsRenderer = new google.maps.DirectionsRenderer({
+    map: map,
+    suppressMarkers: false,
+    preserveViewport: true,
+    routeIndex: index,
+    polylineOptions: {
+      strokeColor: strokeColor,
+      strokeWeight: strokeWeight,
+      zIndex: zIndex,
+    },
+  });
+  directionsRenderer.setDirections(response);
+
+  if (isFastest || isSafest) {
+    const midPoint =
+      response.routes[index].legs[0].steps[
+        Math.floor(response.routes[index].legs[0].steps.length / 1.5)
+      ].start_location;
+
+    const routeTitle = isFastest ? "Fastest Route" : "Safest Route";
+    const currentRouteIndex = isFastest ? 0 : 2; // Set the currentRouteIndex based on the route type
+
+    const contentString = `<div onclick="changeSelectedIndexAndRerender(${currentRouteIndex})" style="cursor: pointer; padding: 4px; font-size: 14px; color: #333;">
+                              <h4>${routeTitle}</h4>
+                              <p>Time: <strong>${response.routes[index].legs[0].duration.text}</strong><br>Distance: <strong>${response.routes[index].legs[0].distance.text}</strong></p>
+                            </div>`;
+
+    const infoBox = new google.maps.InfoWindow({
+      content: contentString,
+      position: midPoint,
     });
-  };
+    infoBox.open(map);
+  }
+}
+
+function changeSelectedIndexAndRerender(newIndex) {
+  currentSelectedIndex = newIndex; // Update the global index
+  rerenderMap(newIndex); // Rerender the map with the new selected index
+}
+
+function rerenderMap(selectedIndex) {
+  document.getElementById("map").innerHTML = ""; // Clear the existing map
+  initMap(selectedIndex); // Re-initialize the map with the selected route index for specific styling
 }

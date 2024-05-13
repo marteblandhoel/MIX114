@@ -56,6 +56,11 @@ document.addEventListener("DOMContentLoaded", function () {
 //highchart script
 
 document.addEventListener("DOMContentLoaded", function () {
+  var selectedIndex = getParameterByName("selectedIndex");
+  if (selectedIndex !== null) {
+    // Use selectedIndex as needed
+    console.log("Selected Index:", selectedIndex); // or perform actions based on selectedIndex
+  }
   var selectedOption = "5"; // Default value to initialize the dashboard
   var dropdownMenu = document.getElementById("dropdownMenu");
 
@@ -81,6 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .then((data) => {
         updateDashboardComponents(data); // Update dashboard components with the fetched data
+        console.log(data);
       })
       .catch((error) => {
         console.error("Error fetching data: ", error);
@@ -89,7 +95,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to update dashboard components based on fetched data
   function updateDashboardComponents(data) {
-    const ulykkeData = data.data[0]["Siste" + selectedOption + "År"];
+    const ulykkeData =
+      data.data[selectedIndex]["Siste" + selectedOption + "År"];
     const ulykke = ulykkeData["AntallAlvorligeUlykker"];
     const dodelig = ulykkeData["AntallDøde"];
     const kpi1 = document.getElementById("dashboard-kpi-1");
@@ -200,3 +207,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initial call to populate the dashboard
   fetchDataAndUpdateDashboard();
 });
+function getParameterByName(name, url = window.location.href) {
+  name = name.replace(/[\[\]]/g, "\\$&");
+  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+    results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return "";
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
