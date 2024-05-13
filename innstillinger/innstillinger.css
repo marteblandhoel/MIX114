@@ -34,11 +34,8 @@
   font-size: 14px;
 }
 
-.min_konto,
-.varsel_steds,
-.personvern {
+.min_konto {
   width: 100%; /* Adjusts to the width of its container */
-  height: auto; /* Adjusts height automatically based on content */
   border-radius: 8px;
   background-color: #e2e2e2;
 }
