@@ -58,5 +58,12 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = "../belønning/poengside.html";
     });
   }
-});
 
+  var innstillingerIcon = document.getElementById(".innstillinger");
+
+  if (innstillingerIcon) {
+    innstillingerIcon.addEventListener("click", function () {
+      window.location.href = "../innstillinger/innstillinger.html";
+    });
+  }
+});
