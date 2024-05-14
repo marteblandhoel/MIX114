@@ -82,21 +82,6 @@
   justify-content: flex-start;
 }
 
-/* .arrowRight {
-
-  display: flex;
-  margin-left: auto;
-  font-size: larger;
-  align-items: center;
-}
-
-.buttons {
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-} */
 .buttons {
   display: flex;
   flex-direction: row;
