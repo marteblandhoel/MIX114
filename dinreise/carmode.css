@@ -77,9 +77,9 @@ header {
 .inactive-default-input {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
   position: relative;
-  padding: 6px 16px;
+  padding: 10px 20px;
   cursor: pointer;
   background: #3e6048;
   border: none;
@@ -92,12 +92,12 @@ header {
   margin: 6px;
   z-index: 18;
   color: #ffffff;
-  font-size: 24px;
+  font-size: 30px;
 }
 .ta-til-venstre-mot {
   position: relative;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   text-align: left;
   z-index: 19;
