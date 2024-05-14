@@ -116,10 +116,12 @@ hr {
 
 .up {
   color: #11b95c;
+  margin-right: 10px;
 }
 
 .down {
   color: #e43700;
+  margin-right: 10px;
 }
 
 .up,
@@ -129,6 +131,7 @@ hr {
   display: flex;
   flex-direction: row;
   padding: 5%;
+  align-items: center;
 }
 
 .italic {
