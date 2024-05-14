@@ -154,20 +154,21 @@ hr {
 .ny_varsling {
   position: fixed;
   display: flex;
-  bottom: 10%;
+  bottom: 12%;
+  left: 50%;
+  transform: translateX(-50%);
   border-radius: 15px;
-  border-color: solid #1a1c74;
-  border: solid;
+  border: solid 1px #1a1c74; /* Adjust border properties */
   color: #1a1c74;
   background-color: #ffffff;
   width: 80%;
   padding: 15px;
   box-sizing: border-box;
   justify-content: space-between;
+  align-items: center;
 }
 
 .ny_varsling input {
   border: none;
-  justify-content: left;
   box-sizing: border-box;
 }
