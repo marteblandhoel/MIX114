@@ -76,24 +76,39 @@
 }
 
 .text-button {
-  flex-grow: 1; /* Allow to take up any available space */
+  flex-grow: 1;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
-.arrowRight {
+/* .arrowRight {
+
   display: flex;
-  margin-left: auto; /* This pushes the icon to the far right */
+  margin-left: auto;
   font-size: larger;
-  align-items: center; /* This ensures the icon is vertically centered */
+  align-items: center;
 }
 
 .buttons {
+
   display: flex;
   flex-direction: row;
-  justify-content: space-between; /* Aligns children to each end */
-  width: 100%; /* Use the full width to space out items */
+  justify-content: space-between;
+  width: 100%;
+} */
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.arrow-icons {
+  display: flex;
+  flex-direction: column; /* Arrange icons in a column */
+  align-items: flex-end; /* Align icons to the right */
 }
 
 .seMer {
