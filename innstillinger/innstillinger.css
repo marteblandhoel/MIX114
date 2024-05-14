@@ -104,7 +104,8 @@ button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: 12px;
+  margin-left: auto;
+  margin-right: auto;
   justify-content: center;
   gap: 20px;
 }
