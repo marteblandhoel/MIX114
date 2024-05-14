@@ -71,6 +71,13 @@ button {
   border-radius: 5px;
 }
 
+#knapp2 {
+  padding: 9px 12px;
+  color: white;
+  background-color: #7c7c7c;
+  border: #1a1c74;
+  border-radius: 5px;
+}
 .component {
   position: relative;
   top: 50%;
@@ -78,7 +85,7 @@ button {
   bottom: 400px;
   width: 306px;
   height: 112px;
-  transform:translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   background-color: white;
   border-radius: 8px;
   border: 2px solid;
@@ -111,12 +118,10 @@ button {
   margin-top: 20px;
 }
 
-
-
 #switch {
-  color: #11B95C !important;
+  color: #11b95c !important;
 }
 
 #switch2 {
-  color: #11B95C !important;
+  color: #11b95c !important;
 }
