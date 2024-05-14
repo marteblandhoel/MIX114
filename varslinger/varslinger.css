@@ -76,7 +76,7 @@ hr {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-bottom: 25%;
+  margin-bottom: 49%;
 }
 
 .varsling {
@@ -154,7 +154,7 @@ hr {
   left: 50%;
   transform: translateX(-50%);
   border-radius: 15px;
-  border: solid 2px; /* Adjust border properties */
+  border: solid 2px;
   color: #004cdf;
   background-color: #ffffff;
   width: 80%;
