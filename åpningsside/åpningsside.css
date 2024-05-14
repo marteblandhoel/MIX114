@@ -121,9 +121,8 @@
 }
 .åpningsside {
   width: 100%;
-  position: relative;
   background-color: #fff;
-  height: 844px;
+  height: 100%;
   overflow: hidden;
   text-align: center;
   font-size: 24px;
