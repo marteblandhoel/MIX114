@@ -161,8 +161,8 @@ hr {
   left: 50%;
   transform: translateX(-50%);
   border-radius: 15px;
-  border: solid 1px #1a1c74; /* Adjust border properties */
-  color: #1a1c74;
+  border: solid 2px ; /* Adjust border properties */
+  color: #004CDF;
   background-color: #ffffff;
   width: 80%;
   padding: 15px;
