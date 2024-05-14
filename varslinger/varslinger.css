@@ -44,11 +44,11 @@
   z-index: 1;
 }
 
-.sort-menu > div {
+/* .sort-menu > div {
   display: flex;
-  justify-content: space-between; /* Aligns label to the left, input to the right */
-  align-items: center; /* Centers items vertically in each div */
-}
+  justify-content: space-between;
+  align-items: center;
+} */
 
 .fa-sort {
   color: #ffffff;

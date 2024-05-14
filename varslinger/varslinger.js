@@ -191,6 +191,7 @@ function filterVarslinger() {
 
   sortMenu.style.display = "none";
 }
+
 document.addEventListener("DOMContentLoaded", function () {
   // Event listener for the goBackButton
   const goBackButton = document.getElementById("goBackButton");
