@@ -134,6 +134,11 @@ hr {
   align-items: center;
 }
 
+.up i,
+.down i {
+  margin-left: 5px; /* Adjust the margin as needed */
+}
+
 .italic {
   font-style: italic;
 }
