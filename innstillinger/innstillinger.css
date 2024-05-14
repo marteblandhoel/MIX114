@@ -75,10 +75,10 @@ button {
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   bottom: 400px;
   width: 306px;
   height: 112px;
+  transform:translate(-50%, -50%);
   background-color: white;
   border-radius: 8px;
   border: 2px solid;
@@ -112,6 +112,11 @@ button {
 }
 
 
-.pers_sikkerhet .fa-toggle-on {
-  color: green !important;
+
+#switch {
+  color: #11B95C !important;
+}
+
+#switch2 {
+  color: #11B95C !important;
 }
