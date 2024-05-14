@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
     event.stopPropagation(); // Prevent bubbling to outer elements
     sortMenu.style.display =
       sortMenu.style.display === "none" || !sortMenu.style.display
-        ? "block"
+        ? "flex"
         : "none";
     filterMenu.style.display = "none"; // Ensure filter menu is closed
   });
@@ -65,17 +65,17 @@ document.addEventListener("DOMContentLoaded", function () {
     event.stopPropagation(); // Prevent bubbling to outer elements
     filterMenu.style.display =
       filterMenu.style.display === "none" || !filterMenu.style.display
-        ? "block"
+        ? "flex"
         : "none";
     sortMenu.style.display = "none"; // Ensure sort menu is closed
   });
 
   // Click anywhere on the window to close both menus if open
   window.addEventListener("click", function () {
-    if (sortMenu.style.display === "block") {
+    if (sortMenu.style.display === "flex") {
       sortMenu.style.display = "none";
     }
-    if (filterMenu.style.display === "block") {
+    if (filterMenu.style.display === "flex") {
       filterMenu.style.display = "none";
     }
   });
@@ -139,11 +139,10 @@ function toggleSortMenu() {
   var filterMenu = document.getElementById("filterMenu");
 
   // Toggle the sort menu
-  sortMenu.style.display =
-    sortMenu.style.display === "block" ? "none" : "block";
+  sortMenu.style.display = sortMenu.style.display === "flex" ? "none" : "flex";
 
   // Ensure the filter menu is closed when the sort menu is toggled
-  if (sortMenu.style.display === "block") {
+  if (sortMenu.style.display === "flex") {
     filterMenu.style.display = "none";
   }
 }
@@ -155,10 +154,10 @@ function toggleFilterMenu() {
 
   // Toggle the filter menu
   filterMenu.style.display =
-    filterMenu.style.display === "block" ? "none" : "block";
+    filterMenu.style.display === "flex" ? "none" : "flex";
 
   // Ensure the sort menu is closed when the filter menu is toggled
-  if (filterMenu.style.display === "block") {
+  if (filterMenu.style.display === "flex") {
     sortMenu.style.display = "none";
   }
 }
