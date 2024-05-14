@@ -1,7 +1,7 @@
 .varslinger {
   margin: 0 32px;
   margin-top: 68px;
-  margin-bottom: 20%;
+  margin-bottom: 7%;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -42,12 +42,6 @@
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 2%;
   z-index: 1;
-}
-
-.sort-menu > div {
-  display: flex;
-  justify-content: space-between; /* Aligns label to the left, input to the right */
-  align-items: center; /* Centers items vertically in each div */
 }
 
 .fa-sort {
@@ -93,6 +87,8 @@ hr {
   gap: 3%;
   color: black;
   text-align: left;
+  margin-left: 32px;
+  margin-right: 32px;
 }
 
 .topplinje {
@@ -116,10 +112,12 @@ hr {
 
 .up {
   color: #11b95c;
+  margin-right: 10px;
 }
 
 .down {
   color: #e43700;
+  margin-right: 10px;
 }
 
 .up,
@@ -129,6 +127,12 @@ hr {
   display: flex;
   flex-direction: row;
   padding: 5%;
+  align-items: center;
+}
+
+.up i,
+.down i {
+  margin-left: 5px; /* Adjust the margin as needed */
 }
 
 .italic {
@@ -146,20 +150,21 @@ hr {
 .ny_varsling {
   position: fixed;
   display: flex;
-  bottom: 10%;
+  bottom: 12%;
+  left: 50%;
+  transform: translateX(-50%);
   border-radius: 15px;
-  border-color: solid #1a1c74;
-  border: solid;
-  color: #1a1c74;
+  border: solid 2px; /* Adjust border properties */
+  color: #004cdf;
   background-color: #ffffff;
   width: 80%;
   padding: 15px;
   box-sizing: border-box;
   justify-content: space-between;
+  align-items: center;
 }
 
 .ny_varsling input {
   border: none;
-  justify-content: left;
   box-sizing: border-box;
 }
