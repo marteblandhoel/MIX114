@@ -85,7 +85,6 @@ function initMap() {
   const mapOptions = {
     zoom: 18, // Set your desired initial zoom level
     center: { lat: 60.392, lng: 5.324 }, // Set your desired initial center
-
     streetViewControl: false,
     mapTypeControl: false,
     fullscreenControl: false,
@@ -107,25 +106,90 @@ function calculateAndDisplayRoute() {
   directionsService.route(request, (response, status) => {
     if (status === "OK") {
       directionsRenderer.setDirections(response);
-      // Manually set center and zoom again if needed
-      map.setCenter({ lat: 60.385853, lng: 5.332325 });
+      map.setCenter({ lat: 60.386666, lng: 5.332099 });
       map.setZoom(17);
 
-      // Extract the starting point from the response
-      const startLocation = response.routes[0].legs[0].start_location;
+      // Add custom markers after setting directions
+      addCustomMarkers();
+      // Shadow Marker
+      const shadowMarker = new google.maps.Marker({
+        position: { lat: 60.38581, lng: 5.332323 },
+        map: map,
+        icon: {
+          url: "../globals/100%.svg",
+          scaledSize: new google.maps.Size(86, 86), // Size of the shadow circle
+          anchor: new google.maps.Point(43, 43), // Center the shadow below the icon
+        },
+      });
 
-      // Create and place the custom marker
-      const marker = new google.maps.Marker({
-        position: { lat: 60.385635, lng: 5.332388 },
+      // Navigation Marker
+      const navigationMarker = new google.maps.Marker({
+        position: { lat: 60.38581, lng: 5.332323 },
         map: map,
         title: "Start Point",
         icon: {
-          url: "../globals/navigation.svg", // Path to the custom SVG icon
-          scaledSize: new google.maps.Size(64, 64), // Adjust size as needed
+          url: "../globals/navigation.svg",
+          scaledSize: new google.maps.Size(64, 64),
+          anchor: new google.maps.Point(32, 32), // Center the navigation icon
         },
       });
     } else {
       window.alert("Directions request failed due to " + status);
     }
+  });
+}
+
+function addCustomMarkers() {
+  addCustomMarker(
+    60.302029,
+    5.371312,
+    "Ny asfalt",
+    "../globals/veiarbeid1.png"
+  );
+
+  addCustomMarker(
+    60.271275,
+    5.429612,
+    "Glatt Vei",
+    "../globals/glattSkilt.png"
+  );
+  // Draw a line between the markers
+  const linePath = new google.maps.Polyline({
+    path: [
+      { lat: 60.302299, lng: 5.370753 },
+      { lat: 60.300813, lng: 5.373323 },
+    ],
+    geodesic: true,
+    strokeColor: "#FF0000",
+    strokeOpacity: 1.0,
+    strokeWeight: 8,
+    zIndex: 10000,
+  });
+  linePath.setMap(map);
+  // Draw a line between the markers
+  const linePath2 = new google.maps.Polyline({
+    path: [
+      { lat: 60.271275, lng: 5.429612 },
+
+      { lat: 60.266655, lng: 5.430878 },
+    ],
+    geodesic: true,
+    strokeColor: "#00B2FF",
+    strokeOpacity: 1.0,
+    strokeWeight: 8,
+    zIndex: 10000,
+  });
+  linePath2.setMap(map);
+}
+
+function addCustomMarker(lat, lng, title, iconUrl) {
+  const marker = new google.maps.Marker({
+    position: { lat, lng },
+    map: map,
+    title: title,
+    icon: {
+      url: iconUrl,
+      scaledSize: new google.maps.Size(60, 60), // Adjust size according to your preference
+    },
   });
 }
