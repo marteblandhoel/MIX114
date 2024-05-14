@@ -80,11 +80,11 @@ function initMap() {
       strokeOpacity: 0.8,
       strokeWeight: 8,
     },
-    preserveViewport: true, // Prevents the map from auto-zooming and auto-centering to fit the route
+    preserveViewport: true,
   });
   const mapOptions = {
-    zoom: 18, // Set your desired initial zoom level
-    center: { lat: 60.392, lng: 5.324 }, // Set your desired initial center
+    zoom: 18,
+    center: { lat: 60.392, lng: 5.324 },
     streetViewControl: false,
     mapTypeControl: false,
     fullscreenControl: false,
@@ -94,12 +94,55 @@ function initMap() {
   directionsRenderer.setMap(map);
 
   calculateAndDisplayRoute();
+  function calculateAndDisplayRoute() {
+    const request = {
+      origin: "Media City Bergen, Bergen", // Set origin
+      destination: "Syfteland, 5212", // Set destination
+      travelMode: "DRIVING",
+    };
+
+    directionsService.route(request, (response, status) => {
+      if (status === "OK") {
+        directionsRenderer.setDirections(response);
+        map.setCenter({ lat: 60.386666, lng: 5.332099 });
+        map.setZoom(17);
+
+        // Add custom markers after setting directions
+        addCustomMarkers();
+        // Shadow Marker
+        const shadowMarker = new google.maps.Marker({
+          position: { lat: 60.38581, lng: 5.332323 },
+          map: map,
+          icon: {
+            url: "../globals/100%.svg",
+            scaledSize: new google.maps.Size(86, 86), // Size of the shadow circle
+            anchor: new google.maps.Point(43, 43), // Center the shadow below the icon
+          },
+        });
+
+        // Navigation Marker
+        const navigationMarker = new google.maps.Marker({
+          position: { lat: 60.38581, lng: 5.332323 },
+          map: map,
+          title: "Start Point",
+          icon: {
+            url: "../globals/navigation.svg",
+            scaledSize: new google.maps.Size(64, 64),
+            anchor: new google.maps.Point(32, 32), // Center the navigation icon
+          },
+        });
+      } else {
+        window.alert("Directions request failed due to " + status);
+      }
+    });
+  }
+  attachImageClickListeners(); // Function to attach listeners to HTML images
 }
 
 function calculateAndDisplayRoute() {
   const request = {
-    origin: "Media City Bergen, Bergen", // Set origin
-    destination: "Syfteland, 5212", // Set destination
+    origin: "Media City Bergen, Bergen",
+    destination: "Syfteland, 5212",
     travelMode: "DRIVING",
   };
 
@@ -108,35 +151,38 @@ function calculateAndDisplayRoute() {
       directionsRenderer.setDirections(response);
       map.setCenter({ lat: 60.386666, lng: 5.332099 });
       map.setZoom(17);
-
-      // Add custom markers after setting directions
       addCustomMarkers();
-      // Shadow Marker
-      const shadowMarker = new google.maps.Marker({
-        position: { lat: 60.38581, lng: 5.332323 },
-        map: map,
-        icon: {
-          url: "../globals/100%.svg",
-          scaledSize: new google.maps.Size(86, 86), // Size of the shadow circle
-          anchor: new google.maps.Point(43, 43), // Center the shadow below the icon
-        },
-      });
-
-      // Navigation Marker
-      const navigationMarker = new google.maps.Marker({
-        position: { lat: 60.38581, lng: 5.332323 },
-        map: map,
-        title: "Start Point",
-        icon: {
-          url: "../globals/navigation.svg",
-          scaledSize: new google.maps.Size(64, 64),
-          anchor: new google.maps.Point(32, 32), // Center the navigation icon
-        },
-      });
     } else {
       window.alert("Directions request failed due to " + status);
     }
   });
+}
+
+function attachImageClickListeners() {
+  const images = {
+    glattvei_ikon: { lat: 60.271275, lng: 5.429612 },
+    sykkel_ikon: { lat: 60.302029, lng: 5.371312 },
+    barn_leker: { lat: 60.302029, lng: 5.371312 },
+  };
+
+  Object.keys(images).forEach(function (className) {
+    const imageElement = document.querySelector(`.${className}`);
+    if (imageElement) {
+      imageElement.addEventListener("click", function () {
+        map.setCenter(images[className]);
+        map.setZoom(13);
+      });
+    }
+  });
+
+  // Listener for resetting map to default center
+  const defaultCenterImage = document.querySelector(".glattvei_ikon2");
+  if (defaultCenterImage) {
+    defaultCenterImage.addEventListener("click", function () {
+      map.setCenter({ lat: 60.386666, lng: 5.332099 });
+      map.setZoom(17); // Reset to the zoom level used in calculateAndDisplayRoute
+    });
+  }
 }
 
 function addCustomMarkers() {
@@ -146,13 +192,24 @@ function addCustomMarkers() {
     "Ny asfalt",
     "../globals/veiarbeid1.png"
   );
-
   addCustomMarker(
     60.271275,
     5.429612,
     "Glatt Vei",
     "../globals/glattSkilt.png"
   );
+}
+
+function addCustomMarker(lat, lng, title, iconUrl) {
+  const marker = new google.maps.Marker({
+    position: { lat, lng },
+    map: map,
+    title: title,
+    icon: {
+      url: iconUrl,
+      scaledSize: new google.maps.Size(60, 60),
+    },
+  });
   // Draw a line between the markers
   const linePath = new google.maps.Polyline({
     path: [
@@ -182,14 +239,7 @@ function addCustomMarkers() {
   linePath2.setMap(map);
 }
 
-function addCustomMarker(lat, lng, title, iconUrl) {
-  const marker = new google.maps.Marker({
-    position: { lat, lng },
-    map: map,
-    title: title,
-    icon: {
-      url: iconUrl,
-      scaledSize: new google.maps.Size(60, 60), // Adjust size according to your preference
-    },
-  });
-}
+// Ensure this is the only script that initializes and manipulates the map
+document.addEventListener("DOMContentLoaded", function () {
+  initMap();
+});

@@ -110,8 +110,8 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 17px;
-  top: 510px;
+  gap: 12px;
+  top: 520px;
   justify-content: center;
   width: fit-content;
   margin-right: auto;
@@ -125,7 +125,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 17px;
+  gap: 12px;
   top: 240px;
   justify-content: center;
   width: fit-content;
@@ -153,6 +153,7 @@ header {
   width: 100%;
   height: 100%;
   border: 3px solid #1a1c74;
+  cursor: pointer;
 }
 .ellipse_orange1 {
   background-color: black;
@@ -161,16 +162,27 @@ header {
   width: 100%;
   height: 100%;
   border: 3px solid white;
+  cursor: pointer;
+}
+.ellipse_orange2 {
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid white;
+  cursor: pointer;
 }
 
 .glattvei_ikon,
 .sykkel_ikon,
-.barn-leker_ikon {
+.barn_leker_ikon {
   position: absolute;
   height: auto; /* Keeps the image ratio */
   top: 46%;
   left: 55%;
   transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 .glattvei_ikon1 {
   position: absolute;
@@ -178,8 +190,16 @@ header {
   top: 53%;
   left: 55%;
   transform: translate(-50%, -50%);
+  cursor: pointer;
 }
-
+.glattvei_ikon2 {
+  position: absolute;
+  height: auto; /* Keeps the image ratio */
+  top: 53%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
 .car-mode-maps {
   position: absolute;
   width: 100%;
